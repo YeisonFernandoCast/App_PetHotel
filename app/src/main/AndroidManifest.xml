@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetsHotel">
         <activity
+            android:name=".InfoContacto"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
