@@ -2,8 +2,8 @@
 <resources>
     <dimen name ="window_paddingRegister">26dp</dimen>
 
-    <dimen name ="logo_widthRegister">180dp</dimen>
-    <dimen name ="logo_heightRegister">180dp</dimen>
+    <dimen name ="logo_register">180dp</dimen>
+    <dimen name ="logo_launch">250dp</dimen>
 
     <dimen name ="margin_8">8dp</dimen>
     <dimen name ="margin_16">16dp</dimen>

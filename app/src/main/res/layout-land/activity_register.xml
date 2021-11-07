@@ -12,8 +12,8 @@
     <ImageView
         android:id="@+id/logoRegister"
         android:contentDescription="@string/logo_descriptionApp"
-        android:layout_width="@dimen/logo_widthRegister"
-        android:layout_height="@dimen/logo_heightRegister"
+        android:layout_width="@dimen/logo_register"
+        android:layout_height="@dimen/logo_register"
         android:layout_gravity="center"
         android:src="@mipmap/logo" />
 
