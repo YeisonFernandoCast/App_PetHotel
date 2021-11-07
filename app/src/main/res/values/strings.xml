@@ -9,7 +9,7 @@
     <string name="sign_up">Registrarme</string>
     <string name="cellphone">Teléfono</string>
     <string name="name">Nombre de Usuario</string>
-    <string name="sing_up_registro">Registro</string>
+    <string name="sing_up_register">Registro</string>
     <string name="sing_up_garden">Registrar una Guarderia</string>
     <string name="login">Login</string>
 </resources>
