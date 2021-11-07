@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/window_padding"
-    tools:context=".MainActivity">
+    tools:context=".ActivityFive">
+
 
     <ImageView
         android:id="@+id/iv_logo"
@@ -17,17 +18,17 @@
         android:layout_marginTop="@dimen/small_margin"
         android:src="@mipmap/pets" />
 
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="393dp"
         android:layout_marginTop="@dimen/small_margin"
-        android:text="Tener a un perro implica una gran responsabilidad. Aunque los consejos para
-        cuidar a tu mascota son sencillos, se debe saber que serán para el resto de su vida, por lo tanto,
-        cuidar a tu perro, o a ese perro que pretendes adoptar, no es tarea fácil.
-        Además de facilitarle las cosas básicas como son la comida, el agua, el veterinario o hacer ejercicio,
-        hay otros consejos que son importantes para que tu mascota esté feliz y con una salud de hierro."
+        android:text="Es importante tener en cuenta que los accesorios para animales pueden ser
+        divididos en dos grupos: los accesorios necesarios y los de entretenimiento. En primer lugar,
+        podemos mencionar los collares, correas, camas y todos aquellos accesorios que realmente sean
+        necesarios para el cuidado de nuestra mascota; en el segundo grupo los juguetes que prefieren
+        las mascotas, tales como pelotas, huesos de hule, ruedas de ejercicio, y todo aquellos con lo que
+        puedan divertirse."
         android:textAlignment="gravity"
         android:textSize="20sp" />
 

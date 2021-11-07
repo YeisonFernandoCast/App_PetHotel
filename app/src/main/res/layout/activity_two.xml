@@ -7,8 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/window_padding"
-    tools:context=".MainActivity">
-
+    tools:context=".ActivityTwo">
     <ImageView
         android:id="@+id/iv_logo"
         android:layout_width="@dimen/logo_width"
@@ -23,11 +22,9 @@
         android:layout_width="match_parent"
         android:layout_height="393dp"
         android:layout_marginTop="@dimen/small_margin"
-        android:text="Tener a un perro implica una gran responsabilidad. Aunque los consejos para
-        cuidar a tu mascota son sencillos, se debe saber que serán para el resto de su vida, por lo tanto,
-        cuidar a tu perro, o a ese perro que pretendes adoptar, no es tarea fácil.
-        Además de facilitarle las cosas básicas como son la comida, el agua, el veterinario o hacer ejercicio,
-        hay otros consejos que son importantes para que tu mascota esté feliz y con una salud de hierro."
+        android:text="Los primeros momentos de los gatitos conforman una etapa de grandes cambios físicos
+        y de comportamiento. Una nutrición adaptada a sus necesidades específicas para su desarrollo puede
+        ayudarlos a crecer y convertirse en gatos fuertes y saludables."
         android:textAlignment="gravity"
         android:textSize="20sp" />
 
