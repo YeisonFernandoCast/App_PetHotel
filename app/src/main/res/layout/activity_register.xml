@@ -26,16 +26,8 @@
                 android:layout_height="@dimen/logo_heightRegister"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/margin_8"
-                android:layout_marginBottom="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_16"
                 android:src="@mipmap/logo" />
-
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginBottom="@dimen/margin_32"
-                android:text="@string/app_name"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_name"
@@ -128,22 +120,6 @@
                         android:layout_marginEnd="@dimen/margin_48"
                         android:text="@string/google"/>
                 </LinearLayout>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Login"/>
-
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@color/white"
-                android:textColor="#DD2C00"
-                android:text="Login"
-                android:textSize="12sp" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>
