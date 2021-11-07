@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">PetsHotel</string>
+    <string name="Tip_one">Cuidados para tu Perro</string>
+    <string name="Tip_oneone">Regresar</string>
+    <string name="Tip_two">Cuidados para tu Gato</string>
+    <string name="Tip_three">Alimentos</string>
+    <string name="Tip_four">Medicinas</string>
+    <string name="Tip_five">Entretenimiento</string>
+
 </resources>
