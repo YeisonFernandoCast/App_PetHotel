@@ -16,8 +16,6 @@ public class RegisterActivity extends AppCompatActivity {
     TextInputEditText EmailRegister;
     TextInputEditText passwordRegister;
 
-    AppCompatButton buttonRegister;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +30,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         passwordRegister = findViewById(R.id.editText_passwordRegister);
         passwordRegister.setText("Abcd_1234");
-
-        buttonRegister = findViewById(R.id.button_register_launch);
-        buttonRegister.setOnClickListener((evt) -> {
-            EmailRegister.setText("");
-            Toast.makeText(this, "Registro Completo", Toast.LENGTH_SHORT).show();
-        });
-
 
     }
 }

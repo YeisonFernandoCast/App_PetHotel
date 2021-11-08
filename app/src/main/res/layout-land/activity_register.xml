@@ -76,7 +76,7 @@
                 android:layout_marginEnd="@dimen/margin_8"
                 android:hint="@string/email">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/EditText_emailRegister"
+                    android:id="@+id/editText_emailRegister"
                     android:inputType="textEmailAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -90,7 +90,7 @@
                 android:layout_marginStart="@dimen/margin_8"
                 android:hint="@string/password">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/EditText_passwordRegister"
+                    android:id="@+id/editText_passwordRegister"
                     android:inputType="textPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -117,7 +117,7 @@
             android:orientation="horizontal" >
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_FacebookRegister"
+                android:id="@+id/button_facebookRegister"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -127,7 +127,7 @@
                 android:textColor="@color/white"
                 android:text="@string/facebook" />
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_GoogleRegister"
+                android:id="@+id/button_googleRegister"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
