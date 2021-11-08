@@ -8,13 +8,19 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class RegisterActivity extends AppCompatActivity {
 
 
-    ImageView ivLogo;
+    ImageView logoRegister;
+    TextInputLayout tilEmail;
     TextInputEditText EmailRegister;
+    TextInputLayout tilPassword;
     TextInputEditText passwordRegister;
+
+    AppCompatButton buttonFacebook;
+    AppCompatButton buttonGoogle;
 
 
     @Override
@@ -22,14 +28,34 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        initUI();
+    }
 
-        ivLogo = findViewById(R.id.logoRegister);
+    private void initUI() {
+        logoRegister = findViewById(R.id.logoRegister);
 
+        tilEmail = findViewById(R.id.til_email);
         EmailRegister = findViewById(R.id.editText_emailRegister);
         EmailRegister.setText("example@gmail.com");
 
+        tilPassword = findViewById(R.id.til_password);
         passwordRegister = findViewById(R.id.editText_passwordRegister);
         passwordRegister.setText("Abcd_1234");
 
+        buttonFacebook = findViewById(R.id.button_facebookRegister);
+        buttonFacebook.setOnClickListener((evt) -> { onFacebookClick(); });
+
+        buttonGoogle = findViewById(R.id.button_googleRegister);
+        buttonGoogle.setOnClickListener((evt) -> { onGoogleClick(); });
     }
+
+    private void onFacebookClick(){
+
+    }
+
+    private void onGoogleClick(){
+
+    }
+
+
 }
