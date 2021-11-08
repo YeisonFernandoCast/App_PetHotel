@@ -7,13 +7,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterUserActivity">
 
     <ImageView
         android:id="@+id/logoRegister"
         android:contentDescription="@string/logo_descriptionApp"
-        android:layout_width="@dimen/logo_register"
-        android:layout_height="@dimen/logo_register"
+        android:layout_width="@dimen/logo_register_users"
+        android:layout_height="@dimen/logo_register_users"
         android:layout_gravity="center"
         android:src="@mipmap/logo" />
 

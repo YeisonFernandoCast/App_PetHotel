@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterUserActivity">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -22,8 +22,8 @@
             <ImageView
                 android:id="@+id/logoRegister"
                 android:contentDescription="@string/logo_descriptionApp"
-                android:layout_width="@dimen/logo_register"
-                android:layout_height="@dimen/logo_register"
+                android:layout_width="@dimen/logo_register_users"
+                android:layout_height="@dimen/logo_register_users"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/margin_8"
                 android:layout_marginBottom="@dimen/margin_16"
@@ -35,7 +35,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_8"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-
                 android:hint="@string/name">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editText_nameRegister"
@@ -48,6 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_8"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="@string/cellphone">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editText_cellphoneRegister"
@@ -61,6 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_8"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="@string/email">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editText_emailRegister"
@@ -74,9 +75,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_8"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="@string/password"
                 app:endIconMode="password_toggle">
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editText_passwordRegister"
                     android:inputType="textPassword"
@@ -89,7 +90,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
-
                 android:text="@string/sign_up"
                 android:textColor="@color/red"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
