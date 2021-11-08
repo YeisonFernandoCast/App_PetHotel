@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Pet\'s Hotel</string>
+    <string name="buscar_cuidador">Buscar cuidador.</string>
+    <string name="ubicaci_n">Ubicación:</string>
 </resources>
