@@ -2,6 +2,7 @@ package com.faroti.petshotel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
@@ -30,7 +31,14 @@ public class InfoContacto extends AppCompatActivity {
         tilbuscar = findViewById(R.id.til_buscar);
         etbuscar = findViewById(R.id.et_buscar);
 
+
+        iv_inicio.setOnClickListener((evt) ->{oninicioClick();});
+
     }
 
+    private void oninicioClick(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 
 }
