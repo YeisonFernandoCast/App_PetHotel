@@ -27,10 +27,10 @@ public class InfoContacto extends AppCompatActivity {
         iv_inicio = findViewById(R.id.iv_inicio);
         iv_salir = findViewById(R.id.iv_salir);
 
-        tilbuscar= findViewById(R.id.til_buscar);
+        tilbuscar = findViewById(R.id.til_buscar);
         etbuscar = findViewById(R.id.et_buscar);
 
-
+    }
 
 
 }
