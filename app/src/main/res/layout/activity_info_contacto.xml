@@ -24,7 +24,7 @@
         android:layout_gravity="fill_vertical"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
-        android:contentDescription=""
+        android:contentDescription="home"
         android:src="@mipmap/ic_launcher_round" />
 
     <ImageView
@@ -34,7 +34,7 @@
         android:layout_gravity="right"
         android:layout_marginTop="-6dp"
         android:layout_marginBottom="6dp"
-        android:contentDescription=""
+        android:contentDescription="out"
         android:src="@mipmap/ic_launcher_round" />
 
 
