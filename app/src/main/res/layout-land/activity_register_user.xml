@@ -39,12 +39,13 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_name_register"
                     android:layout_width="match_parent"
+                    android:inputType="textPersonName"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_cellphone_register"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="@dimen/margin_16"
@@ -76,7 +77,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_password_register"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/til_cellphone_register"
                 android:layout_alignParentEnd="true"
