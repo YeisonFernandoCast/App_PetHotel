@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name ="window_paddingRegister">26dp</dimen>
+    <dimen name ="window_paddingRegister">23dp</dimen>
 
     <dimen name ="logo_register_users">180dp</dimen>
     <dimen name ="logo_register">250dp</dimen>
