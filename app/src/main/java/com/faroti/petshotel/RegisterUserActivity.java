@@ -42,10 +42,10 @@ public class RegisterUserActivity extends AppCompatActivity {
         passwordRegister.setText("Abcd_1234");
 
         buttonFacebook = findViewById(R.id.button_facebook_register);
-        buttonFacebook.setOnClickListener((evt) -> { onFacebookClick(); });
+        buttonFacebook.setOnClickListener((evt) -> onFacebookClick());
 
         buttonGoogle = findViewById(R.id.button_google_register);
-        buttonGoogle.setOnClickListener((evt) -> { onGoogleClick(); });
+        buttonGoogle.setOnClickListener((evt) -> onGoogleClick());
     }
 
     private void onFacebookClick(){

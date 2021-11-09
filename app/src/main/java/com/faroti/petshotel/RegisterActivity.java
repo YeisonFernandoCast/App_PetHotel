@@ -20,8 +20,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register_activity);
 
         buttonRegisterUser = findViewById(R.id.button_go_to_register_user);
-        buttonRegisterUser.setOnClickListener((evt) -> { onRegisterUserClick();
-        });
+        buttonRegisterUser.setOnClickListener((evt) -> onRegisterUserClick());
     }
 
     private void onRegisterUserClick(){
