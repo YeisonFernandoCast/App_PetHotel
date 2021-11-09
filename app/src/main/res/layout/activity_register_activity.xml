@@ -11,52 +11,56 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/logoRegister"
+        android:id="@+id/logo_register"
         android:layout_width="@dimen/logo_register"
         android:layout_height="@dimen/logo_register"
         android:layout_gravity="center"
-        android:contentDescription="@string/logo_descriptionApp"
+        android:contentDescription="@string/register_logo_descriptionApp"
         android:src="@mipmap/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tittle_register"
+        android:id="@+id/title_register"
         style="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/sing_up_register"
+        android:text="@string/register_text_registro"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/logo_register"
+        android:layout_marginTop="@dimen/margin_8"/>
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_register"
+        android:id="@+id/button_go_to_register_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@color/white"
-        android:text="@string/sign_up"
+        android:text="@string/register_sign_up"
         android:textColor="#DD2C00"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tittle_register" />
+        app:layout_constraintTop_toBottomOf="@+id/title_register"
+        android:layout_marginTop="@dimen/margin_24"/>
+
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_launch_register_garden"
+        android:id="@+id/button_go_to_register_garden"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@color/white"
-        android:text="@string/sing_up_garden"
+        android:text="@string/register_sing_up_garden"
         android:textColor="#DD2C00"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_register" />
+        app:layout_constraintTop_toBottomOf="@+id/button_go_to_register_user"
+        android:layout_marginTop="@dimen/margin_16"/>
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -65,7 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:text="@string/login"
+        android:text="@string/register_login"
         android:textSize="12sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"

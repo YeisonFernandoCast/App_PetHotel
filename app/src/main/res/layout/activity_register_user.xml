@@ -20,8 +20,8 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/logoRegister"
-                android:contentDescription="@string/logo_descriptionApp"
+                android:id="@+id/logo_register"
+                android:contentDescription="@string/register_logo_descriptionApp"
                 android:layout_width="@dimen/logo_register_users"
                 android:layout_height="@dimen/logo_register_users"
                 android:layout_gravity="center"
@@ -30,67 +30,67 @@
                 android:src="@mipmap/logo" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_name"
+                android:id="@+id/til_name_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_8"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="@string/name">
+                android:hint="@string/register_name">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editText_nameRegister"
+                    android:id="@+id/edit_text_name_register"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_cellphone"
+                android:id="@+id/til_cellphone_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_8"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="@string/cellphone">
+                android:hint="@string/register_cellphone">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editText_cellphoneRegister"
+                    android:id="@+id/edit_text_cellphone_register"
                     android:inputType="number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_email"
+                android:id="@+id/til_email_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_8"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="@string/email">
+                android:hint="@string/register_email">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editText_emailRegister"
+                    android:id="@+id/edit_text_email_register"
                     android:inputType="textEmailAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_password"
+                android:id="@+id/til_password_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_8"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="@string/password"
+                android:hint="@string/register_password"
                 app:endIconMode="password_toggle">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editText_passwordRegister"
+                    android:id="@+id/edit_text_password_register"
                     android:inputType="textPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_register"
+                android:id="@+id/button_register_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:text="@string/sign_up"
+                android:text="@string/register_sign_up"
                 android:textColor="@color/red"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
                 android:layout_gravity="center"/>
@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_16"
                 android:layout_marginBottom="@dimen/margin_8"
-                android:text="@string/start_whit_social_network"/>
+                android:text="@string/register_start_whit_social_network"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -108,7 +108,7 @@
                     android:orientation="horizontal" >
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/button_facebookRegister"
+                        android:id="@+id/button_facebook_register"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -116,9 +116,9 @@
                         android:layout_marginEnd="@dimen/margin_8"
                         android:background="@color/facebook_color"
                         android:textColor="@color/white"
-                        android:text="@string/facebook" />
+                        android:text="@string/register_facebook" />
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/button_googleRegister"
+                        android:id="@+id/button_google_register"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -126,7 +126,7 @@
                         android:textColor="@color/white"
                         android:layout_marginStart="@dimen/margin_8"
                         android:layout_marginEnd="@dimen/margin_48"
-                        android:text="@string/google"/>
+                        android:text="@string/register_google"/>
                 </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

@@ -10,7 +10,7 @@ import android.widget.Toast;
 public class RegisterActivity extends AppCompatActivity {
 
 
-    AppCompatButton buttonRegister;
+    AppCompatButton buttonRegisterUser;
 
 
 
@@ -19,14 +19,12 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_activity);
 
-
-        buttonRegister = findViewById(R.id.button_register);
-        buttonRegister.setOnClickListener((evt) -> { onRegisterClick();
-
+        buttonRegisterUser = findViewById(R.id.button_go_to_register_user);
+        buttonRegisterUser.setOnClickListener((evt) -> { onRegisterUserClick();
         });
-    };
+    }
 
-    private void onRegisterClick(){
+    private void onRegisterUserClick(){
         Intent intent = new Intent(this, RegisterUserActivity.class);
         startActivity(intent);
         Toast.makeText(this, "Registro Completo", Toast.LENGTH_SHORT).show();

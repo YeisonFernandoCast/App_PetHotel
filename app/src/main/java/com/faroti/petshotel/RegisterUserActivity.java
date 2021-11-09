@@ -31,20 +31,20 @@ public class RegisterUserActivity extends AppCompatActivity {
     }
 
     private void initUI() {
-        logoRegister = findViewById(R.id.logoRegister);
+        logoRegister = findViewById(R.id.logo_register);
 
-        tilEmail = findViewById(R.id.til_email);
-        EmailRegister = findViewById(R.id.editText_emailRegister);
+        tilEmail = findViewById(R.id.til_email_register);
+        EmailRegister = findViewById(R.id.edit_text_email_register);
         EmailRegister.setText("example@gmail.com");
 
-        tilPassword = findViewById(R.id.til_password);
-        passwordRegister = findViewById(R.id.editText_passwordRegister);
+        tilPassword = findViewById(R.id.til_password_register);
+        passwordRegister = findViewById(R.id.edit_text_password_register);
         passwordRegister.setText("Abcd_1234");
 
-        buttonFacebook = findViewById(R.id.button_facebookRegister);
+        buttonFacebook = findViewById(R.id.button_facebook_register);
         buttonFacebook.setOnClickListener((evt) -> { onFacebookClick(); });
 
-        buttonGoogle = findViewById(R.id.button_googleRegister);
+        buttonGoogle = findViewById(R.id.button_google_register);
         buttonGoogle.setOnClickListener((evt) -> { onGoogleClick(); });
     }
 
@@ -55,6 +55,5 @@ public class RegisterUserActivity extends AppCompatActivity {
     private void onGoogleClick(){
 
     }
-
 
 }
