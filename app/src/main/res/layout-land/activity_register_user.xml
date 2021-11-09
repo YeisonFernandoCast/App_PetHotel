@@ -107,7 +107,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
             android:layout_marginBottom="@dimen/margin_8"
             android:text="@string/register_start_whit_social_network"/>
 
