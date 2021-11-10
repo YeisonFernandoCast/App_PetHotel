@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/window_padding_tips"
+    tools:context=".ActivityTwo">
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/logo_width_tips"
+        android:layout_height="@dimen/logo_height_tips"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:src="@mipmap/pets1" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="393dp"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:text="Los primeros momentos de los gatitos conforman una etapa de grandes cambios físicos y de comportamiento. Una nutrición adaptada a sus necesidades específicas para su desarrollo puede
+        ayudarlos a crecer y convertirse en gatos fuertes y saludables."
+        android:textAlignment="gravity"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/design_default_color_background"
+        android:onClick="Tipback"
+        android:text="@string/Tip_back"
+        android:textColor="@color/purple_500"
+        android:textAlignment="viewStart"
+        android:textSize="12dp" />
+</LinearLayout>

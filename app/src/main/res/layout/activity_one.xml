@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/window_padding_tips"
+    tools:context=".ActivityOne">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/logo_width_tips"
+        android:layout_height="@dimen/logo_height_tips"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:src="@mipmap/pets1" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="393dp"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:text="Tener a un perro implica una gran responsabilidad. Aunque los consejos para cuidar a tu mascota son sencillos, se debe saber que serán para el resto de su vida, por lo tanto, cuidar a tu perro, o a ese perro que pretendes adoptar, no es tarea fácil. Además de facilitarle las cosas básicas como son la comida, el agua, el veterinario o hacer ejercicio, hay otros consejos que son importantes para que tu mascota esté feliz y con una salud de hierro."
+        android:textAlignment="gravity"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/design_default_color_background"
+        android:onClick="Tipback"
+        android:text="@string/Tip_back"
+        android:textColor="@color/purple_500"
+        android:textAlignment="viewStart"
+        android:textSize="12dp" />
+
+</LinearLayout>
