@@ -12,4 +12,17 @@
     <string name="register_text_registro">Registro</string>
     <string name="register_sing_up_garden">Registrar una Guarderia</string>
     <string name="register_login">Login</string>
+
+    <string name="Tip_back">Regresar</string>
+    <string name="tip__name_one">Cuidados para tu Perro</string>
+    <string name="tip_name_two">Cuidados para tu Gato</string>
+    <string name="tip_name_three">Alimentos</string>
+    <string name="tip_name_four">Medicinas</string>
+    <string name="tip_name_five">Entretenimiento</string>
+    <string name="tip_3">Establecer hábitos de nutrición adecuados con tu mascota es una clave fundamental para ofrecerle una vida larga y saludable. De una buena nutrición depende que tu perro o gato tenga una alimentación completa y balanceada, que le aporte las vitaminas necesarias, un bello pelaje, evitará malos olores y le brindará buena masa muscular.</string>
+    <string name="tip_2">Los primeros momentos de los gatitos conforman una etapa de grandes cambios físicos y de comportamiento. Una nutrición adaptada a sus necesidades específicas para su desarrollo puede ayudarlos a crecer y convertirse en gatos fuertes y saludables.</string>
+    <string name="tip_1">Tener a un perro implica una gran responsabilidad. Aunque los consejos para cuidar a tu mascota son sencillos, se debe saber que serán para el resto de su vida, por lo tanto, cuidar a tu perro, o a ese perro que pretendes adoptar, no es tarea fácil. Además de facilitarle las cosas básicas como son la comida, el agua, el veterinario o hacer ejercicio, hay otros consejos que son importantes para que tu mascota esté feliz y con una salud de hierro.</string>
+    <string name="tip_4">Acostumbrar desde cachorro a la mascota a que ingiera los medicamentos en casa es una norma que se debe cumplir. Esconder la medicina en un alimento de su agrado, hacer seguimiento varios días, tomar la temperatura corporal, hace parte de la rutina que se debe tener con su mascota.</string>
+    <string name="tips_pets">TIPS PARA MASCOTAS</string>
+    <string name="tip_5">Es importante tener en cuenta que los accesorios para animales pueden ser divididos en dos grupos: los accesorios necesarios y los de entretenimiento. En primer lugar, podemos mencionar los collares, correas, camas y todos aquellos accesorios que realmente sean necesarios para el cuidado de nuestra mascota; en el segundo grupo los juguetes que prefieren las mascotas, tales como pelotas, huesos de hule, ruedas de ejercicio, y todo aquellos con lo que puedan divertirse.</string>
 </resources>

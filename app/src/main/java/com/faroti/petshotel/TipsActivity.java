@@ -1,6 +1,7 @@
 package com.faroti.petshotel;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,33 +10,62 @@ import android.view.View;
 
 public class TipsActivity extends AppCompatActivity {
 
+    AppCompatButton buttonTipOne;
+    AppCompatButton buttonTipTwo;
+    AppCompatButton buttonTipThree;
+    AppCompatButton buttonTipFour;
+    AppCompatButton buttonTipFive;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tips);
-    }
-    public void TipOne(View view){
-        Intent Tipone = new Intent(this, ActivityOne.class);
-        startActivity(Tipone);
+
+        initIU();
     }
 
-    public void TipTwo(View view){
-        Intent Tiptwo = new Intent(this, ActivityTwo.class);
-        startActivity(Tiptwo);
+
+    private void initIU() {
+
+        buttonTipOne = findViewById(R.id.button1_tip);
+        buttonTipOne.setOnClickListener((evt)-> onClickTipOne());
+
+        buttonTipTwo = findViewById(R.id.button2_tip);
+        buttonTipTwo.setOnClickListener((evt)-> onClickTipTwo());
+
+        buttonTipThree = findViewById(R.id.button3_tip);
+        buttonTipThree.setOnClickListener((evt)-> onClickTipThree());
+
+        buttonTipFour = findViewById(R.id.button4_tip);
+        buttonTipFour.setOnClickListener((evt)-> onClickTipFour());
+
+        buttonTipFive = findViewById(R.id.button5_tip);
+        buttonTipFive.setOnClickListener((evt)-> onClickTipFive());
     }
 
-    public void TipThree(View view){
-        Intent Tipthree = new Intent(this, ActivityThree.class);
-        startActivity(Tipthree);
+    private void onClickTipOne() {
+        Intent intent = new Intent(this, ActivityOne.class);
+        startActivity(intent);
     }
 
-    public void TipFour(View view){
-        Intent Tipfour = new Intent(this, ActivityFour.class);
-        startActivity(Tipfour);
+    private void onClickTipTwo() {
+        Intent intent = new Intent(this, ActivityTwo.class);
+        startActivity(intent);
     }
 
-    public void TipFive(View view){
-        Intent Tipfive = new Intent(this, ActivityFive.class);
-        startActivity(Tipfive);
+    private void onClickTipThree() {
+        Intent intent = new Intent(this, ActivityThree.class);
+        startActivity(intent);
     }
+
+    private void onClickTipFour() {
+        Intent intent = new Intent(this, ActivityFour.class);
+        startActivity(intent);
+    }
+
+    private void onClickTipFive() {
+        Intent intent = new Intent(this, ActivityFive.class);
+        startActivity(intent);
+    }
+
 }
