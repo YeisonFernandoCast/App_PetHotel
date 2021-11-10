@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/window_padding_tips"
+    tools:context=".ActivityThree">
+
+    <ImageView
+        android:id="@+id/iv_logo_tips"
+        android:contentDescription="@string/register_logo_descriptionApp"
+        android:layout_width="@dimen/logo_width_tips"
+        android:layout_height="@dimen/logo_height_tips"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:src="@mipmap/pets1" />
+
+
+    <TextView
+        android:id="@+id/text_view_tips"
+        android:layout_width="match_parent"
+        android:layout_height="393dp"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:text="@string/tip_3"
+        android:textAlignment="gravity"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_tips"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/design_default_color_background"
+        android:text="@string/Tip_back"
+        android:textColor="@color/red"
+        android:textAlignment="viewStart"
+        android:textSize="12sp" />
+</LinearLayout>

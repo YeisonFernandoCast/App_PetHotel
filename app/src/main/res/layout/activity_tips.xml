@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/window_padding_tips"
+    tools:context=".TipsActivity">
+
+    <ImageView
+        android:id="@+id/iv_logo_tips"
+        android:contentDescription="@string/register_logo_descriptionApp"
+        android:layout_width="@dimen/logo_width_tips"
+        android:layout_height="@dimen/logo_height_tips"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:src="@mipmap/pets1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_tittle_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tips_pets"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button1_tip"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:text="@string/tip__name_one"
+        android:background="@color/design_default_color_background"
+        android:textColor="@color/red"
+        android:textAlignment="viewStart"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2_tip"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:text="@string/tip_name_two"
+        android:background="@color/design_default_color_background"
+        android:textColor="@color/red"
+        android:textAlignment="viewStart"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3_tip"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:text="@string/tip_name_three"
+        android:background="@color/design_default_color_background"
+        android:textColor="@color/red"
+        android:textAlignment="viewStart"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button4_tip"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:text="@string/tip_name_four"
+        android:background="@color/design_default_color_background"
+        android:textColor="@color/red"
+        android:textAlignment="viewStart"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button5_tip"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:text="@string/tip_name_five"
+        android:background="@color/design_default_color_background"
+        android:textColor="@color/red"
+        android:textAlignment="viewStart"
+        android:textSize="16sp" />
+</LinearLayout>
