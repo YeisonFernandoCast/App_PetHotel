@@ -54,7 +54,7 @@ public class SearchContact extends AppCompatActivity {
     }
 
     private void onInitClick(){
-        Intent intent = new Intent(this, union_base_activity.class);
+        Intent intent = new Intent(this, InfoContact.class);
         startActivity(intent);
     }
 
