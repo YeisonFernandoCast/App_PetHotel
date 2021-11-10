@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="window_padding_tips">16dp</dimen>
     <dimen name ="window_paddingRegister">23dp</dimen>
 
     <dimen name ="logo_register_users">180dp</dimen>
     <dimen name ="logo_register">250dp</dimen>
+    <dimen name="logo_width_tips">130dp</dimen>
+    <dimen name="logo_height_tips">130dp</dimen>
 
     <dimen name ="margin_8">8dp</dimen>
     <dimen name ="margin_16">16dp</dimen>
@@ -18,5 +21,5 @@
 
     <dimen name ="margin_120">120dp</dimen>
     <dimen name ="margin_234">234dp</dimen>
-
+    <dimen name="small_margin_tips">8dp</dimen>
 </resources>
