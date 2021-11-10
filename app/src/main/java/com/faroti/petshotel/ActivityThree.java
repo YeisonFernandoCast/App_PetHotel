@@ -9,15 +9,15 @@ import android.os.Bundle;
 
 public class ActivityThree extends AppCompatActivity {
 
-    AppCompatButton buttonTipBack3;
+    AppCompatButton buttonTipBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_three);
 
-        buttonTipBack3 = findViewById(R.id.button_tips);
-        buttonTipBack3.setOnClickListener((evt) -> onButtonClick());
+        setContentView(R.layout.activity_three);
+        buttonTipBack = findViewById(R.id.button_tips);
+        buttonTipBack.setOnClickListener((evt) -> onButtonClick());
     }
 
     private void onButtonClick() {
