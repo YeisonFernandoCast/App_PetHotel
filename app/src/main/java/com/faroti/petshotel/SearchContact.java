@@ -11,8 +11,8 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class SearchContact extends AppCompatActivity {
 
-    ImageView ivInit;
-    ImageView ivOut;
+    ImageView ivInitContact;
+    ImageView ivOutContact;
     TextInputLayout tilSearch;
     TextInputEditText etSearch;
 
@@ -25,14 +25,14 @@ public class SearchContact extends AppCompatActivity {
     }
 
     private void initUI() {
-        ivInit = findViewById(R.id.iv_init);
-        ivOut = findViewById(R.id.iv_out);
+        ivInitContact = findViewById(R.id.iv_init);
+        ivOutContact = findViewById(R.id.iv_out);
 
         tilSearch = findViewById(R.id.til_search);
         etSearch = findViewById(R.id.et_search);
 
 
-        ivInit.setOnClickListener((evt) -> onInitClick());
+        ivInitContact.setOnClickListener((evt) -> onInitClick());
 
     }
 
