@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:padding="@dimen/window_padding"
+    android:padding="@dimen/window_padding_tips"
     tools:context=".TipsActivity">
 
     <ImageView
         android:id="@+id/iv_logo"
         android:contentDescription="Tips de la app"
-        android:layout_width="@dimen/logo_width"
-        android:layout_height="@dimen/logo_height"
+        android:layout_width="@dimen/logo_width_tips"
+        android:layout_height="@dimen/logo_height_tips"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:src="@mipmap/pets1" />

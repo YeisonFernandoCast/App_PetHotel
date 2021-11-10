@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="@dimen/window_padding"
+    android:padding="@dimen/window_padding_tips"
     tools:context=".ActivityTwo">
     <ImageView
         android:id="@+id/iv_logo"
-        android:layout_width="@dimen/logo_width"
-        android:layout_height="@dimen/logo_height"
+        android:layout_width="@dimen/logo_width_tips"
+        android:layout_height="@dimen/logo_height_tips"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin_tips"
         android:src="@mipmap/pets1" />
 
 
@@ -21,7 +21,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="393dp"
-        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin_tips"
         android:text="Los primeros momentos de los gatitos conforman una etapa de grandes cambios físicos y de comportamiento. Una nutrición adaptada a sus necesidades específicas para su desarrollo puede
         ayudarlos a crecer y convertirse en gatos fuertes y saludables."
         android:textAlignment="gravity"

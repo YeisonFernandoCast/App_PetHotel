@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="window_padding">16dp</dimen>
+    <dimen name="window_padding_tips">16dp</dimen>
 
-    <dimen name="logo_width">130dp</dimen>
-    <dimen name="logo_height">130dp</dimen>
+    <dimen name="logo_width_tips">130dp</dimen>
+    <dimen name="logo_height_tips">130dp</dimen>
 
-    <dimen name="small_margin">8dp</dimen>
+    <dimen name="small_margin_tips">8dp</dimen>
 
 
 </resources>

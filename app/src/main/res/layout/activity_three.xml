@@ -6,15 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="@dimen/window_padding"
+    android:padding="@dimen/window_padding_tips"
     tools:context=".ActivityThree">
 
     <ImageView
         android:id="@+id/iv_logo"
-        android:layout_width="@dimen/logo_width"
-        android:layout_height="@dimen/logo_height"
+        android:layout_width="@dimen/logo_width_tips"
+        android:layout_height="@dimen/logo_height_tips"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin_tips"
         android:src="@mipmap/pets1" />
 
 
@@ -22,7 +22,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="393dp"
-        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin_tips"
         android:text="Establecer hábitos de nutrición adecuados con tu mascota es una clave fundamental para ofrecerle una vida larga y saludable. De una buena nutrición depende que tu perro o gato tenga una alimentación completa y balanceada, que le aporte las vitaminas necesarias, un bello pelaje, evitará malos olores y le brindará buena masa muscular."
         android:textAlignment="gravity"
         android:textSize="20sp" />
