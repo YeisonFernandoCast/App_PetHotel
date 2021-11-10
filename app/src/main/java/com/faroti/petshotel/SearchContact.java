@@ -36,14 +36,10 @@ public class SearchContact extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
 
         appBar = findViewById(R.id.app_bar);
-        appBar.setNavigationOnClickListener(v ->drawerLayout.openDrawer(navigationDrawer));
+        appBar.setNavigationOnClickListener(v ->openDrawer());
 
         navigationDrawer = findViewById(R.id.navigation_drawer);
-        navigationDrawer.setNavigationItemSelectedListener(menuItem ->{
-            menuItem.setChecked(true);
-            drawerLayout.closeDrawer(navigationDrawer);
-            return true;
-        });
+        navigationDrawer.setNavigationItemSelectedListener(this::navigationitenSelected);
 
         ivInitContact = findViewById(R.id.iv_init);
         ivOutContact = findViewById(R.id.iv_out);
@@ -59,6 +55,16 @@ public class SearchContact extends AppCompatActivity {
     private void onInitClick(){
         Intent intent = new Intent(this, union_base_activity.class);
         startActivity(intent);
+    }
+
+    private void openDrawer(){
+        drawerLayout.openDrawer(navigationDrawer);
+    }
+
+    private boolean navigationitenSelected(MenuItem menuItem){
+        menuItem.setChecked(true);
+        drawerLayout.closeDrawer(navigationDrawer);
+        return true;
     }
 
 }
