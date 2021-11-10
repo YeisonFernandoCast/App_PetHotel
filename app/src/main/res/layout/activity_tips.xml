@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,7 +9,8 @@
     tools:context=".TipsActivity">
 
     <ImageView
-        android:id="@+id/iv_logo"
+        android:id="@+id/iv_logo_tips"
+        android:contentDescription="@string/register_logo_descriptionApp"
         android:layout_width="@dimen/logo_width_tips"
         android:layout_height="@dimen/logo_height_tips"
         android:layout_gravity="center"
@@ -18,73 +18,68 @@
         android:src="@mipmap/pets1" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_tittle"
+        android:id="@+id/tv_tittle_tip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TIPS PARA MASCOTAS"
+        android:text="@string/tips_pets"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button1"
+        android:id="@+id/button1_tip"
         android:layout_width="376dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/small_margin_tips"
-        android:onClick="TipOne"
-        android:text="@string/Tip_one"
+        android:text="@string/tip__name_one"
         android:background="@color/design_default_color_background"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/red"
         android:textAlignment="viewStart"
         android:textSize="16sp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button2"
+        android:id="@+id/button2_tip"
         android:layout_width="376dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/small_margin_tips"
-        android:onClick="TipTwo"
-        android:text="@string/Tip_two"
+        android:text="@string/tip_name_two"
         android:background="@color/design_default_color_background"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/red"
         android:textAlignment="viewStart"
         android:textSize="16sp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button3"
+        android:id="@+id/button3_tip"
         android:layout_width="376dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/small_margin_tips"
-        android:onClick="TipThree"
-        android:text="@string/Tip_three"
+        android:text="@string/tip_name_three"
         android:background="@color/design_default_color_background"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/red"
         android:textAlignment="viewStart"
         android:textSize="16sp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button4"
+        android:id="@+id/button4_tip"
         android:layout_width="376dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/small_margin_tips"
-        android:onClick="TipFour"
-        android:text="@string/Tip_four"
+        android:text="@string/tip_name_four"
         android:background="@color/design_default_color_background"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/red"
         android:textAlignment="viewStart"
         android:textSize="16sp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button5"
+        android:id="@+id/button5_tip"
         android:layout_width="376dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/small_margin_tips"
-        android:onClick="TipFive"
-        android:text="@string/Tip_five"
+        android:text="@string/tip_name_five"
         android:background="@color/design_default_color_background"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/red"
         android:textAlignment="viewStart"
         android:textSize="16sp" />
 </LinearLayout>
