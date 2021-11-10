@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
@@ -63,6 +64,7 @@ public class SearchContact extends AppCompatActivity {
 
     private boolean navigationitenSelected(MenuItem menuItem){
         menuItem.setChecked(true);
+        Toast.makeText(this, menuItem.getTitle(),Toast.LENGTH_SHORT).show();
         drawerLayout.closeDrawer(navigationDrawer);
         return true;
     }
