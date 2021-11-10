@@ -12,8 +12,5 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void Tiponeone(View view){
-        Intent Tiponeone = new Intent(this, TipsActivity.class);
-        startActivity(Tiponeone);
-    }
+
 }

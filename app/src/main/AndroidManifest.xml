@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetsHotel">
         <activity
+            android:name=".ActivityOne"
+            android:exported="false" />
+        <activity
             android:name=".ActivityFive"
             android:exported="false" />
         <activity

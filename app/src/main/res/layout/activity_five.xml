@@ -16,7 +16,7 @@
         android:layout_height="@dimen/logo_height"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/small_margin"
-        android:src="@mipmap/pets" />
+        android:src="@mipmap/pets1" />
 
     <TextView
         android:id="@+id/textView"
@@ -24,20 +24,19 @@
         android:layout_height="393dp"
         android:layout_marginTop="@dimen/small_margin"
         android:text="Es importante tener en cuenta que los accesorios para animales pueden ser
-        divididos en dos grupos: los accesorios necesarios y los de entretenimiento. En primer lugar,
-        podemos mencionar los collares, correas, camas y todos aquellos accesorios que realmente sean
-        necesarios para el cuidado de nuestra mascota; en el segundo grupo los juguetes que prefieren
-        las mascotas, tales como pelotas, huesos de hule, ruedas de ejercicio, y todo aquellos con lo que
-        puedan divertirse."
+        divididos en dos grupos: los accesorios necesarios y los de entretenimiento. En primer lugar, podemos mencionar los collares, correas, camas y todos aquellos accesorios que realmente sean necesarios para el cuidado de nuestra mascota; en el segundo grupo los juguetes que prefieren las mascotas, tales como pelotas, huesos de hule, ruedas de ejercicio, y todo aquellos con lo que puedan divertirse."
         android:textAlignment="gravity"
         android:textSize="20sp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
-        android:layout_width="205dp"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:onClick="Tiponeone"
-        android:text="@string/Tip_oneone"
+        android:background="@color/design_default_color_background"
+        android:onClick="Tipback"
+        android:text="@string/Tip_back"
+        android:textColor="@color/purple_500"
+        android:textAlignment="viewStart"
         android:textSize="12dp" />
 </LinearLayout>

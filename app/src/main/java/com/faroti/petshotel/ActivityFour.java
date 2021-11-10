@@ -13,8 +13,8 @@ public class ActivityFour extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_four);
     }
-    public void Tiponeone(View view){
-        Intent Tiponeone = new Intent(this, TipsActivity.class);
-        startActivity(Tiponeone);
+    public void Tipback(View view){
+        Intent Tipback = new Intent(this, TipsActivity.class);
+        startActivity(Tipback);
     }
 }

@@ -15,7 +15,7 @@
         android:layout_height="@dimen/logo_height"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/small_margin"
-        android:src="@mipmap/pets" />
+        android:src="@mipmap/pets1" />
 
 
     <TextView
@@ -23,19 +23,19 @@
         android:layout_width="match_parent"
         android:layout_height="393dp"
         android:layout_marginTop="@dimen/small_margin"
-        android:text="Establecer hábitos de nutrición adecuados con tu mascota es una clave
-        fundamental para ofrecerle una vida larga y saludable. De una buena nutrición depende
-        que tu perro o gato tenga una alimentación completa y balanceada, que le aporte las
-        vitaminas necesarias, un bello pelaje, evitará malos olores y le brindará buena masa muscular."
+        android:text="Establecer hábitos de nutrición adecuados con tu mascota es una clave fundamental para ofrecerle una vida larga y saludable. De una buena nutrición depende que tu perro o gato tenga una alimentación completa y balanceada, que le aporte las vitaminas necesarias, un bello pelaje, evitará malos olores y le brindará buena masa muscular."
         android:textAlignment="gravity"
         android:textSize="20sp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
-        android:layout_width="205dp"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:onClick="Tiponeone"
-        android:text="@string/Tip_oneone"
+        android:background="@color/design_default_color_background"
+        android:onClick="Tipback"
+        android:text="@string/Tip_back"
+        android:textColor="@color/purple_500"
+        android:textAlignment="viewStart"
         android:textSize="12dp" />
 </LinearLayout>
