@@ -28,10 +28,15 @@ public class union_base_activity extends AppCompatActivity {
         buttonTips.setOnClickListener((evt)-> onUnionTipsClick());
 
         buttonContact = findViewById(R.id.union_contact);
-        buttonContact.setOnClickListener((evt)-> onUnionTipsClick());
+        buttonContact.setOnClickListener((evt)-> onUnionContactClick());
 
         buttonRegister = findViewById(R.id.union_register);
         buttonRegister.setOnClickListener((evt)-> onUnionRegisterClick());
+    }
+
+    private void onUnionContactClick() {
+        Intent intent = new Intent(this, SearchContact.class);
+        startActivity(intent);
     }
 
     private void onUnionRegisterClick(){
