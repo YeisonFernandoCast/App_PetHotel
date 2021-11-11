@@ -6,7 +6,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
-//import com.bumptech.glide.Glide;
+import com.bumptech.glide.Glide;
 
 
 public class union_base_activity extends AppCompatActivity {
@@ -31,14 +31,14 @@ public class union_base_activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_union_base);
 
-        /*
+
         ImageView background = findViewById(R.id.background);
 
         Glide.with(this) // TODO -- revisar esto
                 .load(getImage("backgroud"))
-                .centercorp()
+                .centerCrop()
                 .into(background);
-                */
+
         initIU();
 
 
