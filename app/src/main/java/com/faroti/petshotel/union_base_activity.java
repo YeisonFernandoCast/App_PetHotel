@@ -31,24 +31,15 @@ public class union_base_activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_union_base);
 
-
-        ImageView background = findViewById(R.id.background);
+        background.findViewById(R.id.background);
 
         Glide.with(this) // TODO -- revisar esto
-                .load(getImage("backgroud"))
+                .load(R.mipmap.background)
                 .centerCrop()
                 .into(background);
 
         initIU();
 
-
-    }
-
-    public int getImage(String imageName) {
-        int mipmapResourceId = this.getResources().getIdentifier(imageName, "mipmap",
-                this.getPackageName());
-
-        return mipmapResourceId;
     }
 
     private void initIU() {
