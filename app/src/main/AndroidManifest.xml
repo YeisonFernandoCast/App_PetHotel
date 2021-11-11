@@ -14,7 +14,9 @@
             android:exported="false" />
         <activity
             android:name=".union_base_activity"
-            android:exported="true" >
+            android:exported="true">
+            <!-- android:theme="@android:style/Theme.NoTitleBar.Fullscreen" dentro de la
+            activity   <andriod theme.....>   -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
