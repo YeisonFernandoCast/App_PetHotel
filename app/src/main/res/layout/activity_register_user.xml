@@ -34,11 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_8"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:boxCornerRadiusBottomEnd="@dimen/margin_8"
-                app:boxCornerRadiusTopEnd="@dimen/margin_8"
-                app:boxCornerRadiusBottomStart="@dimen/margin_8"
-                app:boxCornerRadiusTopStart="@dimen/margin_8"
+                style="@style/boxRounded"
                 android:hint="@string/register_name">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_name_register"
@@ -52,11 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_16"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:boxCornerRadiusBottomEnd="@dimen/margin_8"
-                app:boxCornerRadiusTopEnd="@dimen/margin_8"
-                app:boxCornerRadiusBottomStart="@dimen/margin_8"
-                app:boxCornerRadiusTopStart="@dimen/margin_8"
+                style="@style/boxRounded"
                 android:hint="@string/register_cellphone">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_cellphone_register"
@@ -70,11 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_8"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:boxCornerRadiusBottomEnd="@dimen/margin_8"
-                app:boxCornerRadiusTopEnd="@dimen/margin_8"
-                app:boxCornerRadiusBottomStart="@dimen/margin_8"
-                app:boxCornerRadiusTopStart="@dimen/margin_8"
+                style="@style/boxRounded"
                 android:hint="@string/register_email">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_email_register"
@@ -88,12 +76,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_8"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                style="@style/boxRounded"
                 android:hint="@string/register_password"
-                app:boxCornerRadiusBottomEnd="@dimen/margin_8"
-                app:boxCornerRadiusTopEnd="@dimen/margin_8"
-                app:boxCornerRadiusBottomStart="@dimen/margin_8"
-                app:boxCornerRadiusTopStart="@dimen/margin_8"
                 app:endIconMode="password_toggle">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_password_register"
