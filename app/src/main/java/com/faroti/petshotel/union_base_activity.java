@@ -1,10 +1,14 @@
 package com.faroti.petshotel;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
-import android.content.Intent;
-import android.os.Bundle;
+import com.bumptech.glide.Glide;
+import java.time.Instant;
 
 
 public class union_base_activity extends AppCompatActivity {
@@ -12,14 +16,30 @@ public class union_base_activity extends AppCompatActivity {
     AppCompatButton buttonRegister;
     AppCompatButton buttonTips;
     AppCompatButton buttonContact;
-    AppCompatButton buttonPrueba;
+    ImageView background;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_union_base);
+
+
+        ImageView background = findViewById(R.id.background);
+
+        Glide.with(this) // TODO -- revisar esto
+                .load(getImage("backgroud"))
+                .centercorp()
+                .into(background);
         initIU();
 
+
+    }
+
+    public int getImage(String imageName) {
+        int mipmapResourceId = this.getResources().getIdentifier(imageName, "mipmap",
+                this.getPackageName());
+
+        return mipmapResourceId;
     }
 
     private void initIU() {

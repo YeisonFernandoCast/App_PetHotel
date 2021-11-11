@@ -7,6 +7,11 @@
     android:orientation="vertical"
     tools:context=".union_base_activity">
 
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/union_register"
         android:layout_width="match_parent"
