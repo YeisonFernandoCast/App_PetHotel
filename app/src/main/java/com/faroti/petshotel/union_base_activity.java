@@ -1,17 +1,15 @@
 package com.faroti.petshotel;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.WindowManager;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 //import com.bumptech.glide.Glide;
 
 
-public class union_base_activity extends Activity {
+public class union_base_activity extends AppCompatActivity {
     AppCompatButton buttonRegister;
     AppCompatButton buttonTips;
     AppCompatButton buttonContact;
@@ -20,10 +18,17 @@ public class union_base_activity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (Build.VERSION.SDK_INT > 16) {
+
+        /*if (Build.VERSION.SDK_INT > 16) {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        }
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN); //TODO -- no sirve con appcompatactivity
+                                                                 // se utilizan con extend Activity
+        }*/
+/*
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN); */ //TODO -- este tampoco
+
         setContentView(R.layout.activity_union_base);
 
         /*
