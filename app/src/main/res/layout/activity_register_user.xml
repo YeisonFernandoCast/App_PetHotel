@@ -27,7 +27,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/margin_8"
                 android:layout_marginBottom="@dimen/margin_16"
-                android:src="@mipmap/logo" />
+                android:src="@mipmap/pets1" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_name_register"
