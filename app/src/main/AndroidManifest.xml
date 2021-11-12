@@ -16,10 +16,6 @@
             android:name=".union_base_activity"
             android:exported="true"
             android:theme="@style/SplashTheme">
-            <!--         android:theme="@style/fullScreen" //TODO - funciona
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" //TODO - solo sirve con extend Activity
-                         dentro del > la activity
-            -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
