@@ -36,7 +36,7 @@ public class union_base_activity extends AppCompatActivity {
                 .load(R.mipmap.background)
                 .centerCrop()
                 .into(background);
-        hideSystemUI();
+        //hideSystemUI();
         initIU();
 
     }
