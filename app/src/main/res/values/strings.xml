@@ -31,4 +31,5 @@
     <string name="contacto_search_garden">Buscar cuidador:</string>
     <string name="contacto_location">Ubicación</string>
     <string name="out_contact">out</string>
+    <string name="client_image">cliente</string>
 </resources>
