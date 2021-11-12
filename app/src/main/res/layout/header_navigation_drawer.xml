@@ -34,7 +34,7 @@
             android:id="@+id/tv_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="petshotel@email.com" />
+            tools:text="petshotel@gmail.com" />
 
     </LinearLayout>
 

@@ -43,52 +43,45 @@ android:fitsSystemWindows="true">
         tools:context=".SearchContact"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <TextView
-            android:layout_width="@dimen/margin_150"
-            android:layout_height="@dimen/margin_40"
-            android:layout_gravity="center"
-            android:text="@string/contacto_search_garden"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            app:autoSizeTextType="uniform" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="@dimen/margin_8">
 
-            <ImageView
-                android:id="@+id/iv_init"
-                android:layout_width="@dimen/margin_24"
-                android:layout_height="@dimen/margin_24"
-                android:layout_gravity="start"
-                android:layout_marginTop="0dp"
-                android:layout_marginBottom="0dp"
-                android:contentDescription="@string/contacto_home"
-                android:src="@mipmap/ic_launcher_round"
-                app:srcCompat="@drawable/home_circle"
-                android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/iv_init"
+            android:layout_width="@dimen/margin_24"
+            android:layout_height="@dimen/margin_24"
+            android:layout_gravity="start"
+            android:contentDescription="@string/contacto_home"
+            app:srcCompat="@drawable/home_circle"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="@dimen/margin_150"
+            android:layout_height="@dimen/margin_32"
+            android:layout_gravity="center"
+            android:text="@string/contacto_search_garden"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:autoSizeTextType="uniform"
+            android:layout_weight="3"/>
+
+        <ImageView
+            android:id="@+id/iv_out"
+            android:layout_width="@dimen/margin_24"
+            android:layout_height="@dimen/margin_24"
+            android:layout_gravity="end"
+            app:srcCompat="@drawable/close_circle_outline"
+            android:layout_weight="1"/>
+        </LinearLayout>
 
             <TextView
                 android:layout_width="@dimen/margin_90"
                 android:layout_height="@dimen/margin_20"
                 android:text="@string/contacto_location"
                 android:textAlignment="center"
-                android:textColor="@color/red_dark"
-                android:layout_weight="3"/>
-
-            <ImageView
-                android:id="@+id/iv_out"
-                android:layout_width="@dimen/margin_24"
-                android:layout_height="@dimen/margin_24"
-                android:layout_gravity="end"
-                android:contentDescription="@string/out_contact"
-                android:src="@mipmap/ic_launcher_round"
-                app:srcCompat="@drawable/close_circle_outline"
-                android:layout_weight="1"/>
-
-        </LinearLayout>
+                android:textColor="@color/red_dark"/>
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -106,6 +99,31 @@ android:fitsSystemWindows="true">
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_payments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:text="@string/search_contact"
+        android:textSize="@dimen/text_important"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contact_search"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/margin_16"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginBottom="@dimen/margin_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_payments"
+        tools:listitem="@layout/item_contact_search" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -32,4 +32,6 @@
     <string name="contacto_location">Ubicación</string>
     <string name="out_contact">out</string>
     <string name="client_image">cliente</string>
+
+    <string name="search_contact">Cuidadores</string>
 </resources>
