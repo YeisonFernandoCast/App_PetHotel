@@ -3,8 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/JP/AndroidStudioProjects/PetsHotel/app/src/main/res/drawable/archive_marker.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/JP/AndroidStudioProjects/PetsHotel/app/src/main/res/drawable/archive_search.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/JP/AndroidStudioProjects/PetsHotel/app/src/main/res/drawable/close_circle_outline.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/JP/AndroidStudioProjects/PetsHotel/app/src/main/res/drawable/home_circle.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/JP/AndroidStudioProjects/PetsHotel/app/src/main/res/drawable/home_group_plus.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/JP/AndroidStudioProjects/PetsHotel/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/JP/AndroidStudioProjects/PetsHotel/app/src/main/res/drawable/ic_menu.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/JP/AndroidStudioProjects/PetsHotel/app/src/main/res/drawable/ic_tips.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/JP/AndroidStudioProjects/PetsHotel/app/src/main/res/drawable/ic_user.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/JP/AndroidStudioProjects/PetsHotel/app/src/main/res/drawable/notebook_multiple.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/JP/AndroidStudioProjects/PetsHotel/app/src/main/res/drawable/sticker_text.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/JP/AndroidStudioProjects/PetsHotel/app/src/main/res/layout/activity_info_contact.xml" value="0.2" />
         <entry key="..\:/Users/JP/AndroidStudioProjects/PetsHotel/app/src/main/res/layout/activity_search_contact.xml" value="0.1213768115942029" />
         <entry key="..\:/Users/JP/AndroidStudioProjects/PetsHotel/app/src/main/res/layout/header_navigation_drawer.xml" value="0.12454710144927536" />

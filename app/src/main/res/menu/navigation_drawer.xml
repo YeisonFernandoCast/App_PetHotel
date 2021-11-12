@@ -3,22 +3,22 @@
     <group
         android:id="@+id/group1"
         android:checkableBehavior="single">
-        <item
-            android:id="@+id/register"
-            android:icon="@drawable/ic_launcher_foreground"
-            android:title="Registrar"
-            android:checked="true" />
+
         <item
             android:id="@+id/user"
-            android:icon="@drawable/ic_launcher_foreground"
-            android:title="Usuarios" />
+            android:icon="@drawable/ic_user"
+            android:title="Mi Cuidador" />
         <item
             android:id="@+id/contact"
-            android:icon="@drawable/ic_launcher_foreground"
-            android:title="Contactos" />
+            android:icon="@drawable/ic_dog"
+            android:title="Mi cuenta" />
         <item
             android:id="@+id/tips"
-            android:icon="@drawable/ic_launcher_foreground"
+            android:icon="@drawable/ic_tips"
             android:title="Tips" />
+        <item
+            android:id="@+id/contact_us"
+            android:icon="@drawable/ic_contatc"
+            android:title="Contactenos" />
     </group>
 </menu>
