@@ -19,6 +19,7 @@ public class union_base_activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.fullScreen);
         super.onCreate(savedInstanceState);
 
         /*if (Build.VERSION.SDK_INT > 16) {
