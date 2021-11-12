@@ -14,8 +14,7 @@
             android:exported="false" />
         <activity
             android:name=".union_base_activity"
-            android:exported="true"
-            >
+            android:exported="true">
             <!--         android:theme="@style/fullScreen" //TODO - funciona
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" //TODO - solo sirve con extend Activity
                          dentro del > la activity
