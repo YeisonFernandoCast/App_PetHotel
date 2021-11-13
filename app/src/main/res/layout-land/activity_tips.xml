@@ -26,5 +26,60 @@
         android:textAlignment="center"
         android:textColor="@color/black" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button1_tip"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:text="@string/tip__name_one"
+        android:background="@color/design_default_color_background"
+        android:textColor="@color/red"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2_tip"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:text="@string/tip_name_two"
+        android:background="@color/design_default_color_background"
+        android:textColor="@color/red"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3_tip"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:text="@string/tip_name_three"
+        android:background="@color/design_default_color_background"
+        android:textColor="@color/red"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button4_tip"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:text="@string/tip_name_four"
+        android:background="@color/design_default_color_background"
+        android:textColor="@color/red"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button5_tip"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin_tips"
+        android:text="@string/tip_name_five"
+        android:background="@color/design_default_color_background"
+        android:textColor="@color/red"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"/>
+
 
 </LinearLayout>

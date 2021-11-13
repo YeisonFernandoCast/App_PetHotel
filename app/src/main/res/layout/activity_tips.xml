@@ -15,7 +15,7 @@
         android:layout_height="@dimen/logo_height_tips"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/small_margin_tips"
-        android:src="@mipmap/pets1" />
+        android:src="@mipmap/pets1"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_tittle_tip"
@@ -25,7 +25,8 @@
         android:text="@string/tips_pets"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textStyle="bold"/>
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -37,7 +38,7 @@
         android:background="@color/design_default_color_background"
         android:textColor="@color/red"
         android:textAlignment="viewStart"
-        android:textSize="16sp" />
+        android:textSize="16sp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button2_tip"
@@ -48,7 +49,7 @@
         android:background="@color/design_default_color_background"
         android:textColor="@color/red"
         android:textAlignment="viewStart"
-        android:textSize="16sp" />
+        android:textSize="16sp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button3_tip"
@@ -59,7 +60,7 @@
         android:background="@color/design_default_color_background"
         android:textColor="@color/red"
         android:textAlignment="viewStart"
-        android:textSize="16sp" />
+        android:textSize="16sp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button4_tip"
@@ -70,7 +71,7 @@
         android:background="@color/design_default_color_background"
         android:textColor="@color/red"
         android:textAlignment="viewStart"
-        android:textSize="16sp" />
+        android:textSize="16sp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button5_tip"
@@ -81,5 +82,5 @@
         android:background="@color/design_default_color_background"
         android:textColor="@color/red"
         android:textAlignment="viewStart"
-        android:textSize="16sp" />
+        android:textSize="16sp"/>
 </LinearLayout>
