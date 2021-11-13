@@ -35,23 +35,25 @@
         android:textAlignment="gravity"
         android:textSize="20sp" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_tips"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/design_default_color_background"
-        android:text="@string/Tip_back"
-        android:textColor="@color/red"
-        android:textAlignment="viewStart"
-        android:textSize="12sp" />
-    
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_16"
+        android:id="@+id/fab_back"
+        android:layout_width="@dimen/margin_56"
+        android:layout_height="@dimen/margin_56"
+        android:layout_margin="@dimen/margin_20"
         android:layout_marginBottom="@dimen/margin_16"
-        android:contentDescription="@string/Tip_back" />
+        android:contentDescription="@string/Tip_back"
+        android:src="@drawable/arrow_left_circle"
+        android:layout_gravity="bottom|end"
+        app:backgroundTint="@color/red_dark" />
+
+    <ImageView
+        android:id="@+id/iv_image_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginTop="-140dp"
+        android:layout_gravity=""
+        android:contentDescription="@string/register_logo_descriptionApp"
+        android:src="@mipmap/perro" />
     
         
     </LinearLayout>

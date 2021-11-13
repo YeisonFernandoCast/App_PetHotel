@@ -46,5 +46,15 @@
         android:layout_gravity="bottom|end"
         app:backgroundTint="@color/red_dark" />
 
+    <ImageView
+        android:id="@+id/iv_image_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginTop="-230dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/register_logo_descriptionApp"
+        android:src="@mipmap/alimento" />
+
+
 </LinearLayout>
 </androidx.core.widget.NestedScrollView>
