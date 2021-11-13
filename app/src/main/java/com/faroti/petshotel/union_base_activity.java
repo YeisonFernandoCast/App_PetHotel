@@ -19,7 +19,7 @@ public class union_base_activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.fullScreen);
+        setTheme(R.style.Theme_PetsHotel);
         super.onCreate(savedInstanceState);
 
 

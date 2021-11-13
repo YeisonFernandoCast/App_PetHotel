@@ -7,6 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".union_base_activity">
 
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="@string/app_name"
+
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
     <ImageView
         android:id="@+id/background"
         android:layout_width="match_parent"
@@ -31,50 +41,68 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.123" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/union_login"
         android:layout_width="@dimen/margin_100"
         android:layout_height="@dimen/margin_50"
         android:layout_marginTop="@dimen/margin_40"
         android:layout_marginStart="60dp"
         android:layout_marginBottom="200dp"
+        app:cornerRadius="@dimen/margin_80"
+        app:backgroundTint="@color/red"
+        app:rippleColor="@color/red_dark"
         android:text="@string/register_login"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/union_register"
         android:layout_width="@dimen/margin_100"
         android:layout_height="@dimen/margin_50"
         android:layout_marginTop="@dimen/margin_8"
         android:layout_marginStart="60dp"
         android:layout_marginBottom="140dp"
+        app:backgroundTint="@color/red"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        app:cornerRadius="@dimen/margin_80"
+        app:rippleColor="@color/red_dark"
         android:text="@string/register_text_registro"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/union_login" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/union_tips"
         android:layout_width="@dimen/margin_100"
         android:layout_height="@dimen/margin_50"
         android:layout_marginTop="@dimen/margin_8"
         android:layout_marginStart="60dp"
         android:layout_marginBottom="92dp"
+        app:backgroundTint="@color/red"
+        app:rippleColor="@color/red_dark"
+        app:cornerRadius="@dimen/margin_80"
         android:text="@string/tips"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/union_register" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/union_contact"
         android:layout_width="130dp"
         android:layout_height="@dimen/margin_50"
         android:layout_marginTop="@dimen/margin_8"
         android:layout_marginStart="60dp"
         android:layout_marginBottom="45dp"
+        android:backgroundTint="@color/red"
+        app:rippleColor="@color/red_dark"
+        app:cornerRadius="@dimen/margin_80"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:text="@string/contact_us"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/union_tips" />
