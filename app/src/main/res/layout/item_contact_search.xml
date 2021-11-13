@@ -36,13 +36,13 @@
                 android:layout_marginBottom="@dimen/small_margin"
                 android:textSize="@dimen/text_important"
                 android:textStyle="bold"
-                tools:text="Jose Fernando Pacheco" />
+                android:text="Jose Fernando Pacheco" />
 
             <TextView
                 android:id="@+id/tv_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Cra 1 # 2 -03" />
+                android:text="Cra 1 # 2 -03" />
         </LinearLayout>
     </LinearLayout>
 
