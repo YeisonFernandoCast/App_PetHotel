@@ -17,13 +17,13 @@
 
     <TextView
         android:id="@+id/title"
-        android:background="@drawable/botones_redondos"
+        android:background="@drawable/text_view_bordes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:gravity="center"
         android:text="@string/app_name"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="35sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
