@@ -5,7 +5,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -15,7 +16,6 @@
     tools:context=".ActivityOne">
 
 
-
     <ImageView
         android:id="@+id/iv_logo_tips"
         android:contentDescription="@string/register_logo_descriptionApp"
@@ -23,7 +23,7 @@
         android:layout_height="@dimen/logo_height_tips"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/small_margin_tips"
-        android:src="@mipmap/pets1" />
+        android:src="@mipmap/pets1"/>
 
 
     <TextView
@@ -35,16 +35,16 @@
         android:textAlignment="gravity"
         android:textSize="20sp" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_tips"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/design_default_color_background"
-        android:text="@string/Tip_back"
-        android:textColor="@color/red"
-        android:textAlignment="viewStart"
-        android:textSize="12sp" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_back"
+        android:layout_width="@dimen/margin_56"
+        android:layout_height="@dimen/margin_56"
+        android:layout_margin="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:contentDescription="@string/Tip_back"
+        android:src="@drawable/arrow_left_circle"
+        android:layout_gravity="bottom|end"
+        app:backgroundTint="@color/red_dark" />
 
-    </LinearLayout>
+</LinearLayout>
 </androidx.core.widget.NestedScrollView>

@@ -6,7 +6,6 @@ import androidx.appcompat.widget.AppCompatButton;
 import android.content.Intent;
 import android.os.Bundle;
 
-
 public class union_base_activity extends AppCompatActivity {
 
     AppCompatButton buttonRegister;
