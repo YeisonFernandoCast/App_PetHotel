@@ -55,5 +55,6 @@
         android:contentDescription="@string/register_logo_descriptionApp"
         android:src="@mipmap/medicicna" />
 
+
 </LinearLayout>
 </androidx.core.widget.NestedScrollView>

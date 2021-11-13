@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
@@ -16,6 +15,7 @@
     tools:context=".ActivityOne">
 
 
+
     <ImageView
         android:id="@+id/iv_logo_tips"
         android:contentDescription="@string/register_logo_descriptionApp"
@@ -23,15 +23,15 @@
         android:layout_height="@dimen/logo_height_tips"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/small_margin_tips"
-        android:src="@mipmap/pets1"/>
+        android:src="@mipmap/pets1" />
 
 
     <TextView
         android:id="@+id/text_view_tips"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="393dp"
         android:layout_marginTop="@dimen/small_margin_tips"
-        android:text="@string/tip_4"
+        android:text="@string/tip_1"
         android:textAlignment="gravity"
         android:textSize="20sp" />
 
@@ -50,10 +50,11 @@
         android:id="@+id/iv_image_tip"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
-        android:layout_marginTop="-230dp"
-        android:layout_gravity="center"
+        android:layout_marginTop="-140dp"
+        android:layout_gravity=""
         android:contentDescription="@string/register_logo_descriptionApp"
-        android:src="@mipmap/medicicna" />
-
-</LinearLayout>
+        android:src="@mipmap/perro" />
+    
+        
+    </LinearLayout>
 </androidx.core.widget.NestedScrollView>
