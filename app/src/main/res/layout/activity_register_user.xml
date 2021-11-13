@@ -23,22 +23,18 @@
                 android:id="@+id/logo_register"
                 android:contentDescription="@string/register_logo_descriptionApp"
                 android:layout_width="@dimen/logo_register_users"
+                android:layout_marginTop="@dimen/margin_16"
                 android:layout_height="@dimen/logo_register_users"
                 android:layout_gravity="center"
-                android:layout_marginTop="@dimen/margin_8"
-                android:layout_marginBottom="@dimen/margin_16"
-                android:src="@mipmap/pets1" />
+                android:src="@drawable/ic_pet_hotel_logo" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_name_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_8"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:boxCornerRadiusBottomEnd="@dimen/margin_8"
-                app:boxCornerRadiusTopEnd="@dimen/margin_8"
-                app:boxCornerRadiusBottomStart="@dimen/margin_8"
-                app:boxCornerRadiusTopStart="@dimen/margin_8"
+                style="@style/boxRounded"
+                app:startIconDrawable="@drawable/ic_account_user_circle"
                 android:hint="@string/register_name">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_name_register"
@@ -51,12 +47,9 @@
                 android:id="@+id/til_cellphone_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_16"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:boxCornerRadiusBottomEnd="@dimen/margin_8"
-                app:boxCornerRadiusTopEnd="@dimen/margin_8"
-                app:boxCornerRadiusBottomStart="@dimen/margin_8"
-                app:boxCornerRadiusTopStart="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                style="@style/boxRounded"
+                app:startIconDrawable="@drawable/ic_phone"
                 android:hint="@string/register_cellphone">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_cellphone_register"
@@ -70,11 +63,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_8"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:boxCornerRadiusBottomEnd="@dimen/margin_8"
-                app:boxCornerRadiusTopEnd="@dimen/margin_8"
-                app:boxCornerRadiusBottomStart="@dimen/margin_8"
-                app:boxCornerRadiusTopStart="@dimen/margin_8"
+                style="@style/boxRounded"
+                app:startIconDrawable="@drawable/email"
                 android:hint="@string/register_email">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_email_register"
@@ -88,12 +78,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_8"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                style="@style/boxRounded"
+                app:startIconDrawable="@drawable/ic_lock"
                 android:hint="@string/register_password"
-                app:boxCornerRadiusBottomEnd="@dimen/margin_8"
-                app:boxCornerRadiusTopEnd="@dimen/margin_8"
-                app:boxCornerRadiusBottomStart="@dimen/margin_8"
-                app:boxCornerRadiusTopStart="@dimen/margin_8"
                 app:endIconMode="password_toggle">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_password_register"

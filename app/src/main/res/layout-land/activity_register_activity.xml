@@ -15,7 +15,7 @@
         android:layout_height="@dimen/logo_register"
         android:layout_marginStart="32dp"
         android:contentDescription="@string/register_logo_descriptionApp"
-        android:src="@mipmap/pets1"
+        android:src="@drawable/ic_pet_hotel_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,44 +25,59 @@
         style="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
         android:text="@string/register_text_registro"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toEndOf="@+id/logo_register"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_go_to_register_user"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@color/white"
+        android:layout_marginTop="32dp"
+        app:rippleColor="@color/red"
+        app:icon="@drawable/ic_person"
+        app:iconGravity="textStart"
+        app:iconPadding="@dimen/margin_8"
+        app:cornerRadius="@dimen/margin_80"
+        app:iconTint="@color/white"
         android:text="@string/register_sign_up"
-        android:textColor="@color/red"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toEndOf="@+id/logo_register"
         app:layout_constraintTop_toBottomOf="@+id/title_register" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_go_to_register_garden"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_16"
-        android:background="@color/white"
+        android:layout_marginTop="24dp"
         android:text="@string/register_sing_up_garden"
-        android:textColor="@color/red"
+        android:textColor="@color/white"
+        app:cornerRadius="@dimen/margin_80"
+        app:icon="@drawable/ic_dog_sleep"
+        app:iconGravity="textStart"
+        app:iconPadding="@dimen/margin_8"
+        app:iconTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/logo_register"
-        app:layout_constraintTop_toBottomOf="@+id/button_go_to_register_user" />
+        app:layout_constraintTop_toBottomOf="@+id/button_go_to_register_user"
+        app:rippleColor="@color/red" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_register"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/register_login"
         android:textSize="12sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
