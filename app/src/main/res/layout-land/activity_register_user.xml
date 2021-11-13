@@ -42,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 style="@style/boxRounded"
+                app:startIconDrawable="@drawable/ic_account_user_circle"
                 android:hint="@string/register_name">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_name_register"
@@ -58,6 +59,7 @@
                 android:layout_marginStart="@dimen/margin_16"
                 android:layout_toEndOf="@+id/til_name_register"
                 style="@style/boxRounded"
+                app:startIconDrawable="@drawable/ic_phone"
                 android:hint="@string/register_cellphone">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_cellphone_register"
@@ -75,6 +77,7 @@
                 android:layout_below="@+id/til_name_register"
                 android:layout_marginTop="@dimen/margin_16"
                 style="@style/boxRounded"
+                app:startIconDrawable="@drawable/email"
                 android:hint="@string/register_email">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_email_register"
@@ -94,6 +97,7 @@
                 android:layout_marginStart="@dimen/margin_16"
                 android:layout_marginTop="@dimen/margin_16"
                 style="@style/boxRounded"
+                app:startIconDrawable="@drawable/ic_lock"
                 app:endIconMode="password_toggle"
                 android:hint="@string/register_password">
                 <com.google.android.material.textfield.TextInputEditText
