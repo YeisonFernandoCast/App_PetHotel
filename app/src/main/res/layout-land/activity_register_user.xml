@@ -21,12 +21,11 @@
         android:layout_width="@dimen/logo_register_users"
         android:layout_height="@dimen/logo_register_users"
         android:layout_gravity="center"
-        android:src="@mipmap/pets1" />
+        android:src="@drawable/ic_pet_hotel_logo" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_16"
         android:orientation="vertical"
         android:layout_gravity="center"
         android:layout_weight="1">
@@ -34,6 +33,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_32"
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -114,12 +114,12 @@
             android:textColor="@color/red"
             android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
             android:textSize="20sp"
+            android:layout_marginTop="@dimen/margin_16"
             android:layout_gravity="center"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_8"
             android:layout_marginBottom="@dimen/margin_8"
             android:text="@string/register_start_whit_social_network"/>
 
