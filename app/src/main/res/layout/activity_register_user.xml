@@ -49,6 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_8"
                 style="@style/boxRounded"
+                app:startIconDrawable="@drawable/ic_phone"
                 android:hint="@string/register_cellphone">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_cellphone_register"
