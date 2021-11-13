@@ -107,7 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/whatsapp_color"
-                android:text="WhatsApp"
+                android:text="@string/whatsapp"
                 android:textColor="?attr/colorOnPrimary" />
 
         </LinearLayout>
