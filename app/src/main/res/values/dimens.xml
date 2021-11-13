@@ -24,10 +24,11 @@
     <dimen name="small_margin_tips">8dp</dimen>
 
     <dimen name ="margin_150">150dp</dimen>
+    <dimen name ="margin_200">200dp</dimen>
     <dimen name ="margin_90">90dp</dimen>
     <dimen name ="margin_20">20dp</dimen>
 
-    <dimen name="text_important">18sp</dimen>
+    <dimen name="text_important">20sp</dimen>
     <dimen name="card_elevation">8dp</dimen>
     <dimen name="payments_image_width">48dp</dimen>
     <dimen name="payments_image_height">48dp</dimen>
