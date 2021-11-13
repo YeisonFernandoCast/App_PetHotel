@@ -72,6 +72,7 @@ android:fitsSystemWindows="true">
             android:layout_height="@dimen/margin_24"
             app:srcCompat="@drawable/close_circle_outline"
             android:layout_weight="1"/>
+
         </LinearLayout>
 
             <TextView
@@ -87,41 +88,49 @@ android:fitsSystemWindows="true">
             style="@style/Widget.Design.TextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_16"
-            android:hint="@string/contacto_search_garden"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:hint="@string/contacto_search"
             app:startIconDrawable="@drawable/ic_search">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".SearchContact">
+
+
+            <TextView
+                android:id="@+id/tv_contact_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:text="@string/search_contact"
+                android:textSize="@dimen/text_important"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_search_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:listitem="@layout/item_contact_search" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/tv_payments"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/margin_16"
-        android:layout_marginTop="@dimen/margin_16"
-        android:text="@string/search_contact"
-        android:textSize="@dimen/text_important"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/contact_search"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginHorizontal="@dimen/margin_16"
-        android:layout_marginTop="@dimen/small_margin"
-        android:layout_marginBottom="@dimen/margin_16"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_payments"
-        tools:listitem="@layout/item_contact_search" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
