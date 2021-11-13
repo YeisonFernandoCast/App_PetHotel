@@ -10,11 +10,13 @@
     tools:context=".RegisterActivity"
     android:orientation="vertical">
 
+
     <ImageView
         android:id="@+id/logo_register"
         android:layout_width="@dimen/logo_register"
         android:layout_height="@dimen/logo_register"
         android:layout_gravity="center"
+        android:layout_marginTop="56dp"
         android:contentDescription="@string/register_logo_descriptionApp"
         android:src="@drawable/ic_pet_hotel_logo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,37 +33,33 @@
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_register"
-        android:layout_marginTop="@dimen/margin_8"/>
-
+        app:layout_constraintTop_toBottomOf="@+id/logo_register" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_go_to_register_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="44dp"
         android:background="@drawable/botones_redondos"
         android:text="@string/register_sign_up"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_register"
-        android:layout_marginTop="@dimen/margin_24"/>
-
+        app:layout_constraintTop_toBottomOf="@+id/title_register" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_go_to_register_garden"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="28dp"
         android:background="@drawable/botones_redondos"
         android:text="@string/register_sing_up_garden"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_go_to_register_user"
-        android:layout_marginTop="@dimen/margin_16"/>
-
+        app:layout_constraintTop_toBottomOf="@+id/button_go_to_register_user" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_register"
