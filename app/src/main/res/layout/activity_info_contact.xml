@@ -35,7 +35,7 @@
         <!-- Screen content -->
         <!-- Use app:layout_behavior="@string/appbar_scrolling_view_behavior" to fit below top app bar -->
         <!-- Inicio del código -->
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
@@ -52,7 +52,7 @@
             android:layout_height="@dimen/margin_180"
             android:layout_gravity="center"
             android:contentDescription="@string/client_image"
-            android:src="@drawable/ic_account_circle"
+
             app:srcCompat="@mipmap/pets1" />
 
         <LinearLayout
@@ -68,44 +68,44 @@
                 android:layout_marginBottom="@dimen/small_margin"
                 android:textSize="@dimen/text_important"
                 android:textStyle="bold"
-                tools:text="Jose Fernando Pacheco" />
+                android:text="Jose Fernando Pacheco" />
 
             <TextView
                 android:id="@+id/tv_identification"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="C.C. 12.345.678" />
+                android:text="C.C. 12.345.678" />
 
             <TextView
                 android:id="@+id/tv_direction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Cra 12 # 34 - 56" />
+                android:text="Cra 12 # 34 - 56" />
 
             <TextView
                 android:id="@+id/tv_location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Barrio: Lago 2" />
+                android:text="Barrio: Lago 2" />
 
             <TextView
                 android:id="@+id/tv_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Número de Teléfono: 3005478965" />
+                android:text="Número de Teléfono: 3005478965" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="pet´shotel@gmail.com" />
+                android:text="pet´shotel@gmail.com" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_whatsapp"
                 style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:background="@color/whatsapp_color"
                 android:text="@string/whatsapp"
                 android:textColor="?attr/colorOnPrimary" />
@@ -113,16 +113,18 @@
         </LinearLayout>
     </LinearLayout>
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_descrip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descripción:"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_descrip"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="Descripción:" />
+
 
         <!-- Fin del código -->
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
