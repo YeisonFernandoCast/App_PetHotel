@@ -22,11 +22,6 @@ public class union_base_activity extends AppCompatActivity {
         setTheme(R.style.fullScreen);
         super.onCreate(savedInstanceState);
 
-        /*if (Build.VERSION.SDK_INT > 16) {
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                    WindowManager.LayoutParams.FLAG_FULLSCREEN); //TODO -- no sirve con appcompatactivity
-                                                                 // se utilizan con extend Activity
-        }*/
 
         setContentView(R.layout.activity_union_base);
 
