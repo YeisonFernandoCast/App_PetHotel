@@ -33,16 +33,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_register" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_go_to_register_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginTop="44dp"
-        android:background="@drawable/botones_redondos"
-        android:drawableStart="@drawable/ic_person"
-        android:paddingEnd="90dp"
-        android:paddingStart="45dp"
+        app:icon="@drawable/ic_person"
+        app:iconGravity="textStart"
+        app:cornerRadius="80dp"
+        app:iconPadding="@dimen/margin_8"
+        android:backgroundTint="@color/red_dark"
         android:text="@string/register_sign_up"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
