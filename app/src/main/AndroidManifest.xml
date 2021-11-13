@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.faroti.petshotel" >
+    package="com.faroti.petshotel">
 
     <application
         android:allowBackup="true"
@@ -8,10 +8,7 @@
         android:label="Pet&apos;s Hotel"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PetsHotel" >
-        <activity
-            android:name=".InfoContact"
-            android:exported="false" />
+        android:theme="@style/Theme.PetsHotel">
         <activity
             android:name=".union_base_activity"
             android:exported="true"
@@ -22,6 +19,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegisterUserActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TipsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".InfoContact"
+            android:exported="false" />
+        <activity
+            android:name=".SearchContact"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
         <activity
             android:name=".ActivityOne"
             android:exported="false" />
@@ -37,21 +55,8 @@
         <activity
             android:name=".ActivityFive"
             android:exported="false" />
-        <activity
-            android:name=".TipsActivity"
-            android:exported="true" />
-        <activity
-            android:name=".SearchContact"
-            android:exported="true" />
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="true" />
-        <activity
-            android:name=".RegisterUserActivity"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
+
+
     </application>
 
 </manifest>
