@@ -109,5 +109,5 @@
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/small_margin_tips"
         android:contentDescription="@string/register_logo_descriptionApp"
-        android:src="@mipmap/perro_gato" />
+        android:src="@mipmap/perro_gato"/>
 </LinearLayout>
