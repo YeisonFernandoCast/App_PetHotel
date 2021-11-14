@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -12,11 +13,10 @@
         android:layout_width="@dimen/logo_register_users"
         android:layout_height="@dimen/logo_register_users"
         android:layout_gravity="center"
-        android:layout_marginTop="72dp"
+        android:layout_marginStart="44dp"
         android:contentDescription="@string/register_logo_descriptionApp"
         android:src="@drawable/ic_pet_hotel_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,19 +25,20 @@
         style="@style/boxRounded"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_234"
+        android:layout_marginTop="36dp"
         android:hint="@string/register_email"
         app:boxCornerRadiusBottomEnd="@dimen/margin_8"
         app:boxCornerRadiusBottomStart="@dimen/margin_8"
-        android:layout_marginTop="@dimen/margin_16"
-        app:startIconDrawable="@drawable/email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_login">
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/email">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_email_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -45,6 +46,7 @@
         style="@style/boxRounded"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_234"
         android:layout_marginTop="@dimen/margin_16"
         android:hint="@string/register_password"
         app:endIconMode="password_toggle"
@@ -65,49 +67,49 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/margin_32"
+        android:layout_marginBottom="128dp"
         android:text="@string/login_sign_in"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
         android:textColor="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/til_password_login" />
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/appCompatTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="410dp"
         android:layout_marginTop="@dimen/margin_16"
         android:text="@string/register_start_whit_social_network"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_sign_in_login" />
+        app:layout_constraintTop_toBottomOf="@+id/til_password_login" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_google_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="108dp"
         android:background="@color/google_color"
         android:text="@string/register_google"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.387"
-        app:layout_constraintStart_toEndOf="@+id/button_facebook_login" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_facebook_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="108dp"
         android:background="@color/facebook_color"
         android:text="@string/register_facebook"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
