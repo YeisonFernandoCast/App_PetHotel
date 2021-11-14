@@ -10,7 +10,6 @@ import androidx.appcompat.widget.AppCompatButton;
 
 import com.bumptech.glide.Glide;
 
-
 public class union_base_activity extends AppCompatActivity {
     AppCompatButton buttonRegister;
     AppCompatButton buttonTips;
