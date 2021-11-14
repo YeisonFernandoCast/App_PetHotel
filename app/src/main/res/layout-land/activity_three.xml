@@ -23,7 +23,7 @@
         android:layout_height="@dimen/logo_height_tips"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/small_margin_tips"
-        android:src="@mipmap/pets1"/>
+        android:src="@drawable/ic_pet_hotel_logo" />
 
 
     <TextView
