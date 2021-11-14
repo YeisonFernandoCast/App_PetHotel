@@ -7,10 +7,13 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import com.google.android.material.button.MaterialButton;
+
 public class RegisterActivity extends AppCompatActivity {
 
 
-    AppCompatButton buttonRegisterUser;
+    MaterialButton buttonRegisterUser;
+    AppCompatButton buttonGoToLogin;
 
 
 
@@ -19,8 +22,20 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_activity);
 
+        initIU();
+    }
+
+    private void initIU() {
         buttonRegisterUser = findViewById(R.id.button_go_to_register_user);
         buttonRegisterUser.setOnClickListener((evt) -> onRegisterUserClick());
+
+        buttonGoToLogin = findViewById(R.id.login_register);
+        buttonGoToLogin.setOnClickListener((evt) -> onLoginClick());
+    }
+
+    private void onLoginClick() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
     private void onRegisterUserClick(){
