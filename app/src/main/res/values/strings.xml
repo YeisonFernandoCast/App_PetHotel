@@ -5,7 +5,7 @@
     <string name="register_password">Contraseña</string>
     <string name="register_facebook">Facebook</string>
     <string name="register_google">Google</string>
-    <string name="register_start_whit_social_network">O ingresé con su red social:</string>
+    <string name="register_start_whit_social_network">O ingrese con su red social:</string>
     <string name="register_sign_up">Registrarme</string>
     <string name="register_cellphone">Teléfono</string>
     <string name="register_name">Nombre de Usuario</string>
