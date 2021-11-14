@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pet\'s Hotel</string>
+    <string name="app_name">Pet Hotel</string>
     <string name="register_logo_descriptionApp">Logo de la aplicación</string>
     <string name="register_email">Correo Electrónico</string>
     <string name="register_password">Contraseña</string>
@@ -40,6 +40,7 @@
     <string name="search_contact">Cuidadores</string>
     <string name="whatsapp">WhatsApp</string>
     <string name="login_sign_in">Iniciar Sesión</string>
+    <string name="register_here">Registrese Aqui</string>
 
 
 </resources>
