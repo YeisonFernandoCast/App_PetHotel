@@ -15,7 +15,10 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <!--Menú Hamburguesa. -->
         <item name="android:windowTranslucentStatus">true</item>
+
     </style>
 
     <style name="fullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
