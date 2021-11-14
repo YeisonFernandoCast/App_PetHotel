@@ -57,16 +57,6 @@ public class union_base_activity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
     private void initIU() {
 
         buttonTips = findViewById(R.id.union_tips);
