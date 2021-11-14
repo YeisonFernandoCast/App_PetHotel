@@ -36,5 +36,10 @@
     <string name="contact_us">Contactenos</string>
     <string name="background_description">background de la aplicacion</string>
     <string name="tips">Tips</string>
+    <string name="client_image">cliente</string>
+    <string name="search_contact">Cuidadores</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="login_sign_in">Iniciar Sesión</string>
+
 
 </resources>
