@@ -76,6 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:text="@string/register_login"
+        android:textColor="@color/red"
         android:textSize="12sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"

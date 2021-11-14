@@ -14,6 +14,7 @@ public class union_base_activity extends AppCompatActivity {
     AppCompatButton buttonRegister;
     AppCompatButton buttonTips;
     AppCompatButton buttonContact;
+    AppCompatButton buttonLogin;
     ImageView background;
 
     @Override
@@ -54,9 +55,6 @@ public class union_base_activity extends AppCompatActivity {
         // Hide the nav bar and status bar
     }
 
-
-
-
     private void initIU() {
 
         buttonTips = findViewById(R.id.union_tips);
@@ -67,6 +65,14 @@ public class union_base_activity extends AppCompatActivity {
 
         buttonRegister = findViewById(R.id.union_register);
         buttonRegister.setOnClickListener((evt)-> onUnionRegisterClick());
+
+        buttonLogin = findViewById(R.id.union_login);
+        buttonLogin.setOnClickListener((evt)-> onUnionLoginClick());
+    }
+
+    private void onUnionLoginClick() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
     private void onUnionContactClick() {
