@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".union_base_activity">
+    tools:context=".view.union_base_activity">
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="70dp"

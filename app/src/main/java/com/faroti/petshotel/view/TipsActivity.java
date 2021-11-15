@@ -1,10 +1,12 @@
-package com.faroti.petshotel;
+package com.faroti.petshotel.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.faroti.petshotel.R;
 
 
 public class TipsActivity extends AppCompatActivity {

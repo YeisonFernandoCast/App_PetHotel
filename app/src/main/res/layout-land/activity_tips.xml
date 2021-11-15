@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:padding="@dimen/window_padding_tips"
-    tools:context=".TipsActivity">
+    tools:context=".view.TipsActivity">
 
     <ImageView
         android:id="@+id/iv_logo"
