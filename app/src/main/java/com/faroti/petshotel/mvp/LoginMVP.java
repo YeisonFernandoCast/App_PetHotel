@@ -4,6 +4,7 @@ public interface LoginMVP {
 
     interface Model {
 
+        boolean validateCredentials(String email, String password);
     }
 
     interface Presenter {
