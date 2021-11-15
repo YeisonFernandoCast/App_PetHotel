@@ -20,5 +20,9 @@
             android:id="@+id/contact_us"
             android:icon="@drawable/ic_contatc"
             android:title="Contactenos" />
+        <item
+            android:id="@+id/close"
+            android:icon="@drawable/ic_contatc"
+            android:title="Cerrar Sesión" />
     </group>
 </menu>

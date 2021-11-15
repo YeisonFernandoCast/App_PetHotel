@@ -73,7 +73,7 @@
                     android:backgroundTint="@color/red_dark"
                     app:iconGravity="textStart"
                     android:text="@string/app_name"
-                    app:icon="@drawable/arrow_left_circle"
+                    app:icon="@drawable/ic_back_arrow_left_circle"
                     app:cornerRadius="@dimen/margin_100"
                     app:iconTint="@color/white"
                     android:layout_gravity="center_vertical"/>

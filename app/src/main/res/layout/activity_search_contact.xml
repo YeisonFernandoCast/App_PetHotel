@@ -27,7 +27,7 @@ android:fitsSystemWindows="true">
         app:title="@string/app_name"
         app:navigationIcon="@drawable/ic_menu"
         style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
-        android:background="@android:color/transparent"
+        app:titleTextColor="@color/white"
         android:elevation="0dp" />
 
 </com.google.android.material.appbar.AppBarLayout>
@@ -54,7 +54,7 @@ android:fitsSystemWindows="true">
             android:layout_width="@dimen/margin_24"
             android:layout_height="@dimen/margin_24"
             android:contentDescription="@string/contacto_home"
-            app:srcCompat="@drawable/home_circle"
+            app:srcCompat="@drawable/ic_home_circle"
             android:layout_weight="1"/>
         <TextView
             android:layout_width="@dimen/margin_150"
@@ -69,20 +69,13 @@ android:fitsSystemWindows="true">
 
         <ImageView
             android:id="@+id/iv_out"
+            android:contentDescription="TODO"
             android:layout_width="@dimen/margin_24"
             android:layout_height="@dimen/margin_24"
-            app:srcCompat="@drawable/close_circle_outline"
+            app:srcCompat="@drawable/ic_close_circle_outline"
             android:layout_weight="1"/>
 
         </LinearLayout>
-
-            <TextView
-                android:layout_width="@dimen/margin_90"
-                android:layout_height="@dimen/margin_20"
-                android:text="@string/contacto_location"
-                android:textAlignment="center"
-                android:textColor="@color/red_dark"/>
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_search"
@@ -101,7 +94,7 @@ android:fitsSystemWindows="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             tools:context=".SearchContact">
 
@@ -110,8 +103,7 @@ android:fitsSystemWindows="true">
                 android:id="@+id/tv_contact_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/margin_16"
-                android:layout_marginTop="@dimen/margin_16"
+                android:gravity="center"
                 android:text="@string/search_contact"
                 android:textSize="@dimen/text_important"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -122,17 +114,14 @@ android:fitsSystemWindows="true">
                 android:id="@+id/rv_search_contact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/margin_16"
-                android:layout_marginBottom="@dimen/margin_16"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="@dimen/margin_8"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_contact_search"
                 tools:listitem="@layout/item_contact_search" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </LinearLayout>
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
@@ -143,7 +132,6 @@ android:fitsSystemWindows="true">
     android:layout_gravity="start"
     app:menu="@menu/navigation_drawer"
     app:headerLayout="@layout/header_navigation_drawer"/>
-
-    </androidx.drawerlayout.widget.DrawerLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
 
 

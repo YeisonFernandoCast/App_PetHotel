@@ -29,7 +29,7 @@
         app:boxCornerRadiusBottomEnd="@dimen/margin_8"
         app:boxCornerRadiusBottomStart="@dimen/margin_8"
         android:layout_marginTop="@dimen/margin_16"
-        app:startIconDrawable="@drawable/email"
+        app:startIconDrawable="@drawable/ic_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_login">
