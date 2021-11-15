@@ -63,7 +63,6 @@
         android:layout_gravity="center_vertical"
         android:layout_marginTop="36dp"
         android:backgroundTint="@color/red_dark"
-        android:text="@string/app_name"
         app:cornerRadius="@dimen/margin_100"
         app:icon="@drawable/arrow_left_circle"
         app:iconGravity="textStart"
