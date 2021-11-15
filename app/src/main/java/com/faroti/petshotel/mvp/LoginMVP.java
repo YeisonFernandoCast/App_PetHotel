@@ -4,7 +4,12 @@ public interface LoginMVP {
 
     interface Model {
 
-        boolean validateCredentials(String email, String password);
+        void validateCredentials(String email, String password, ValidateCredentialsCallback callback);
+
+        interface ValidateCredentialsCallback{
+            void onSuccess();
+            void onFailure(String error);
+        }
     }
 
     interface Presenter {

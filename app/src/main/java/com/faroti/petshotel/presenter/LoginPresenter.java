@@ -38,14 +38,20 @@ public class LoginPresenter implements LoginMVP.Presenter{
                 error = true;
             }
             if(!error){
-                if(model.validateCredentials(
-                        loginInfo.getEmail().trim(),
-                        loginInfo.getPassword().trim())){
-                    view.openSearchContactActivity();
-                }else {
-                    view.showGeneralError("Credenciales invalidas");
-                }
+                // Validar que el usuario/contraseña sean correctos
+                model.validateCredentials(loginInfo.getEmail().trim(),
+                        loginInfo.getPassword().trim(),
+                        new LoginMVP.Model.ValidateCredentialsCallback(){
+                            @Override
+                            public void onSuccess() {
+                                view.openSearchContactActivity();
+                            }
 
+                            @Override
+                            public void onFailure(String error) {
+                                view.showGeneralError(error);
+                            }
+                });
             }
     }
     //TODO VALIDAR USER

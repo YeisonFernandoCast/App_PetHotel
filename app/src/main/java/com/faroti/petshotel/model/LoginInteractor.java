@@ -16,12 +16,21 @@ public class LoginInteractor implements LoginMVP.Model {
         users.put("johan@gmail.com","12345678");
     }
 
+
     @Override
-    public boolean validateCredentials(String email, String password) {
-        if (users.get(email) != null
-                && users.get(email).equals(password)){
-            return true;
+    public void validateCredentials(String email, String password, ValidateCredentialsCallback callback) {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-        return false;
+        if (users.get(email) == null){
+            callback.onFailure("Usuario no existe");
+        } else if (!users.get(email).equals(password)){
+            callback.onFailure("Contraseña incorrecta");
+        } else {
+            callback.onSuccess();
+        }
+
     }
 }
