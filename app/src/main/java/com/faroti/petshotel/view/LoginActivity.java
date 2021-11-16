@@ -105,10 +105,16 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
     @Override
     public void startWaiting() {
         piWaitingLogin.setVisibility(View.VISIBLE);
+        buttonSingLogin.setEnabled(false);
+        buttonFacebook.setEnabled(false);
+        buttonGoogle.setEnabled(false);
     }
 
     @Override
     public void stopWaiting() {
         piWaitingLogin.setVisibility(View.GONE);
+        buttonSingLogin.setEnabled(true);
+        buttonFacebook.setEnabled(true);
+        buttonGoogle.setEnabled(true);
     }
 }
