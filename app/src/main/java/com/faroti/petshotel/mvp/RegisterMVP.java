@@ -16,7 +16,7 @@ public interface RegisterMVP {
         RegisterInfo getRegisterInfo();
         void showEmailError(String error);
         void showPasswordError (String error);
-        void showGeneralMessage(String error);
+        void showGeneralError(String error);
         void clearData();
         void openNewActivity();
 

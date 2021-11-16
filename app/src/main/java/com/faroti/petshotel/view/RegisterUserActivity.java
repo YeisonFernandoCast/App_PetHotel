@@ -76,7 +76,7 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
     }
 
     @Override
-    public void showGeneralMessage(String error) {
+    public void showGeneralError(String error) {
         Toast.makeText(RegisterUserActivity.this,error, Toast.LENGTH_SHORT).show();
     }
 

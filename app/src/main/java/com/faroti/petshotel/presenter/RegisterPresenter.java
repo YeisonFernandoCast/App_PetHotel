@@ -16,18 +16,44 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
 
     @Override
     public void RegisterWithEmail() {
-        RegisterMVP.RegisterInfo registerInfo = view.getRegisterInfo();
+        boolean error = false;
+        view.showEmailError("");
+        view.showPasswordError("");
 
+        RegisterMVP.RegisterInfo registerInfo = view.getRegisterInfo();
         if(registerInfo.getEmail().trim().isEmpty()){
             view.showEmailError("Correo Electrónico es obligatorio");
+            error = true;
+        } else if (isEmailValid(registerInfo.getEmail().trim())) {
+            view.showEmailError("Correo Electrónico invalido");
+            error = true;
         }
+
         if(registerInfo.getPassword().trim().isEmpty()){
             view.showPasswordError("Contraseña es obligatoria");
+            error = true;
+        } else if (!isPasswordValid(registerInfo.getPassword().trim())) {
+            view.showPasswordError("Contraseña no cumple cricterio de seguridad");
+            error = true;
         }
 
+        if(!error) {
+            view.openNewActivity();
+        }else {
+            view.showGeneralError("Verifique los datos");
+        }
     }
 
-        @Override
+
+    private boolean isEmailValid(String email) {
+        return email.contains("@") && email.endsWith(".com");
+    }
+
+    private boolean isPasswordValid(String password) {
+        return password.length() > 8;
+    }
+
+    @Override
     public void RegisterWithFacebook() {
 
     }
