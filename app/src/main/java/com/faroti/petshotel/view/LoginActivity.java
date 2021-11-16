@@ -89,4 +89,14 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
         Intent intent = new Intent(this, SearchContact.class);
         startActivity(intent);
     }
+
+    @Override
+    public void startWaiting() {
+
+    }
+
+    @Override
+    public void stopWaiting() {
+
+    }
 }

@@ -38,20 +38,27 @@ public class LoginPresenter implements LoginMVP.Presenter{
                 error = true;
             }
             if(!error){
+                view.startWaiting();
                 // Validar que el usuario/contraseña sean correctos
-                model.validateCredentials(loginInfo.getEmail().trim(),
-                        loginInfo.getPassword().trim(),
-                        new LoginMVP.Model.ValidateCredentialsCallback(){
-                            @Override
-                            public void onSuccess() {
-                                view.openSearchContactActivity();
-                            }
+                new Thread(() ->{
+                    model.validateCredentials(loginInfo.getEmail().trim(),
+                            loginInfo.getPassword().trim(),
+                            new LoginMVP.Model.ValidateCredentialsCallback(){
+                                @Override
+                                public void onSuccess() {
+                                    view.stopWaiting();
+                                    view.openSearchContactActivity();
+                                }
 
-                            @Override
-                            public void onFailure(String error) {
-                                view.showGeneralError(error);
-                            }
-                });
+                                @Override
+                                public void onFailure(String error) {
+                                    view.stopWaiting();
+                                    view.showGeneralError(error);
+                                }
+                            });
+
+                }).start();
+
             }
     }
     //TODO VALIDAR USER

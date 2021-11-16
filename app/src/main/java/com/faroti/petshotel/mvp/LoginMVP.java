@@ -29,6 +29,9 @@ public interface LoginMVP {
         void clearData();
 
         void openSearchContactActivity();
+
+        void startWaiting();
+        void stopWaiting();
     }
 
     class LoginInfo{
