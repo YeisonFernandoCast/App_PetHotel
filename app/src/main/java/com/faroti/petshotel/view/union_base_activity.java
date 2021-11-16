@@ -1,4 +1,4 @@
-package com.faroti.petshotel;
+package com.faroti.petshotel.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import com.bumptech.glide.Glide;
+import com.faroti.petshotel.R;
 
 public class union_base_activity extends AppCompatActivity {
     AppCompatButton buttonRegister;

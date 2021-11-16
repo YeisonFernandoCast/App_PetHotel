@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetsHotel">
         <activity
-            android:name=".union_base_activity"
+            android:name=".view.union_base_activity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -20,40 +20,40 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".view.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".view.RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".RegisterUserActivity"
+            android:name=".view.RegisterUserActivity"
             android:exported="true" />
         <activity
-            android:name=".TipsActivity"
+            android:name=".view.TipsActivity"
             android:exported="true" />
         <activity
-            android:name=".InfoContact"
+            android:name=".view.InfoContact"
             android:exported="false" />
         <activity
-            android:name=".SearchContact"
+            android:name=".view.SearchContact"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".ActivityOne"
+            android:name=".view.ActivityOne"
             android:exported="false" />
         <activity
-            android:name=".ActivityTwo"
+            android:name=".view.ActivityTwo"
             android:exported="false" />
         <activity
-            android:name=".ActivityThree"
+            android:name=".view.ActivityThree"
             android:exported="false" />
         <activity
-            android:name=".ActivityFour"
+            android:name=".view.ActivityFour"
             android:exported="false" />
         <activity
-            android:name=".ActivityFive"
+            android:name=".view.ActivityFive"
             android:exported="false" />
 
 

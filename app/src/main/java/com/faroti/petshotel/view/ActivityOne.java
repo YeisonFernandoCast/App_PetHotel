@@ -1,10 +1,12 @@
-package com.faroti.petshotel;
+package com.faroti.petshotel.view;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+
+import com.faroti.petshotel.R;
 
 public class ActivityOne extends AppCompatActivity {
 

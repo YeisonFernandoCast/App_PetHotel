@@ -1,23 +1,22 @@
-package com.faroti.petshotel;
+package com.faroti.petshotel.view;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.faroti.petshotel.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class ActivityFour extends AppCompatActivity {
+public class ActivityThree extends AppCompatActivity {
 
     FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_four);
+        setContentView(R.layout.activity_three);
         fab=(FloatingActionButton) findViewById(R.id.fab_back);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

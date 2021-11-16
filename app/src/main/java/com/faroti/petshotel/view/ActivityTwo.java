@@ -1,13 +1,12 @@
-package com.faroti.petshotel;
+package com.faroti.petshotel.view;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.faroti.petshotel.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ActivityTwo extends AppCompatActivity {
