@@ -1,7 +1,9 @@
 package com.faroti.petshotel.view;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -11,10 +13,12 @@ import androidx.appcompat.widget.AppCompatButton;
 import com.faroti.petshotel.R;
 import com.faroti.petshotel.mvp.LoginMVP;
 import com.faroti.petshotel.presenter.LoginPresenter;
+import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
+    private LinearProgressIndicator piWaitingLogin;
     private ImageView ivLogo;
     private TextInputLayout tilEmail;
     private TextInputEditText etEmail;
@@ -37,6 +41,8 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
     }
 
     private void initIU() {
+        piWaitingLogin = findViewById(R.id.pi_waiting_login);
+
         ivLogo = findViewById(R.id.iv_logo);
 
         tilEmail = findViewById(R.id.til_email_login);
@@ -55,6 +61,11 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
         buttonGoogle.setOnClickListener((evt) -> presenter.loginWithGoogle());
     }
 
+
+    @Override
+    public Activity getActivity() {
+        return this;
+    }
 
     @Override
     public LoginMVP.LoginInfo getLoginInfo() {
@@ -88,15 +99,16 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
     public void openSearchContactActivity() {
         Intent intent = new Intent(this, SearchContact.class);
         startActivity(intent);
+
     }
 
     @Override
     public void startWaiting() {
-
+        piWaitingLogin.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void stopWaiting() {
-
+        piWaitingLogin.setVisibility(View.GONE);
     }
 }

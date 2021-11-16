@@ -40,20 +40,25 @@ public class LoginPresenter implements LoginMVP.Presenter{
             if(!error){
                 view.startWaiting();
                 // Validar que el usuario/contraseña sean correctos
-                new Thread(() ->{
+                new Thread(() -> {
                     model.validateCredentials(loginInfo.getEmail().trim(),
                             loginInfo.getPassword().trim(),
                             new LoginMVP.Model.ValidateCredentialsCallback(){
                                 @Override
                                 public void onSuccess() {
-                                    view.stopWaiting();
-                                    view.openSearchContactActivity();
+                                    view.getActivity().runOnUiThread(()-> {
+                                        view.stopWaiting();
+                                        view.openSearchContactActivity();
+                                    });
                                 }
 
                                 @Override
                                 public void onFailure(String error) {
-                                    view.stopWaiting();
-                                    view.showGeneralError(error);
+                                    view.getActivity().runOnUiThread(()-> {
+                                        view.stopWaiting();
+                                        view.showGeneralError(error);
+                                    });
+
                                 }
                             });
 

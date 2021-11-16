@@ -1,5 +1,8 @@
 package com.faroti.petshotel.mvp;
 
+import android.app.Activity;
+
+
 public interface LoginMVP {
 
     interface Model {
@@ -21,6 +24,8 @@ public interface LoginMVP {
     }
 
     interface View {
+        Activity getActivity();
+
         LoginInfo getLoginInfo();
         void showEmailError(String error);
         void showPasswordError(String error);
