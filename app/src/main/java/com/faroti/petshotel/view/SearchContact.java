@@ -3,6 +3,7 @@ package com.faroti.petshotel.view;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -10,12 +11,16 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.faroti.petshotel.R;
+import com.faroti.petshotel.mvp.SearchContactMVP;
+import com.faroti.petshotel.presenter.SearchContactPresenter;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-public class SearchContact extends AppCompatActivity {
+import java.util.List;
+
+public class SearchContact extends AppCompatActivity implements SearchContactMVP.View {
 
     ImageView ivInitContact;
     ImageView ivOutContact;
@@ -26,12 +31,19 @@ public class SearchContact extends AppCompatActivity {
     private MaterialToolbar appBar;
     private NavigationView navigationDrawer;
 
+    //private RecyclearView rvSearchContact;
+    private SearchContactMVP.Presenter presenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_contact);
 
+        presenter = new SearchContactPresenter(this);
+
         initUI();
+
+        presenter.loadSearchContact();
     }
 
     private void initUI() {
@@ -70,4 +82,13 @@ public class SearchContact extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public Activity getActivity() {
+        return SearchContact.this;
+    }
+
+    @Override
+    public void showSearchContactInfo(List<SearchContactMVP.SearchContactInfo> searchContactInfo) {
+        //TODO Cargar la información en el RecyclerView
+    }
 }
