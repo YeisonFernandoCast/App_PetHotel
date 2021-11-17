@@ -7,6 +7,14 @@
     android:orientation="vertical"
     android:padding="@dimen/window_paddingRegister">
 
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/pi_waiting_login"
+        android:indeterminate="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:visibility="gone"/>
+
     <ImageView
         android:id="@+id/logo_login"
         android:layout_width="@dimen/logo_register_users"

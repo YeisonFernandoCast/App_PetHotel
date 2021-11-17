@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:padding="@dimen/window_padding_tips"
-    tools:context=".TipsActivity">
+    tools:context=".view.TipsActivity">
 
     <ImageView
         android:id="@+id/iv_logo"
@@ -15,7 +15,7 @@
         android:layout_height="@dimen/logo_height_tips"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:src="@mipmap/pets1" />
+        android:src="@drawable/ic_pet_hotel_logo" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_tittle"
