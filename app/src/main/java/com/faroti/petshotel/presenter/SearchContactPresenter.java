@@ -16,12 +16,14 @@ public class SearchContactPresenter implements SearchContactMVP.Presenter {
 
     @Override
     public void loadSearchContact() {
+        view.showProgressBar();
         new Thread(()->{
             model.loadSearchContact(new SearchContactMVP.Model.LoadSearchContactCallback() {
                 @Override
                 public void showSearchContactInfo(List<SearchContactMVP.SearchContactInfo> searchContactInfo) {
                     view.getActivity().runOnUiThread(()->{
                         view.showSearchContactInfo(searchContactInfo);
+                        view.hideProgressBar();
                     });
 
                 }

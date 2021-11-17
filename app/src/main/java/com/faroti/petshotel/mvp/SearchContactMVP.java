@@ -21,6 +21,10 @@ public interface SearchContactMVP {
     interface View{
         Activity getActivity();
 
+        void showProgressBar();
+
+        void hideProgressBar();
+
         void showSearchContactInfo(List<SearchContactInfo> searchContactInfo);
     }
 

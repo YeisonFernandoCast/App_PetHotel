@@ -12,8 +12,9 @@ public class LoginInteractor implements LoginMVP.Model {
         users = new HashMap<>();
         users.put("jfpacheco11@gmail.com","12345678");
         users.put("hre-palacios@hotmail.com","12345678");
-        users.put("yeisonfcu@outlook.com","12345678");
+        users.put("yefer08@gmail.com","yeison123");
         users.put("johan@gmail.com","12345678");
+        users.put("ph@g.com","12345678");
     }
 
 
