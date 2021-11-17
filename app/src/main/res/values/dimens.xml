@@ -8,6 +8,7 @@
     <dimen name ="logo_width_tips">130dp</dimen>
     <dimen name ="logo_height_tips">130dp</dimen>
 
+    <dimen name ="margin_4">4dp</dimen>
     <dimen name ="margin_8">8dp</dimen>
     <dimen name ="margin_16">16dp</dimen>
     <dimen name ="margin_20">20dp</dimen>
@@ -28,6 +29,14 @@
     <dimen name ="margin_200">200dp</dimen>
     <dimen name ="margin_234">234dp</dimen>
     <dimen name ="small_margin_tips">8dp</dimen>
+    <dimen name="height_Scroll">645dp</dimen>
+    <dimen name="elevation_toolbar">1dp</dimen>
+    <dimen name="width_logo_portrait">152dp</dimen>
+    <dimen name="Height_logo_portrait">90dp</dimen>
+    <dimen name="text_size">20sp</dimen>
+    <dimen name="height_image_tips">135dp</dimen>
+    <dimen name="width_arrow">28dp</dimen>
+
 
 
     <dimen name="text_important">20sp</dimen>
