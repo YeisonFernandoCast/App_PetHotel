@@ -1,4 +1,4 @@
-package com.faroti.petshotel;
+package com.faroti.petshotel.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -6,6 +6,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import com.faroti.petshotel.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
