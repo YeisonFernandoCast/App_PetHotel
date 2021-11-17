@@ -13,7 +13,7 @@ public class SearchContactInteractor implements SearchContactMVP.Model {
     public SearchContactInteractor(){
         data = Arrays.asList(
                 new SearchContactMVP.SearchContactInfo("Jose Pacheco", "Cra 23 # 45-67"),
-                new SearchContactMVP.SearchContactInfo("Johan M", "Cra 23 # 45-67"),
+                new SearchContactMVP.SearchContactInfo("Johan Moscoso", "Cra 23 # 45-67"),
                 new SearchContactMVP.SearchContactInfo("Yeison Castaño", "Cra 23 # 45-67"),
                 new SearchContactMVP.SearchContactInfo("Rodrigo Estupiñán", "Cra 23 # 45-67"),
                 new SearchContactMVP.SearchContactInfo("Francisco J", "Cra 23 # 45-67")

@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -38,6 +39,11 @@ public class SearchContactAdapter extends RecyclerView.Adapter<SearchContactAdap
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         SearchContactMVP.SearchContactInfo item = data.get(position);
+
+        //TODO Agregar un evento a la vista
+        holder.itemView.setOnClickListener(v ->{
+            Toast.makeText(v.getContext(),item.getName(), Toast.LENGTH_SHORT).show();
+        });
 
         //TODO holder.getIvClient().setImageIcon();
         holder.getTvClient().setText(item.getName());
