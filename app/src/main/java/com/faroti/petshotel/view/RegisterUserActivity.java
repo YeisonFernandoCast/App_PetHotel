@@ -16,7 +16,6 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class RegisterUserActivity extends AppCompatActivity implements RegisterMVP.View {
 
-
     private ImageView logoRegister;
     private TextInputLayout tilEmail;
     private TextInputEditText EmailRegister;
@@ -89,7 +88,7 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
     }
 
     @Override
-    public void openNewActivity() {
+    public void SearchActivity() {
         Intent intent = new Intent(this, SearchContact.class);
         startActivity(intent);
     }

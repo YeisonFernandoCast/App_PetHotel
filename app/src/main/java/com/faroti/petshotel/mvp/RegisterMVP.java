@@ -4,6 +4,7 @@ public interface RegisterMVP {
 
     interface Model{
 
+        boolean validateCredentials(String email, String password);
     }
 
     interface Presenter{
@@ -18,7 +19,7 @@ public interface RegisterMVP {
         void showPasswordError (String error);
         void showGeneralError(String error);
         void clearData();
-        void openNewActivity();
+        void SearchActivity();
 
     }
 

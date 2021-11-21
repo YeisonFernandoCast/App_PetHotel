@@ -15,6 +15,9 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
 
 
     @Override
+
+    //condiciones de registro
+
     public void RegisterWithEmail() {
         boolean error = false;
         view.showEmailError("");
@@ -24,7 +27,7 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
         if(registerInfo.getEmail().trim().isEmpty()){
             view.showEmailError("Correo Electrónico es obligatorio");
             error = true;
-        } else if (isEmailValid(registerInfo.getEmail().trim())) {
+        } else if (!isEmailValid(registerInfo.getEmail().trim())) {
             view.showEmailError("Correo Electrónico invalido");
             error = true;
         }
@@ -37,16 +40,19 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
             error = true;
         }
 
+
+        //validar credenciales
         if(!error) {
-            view.openNewActivity();
-        }else {
+                view.SearchActivity();
+        }
+        else{
             view.showGeneralError("Verifique los datos");
         }
     }
 
 
     private boolean isEmailValid(String email) {
-        return email.contains("@") && email.endsWith(".com");
+         return email.contains("@") && email.endsWith(".com");
     }
 
     private boolean isPasswordValid(String password) {
