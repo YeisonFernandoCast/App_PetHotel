@@ -17,6 +17,12 @@ public class RegisterInteractor implements RegisterMVP.Model {
 
     @Override
     public void validateCredentials(String email, ValidateCredentialsCallback callback) {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         if(users.get(email) != null) {
             callback.onFailed("Correo ya existe");
         }else{

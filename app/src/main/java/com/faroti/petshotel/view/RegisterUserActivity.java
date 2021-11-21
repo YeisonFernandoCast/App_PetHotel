@@ -107,10 +107,16 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
     @Override
     public void startWaiting() {
         progressCircularWaiting.setVisibility(View.VISIBLE);
+        buttonSingUpUser.setEnabled(false);
+        buttonFacebook.setEnabled(false);
+        buttonGoogle.setEnabled(false);
     }
 
     @Override
     public void stopWaiting() {
         progressCircularWaiting.setVisibility(View.GONE);
+        buttonSingUpUser.setEnabled(true);
+        buttonFacebook.setEnabled(true);
+        buttonGoogle.setEnabled(true);
     }
 }
