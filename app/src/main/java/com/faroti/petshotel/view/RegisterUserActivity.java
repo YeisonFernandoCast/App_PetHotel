@@ -1,7 +1,9 @@
 package com.faroti.petshotel.view;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -11,11 +13,13 @@ import androidx.appcompat.widget.AppCompatButton;
 import com.faroti.petshotel.R;
 import com.faroti.petshotel.mvp.RegisterMVP;
 import com.faroti.petshotel.presenter.RegisterPresenter;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class RegisterUserActivity extends AppCompatActivity implements RegisterMVP.View {
 
+    private CircularProgressIndicator  progressCircularWaiting;
     private ImageView logoRegister;
     private TextInputLayout tilEmail;
     private TextInputEditText EmailRegister;
@@ -38,6 +42,8 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
     }
 
     private void initUI() {
+        progressCircularWaiting = findViewById(R.id.progress_circular_waiting);
+
         logoRegister = findViewById(R.id.logo_register);
 
         tilEmail = findViewById(R.id.til_email_register);
@@ -56,6 +62,11 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
 
         buttonGoogle = findViewById(R.id.button_google_register);
         buttonGoogle.setOnClickListener((evt) -> presenter.RegisterWithGoogle());
+    }
+
+    @Override
+    public Activity getActivity() {
+        return this;
     }
 
     @Override
@@ -91,5 +102,15 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
     public void SearchActivity() {
         Intent intent = new Intent(this, SearchContact.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void startWaiting() {
+        progressCircularWaiting.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void stopWaiting() {
+        progressCircularWaiting.setVisibility(View.GONE);
     }
 }

@@ -1,10 +1,16 @@
 package com.faroti.petshotel.mvp;
 
+import android.app.Activity;
+
 public interface RegisterMVP {
 
     interface Model{
+        void validateCredentials(String email, ValidateCredentialsCallback callback);
 
-        boolean validateCredentials(String email, String password);
+        interface ValidateCredentialsCallback{
+            void onSuccess();
+            void onFailed(String error);
+        }
     }
 
     interface Presenter{
@@ -14,6 +20,7 @@ public interface RegisterMVP {
     }
 
     interface View {
+        Activity getActivity();
         RegisterInfo getRegisterInfo();
         void showEmailError(String error);
         void showPasswordError (String error);
@@ -21,6 +28,8 @@ public interface RegisterMVP {
         void clearData();
         void SearchActivity();
 
+        void startWaiting();
+        void stopWaiting();
     }
 
     class RegisterInfo{

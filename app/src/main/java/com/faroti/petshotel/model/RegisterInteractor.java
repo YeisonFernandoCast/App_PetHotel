@@ -16,12 +16,12 @@ public class RegisterInteractor implements RegisterMVP.Model {
 
 
     @Override
-    public boolean validateCredentials(String email, String password) {
+    public void validateCredentials(String email, ValidateCredentialsCallback callback) {
+        if(users.get(email) != null) {
+            callback.onFailed("Correo ya existe");
+        }else{
+            callback.onSuccess();
+        }
 
-
-
-
-        return users.get(email) != null
-                && users.get(email).equals(password);
     }
 }

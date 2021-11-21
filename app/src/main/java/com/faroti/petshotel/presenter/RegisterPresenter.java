@@ -32,6 +32,30 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
             error = true;
         }
 
+        if(!error) {
+            view.startWaiting();
+            new Thread(()->{
+                model.validateCredentials(
+                        registerInfo.getEmail().trim(),
+                        new RegisterMVP.Model.ValidateCredentialsCallback() {
+                            @Override
+                            public void onSuccess() {
+                                view.getActivity().runOnUiThread(()->{
+                                    view.stopWaiting();
+                                    view.SearchActivity();
+                                });
+                            }
+                            @Override
+                            public void onFailed(String error) {
+                                view.getActivity().runOnUiThread(()->{
+                                    view.stopWaiting();
+                                    view.showEmailError(error);
+                                });
+                            }
+                        });
+            }).start();
+        }
+
         if(registerInfo.getPassword().trim().isEmpty()){
             view.showPasswordError("Contraseña es obligatoria");
             error = true;
@@ -40,23 +64,40 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
             error = true;
         }
 
-
+        /*
         //validar credenciales
         if(!error) {
-                view.SearchActivity();
+            view.startWaiting();
+            new Thread(()->{
+                model.validateCredentials(
+                        registerInfo.getEmail().trim(),
+                        new RegisterMVP.Model.ValidateCredentialsCallback() {
+                            @Override
+                            public void onSuccess() {
+                                view.getActivity().runOnUiThread(()->{
+                                    view.stopWaiting();
+                                    view.SearchActivity();
+                                });
+                            }
+                            @Override
+                            public void onFailed(String error) {
+                                view.getActivity().runOnUiThread(()->{
+                                    view.stopWaiting();
+                                    view.showEmailError(error);
+                                });
+                            }
+                        });
+            }).start();
         }
-        else{
-            view.showGeneralError("Verifique los datos");
-        }
+         */
     }
-
 
     private boolean isEmailValid(String email) {
          return email.contains("@") && email.endsWith(".com");
     }
 
     private boolean isPasswordValid(String password) {
-        return password.length() > 8;
+        return password.length() >= 8;
     }
 
     @Override
