@@ -1,5 +1,9 @@
 package com.faroti.petshotel.model;
 
+import android.content.Context;
+
+import com.faroti.petshotel.model.database.entities.User;
+import com.faroti.petshotel.model.repository.UserRepository;
 import com.faroti.petshotel.mvp.LoginMVP;
 
 import java.util.HashMap;
@@ -7,27 +11,23 @@ import java.util.Map;
 
 public class LoginInteractor implements LoginMVP.Model {
 
-    private Map<String, String> users;
-    public LoginInteractor (){
-        users = new HashMap<>();
-        users.put("jfpacheco11@gmail.com","12345678");
-        users.put("hre-palacios@hotmail.com","12345678");
-        users.put("yefer08@gmail.com","yeison123");
-        users.put("johan@gmail.com","12345678");
-        users.put("ph@g.com","12345678");
+    private UserRepository userRepository;
+
+
+    public LoginInteractor (Context context){
+
+        userRepository = new UserRepository(context);
+
     }
 
 
     @Override
     public void validateCredentials(String email, String password, ValidateCredentialsCallback callback) {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        if (users.get(email) == null){
+        User user = userRepository.getUserByEmail(email);
+
+        if (user == null){
             callback.onFailure("Usuario no existe");
-        } else if (!users.get(email).equals(password)){
+        } else if (!user.getPassword().equals(password)){
             callback.onFailure("Contraseña incorrecta");
         } else {
             callback.onSuccess();
