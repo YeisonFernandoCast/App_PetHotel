@@ -12,7 +12,7 @@ public class UserRepository {
 
     public UserRepository(Context context) {
         userDao = PetDatabase.getDatabase(context).getUserDao();
-        loadInitialDatabase();
+        //loadInitialDatabase();
     }
 
     private void loadInitialDatabase() {
