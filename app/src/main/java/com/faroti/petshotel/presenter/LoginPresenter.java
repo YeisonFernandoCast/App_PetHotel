@@ -17,7 +17,7 @@ public class LoginPresenter implements LoginMVP.Presenter{
 
     public LoginPresenter(LoginMVP.View view){
         this.view = view;
-        this.model = new LoginInteractor();
+        this.model = new LoginInteractor(view.getActivity());
     }
 
     @Override
