@@ -64,7 +64,7 @@
         android:layout_marginTop="36dp"
         android:backgroundTint="@color/red_dark"
         app:cornerRadius="@dimen/margin_100"
-        app:icon="@drawable/arrow_left_circle"
+        app:icon="@drawable/ic_back_arrow_left_circle"
         app:iconGravity="textStart"
         app:iconTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
