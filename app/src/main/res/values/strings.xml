@@ -13,7 +13,6 @@
     <string name="register_sing_up_garden">Registrar una Guarderia</string>
     <string name="register_login">Login</string>
 
-
     <string name="tips_pets">TIPS PARA MASCOTAS</string>
     <string name="tip__name_one">Cuidados para tu Perro</string>
     <string name="tip_name_two">Cuidados para tu Gato</string>
@@ -33,7 +32,7 @@
     <string name="contacto_location">Ubicación</string>
     <string name="out_contact">out</string>
     <string name="contact">Contacto</string>
-    <string name="contact_us">Contactenos</string>
+    <string name="contact_us">Contacto</string>
     <string name="background_description">background de la aplicacion</string>
     <string name="tips">Tips</string>
     <string name="client_image">cliente</string>
@@ -41,7 +40,8 @@
     <string name="whatsapp">WhatsApp</string>
     <string name="login_sign_in">Iniciar Sesión</string>
     <string name="register_here">Registrese Aqui</string>
-
-
+    <string name="carer">Cuidador</string>
+    <string name="account">Mi cuenta</string>
+    <string name="log_out">Cerrar Sesión</string>
 
 </resources>
