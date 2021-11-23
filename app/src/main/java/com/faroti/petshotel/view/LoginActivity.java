@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
     private void initIU() {
         piWaitingLogin = findViewById(R.id.pi_waiting_login);
 
-        ivLogo = findViewById(R.id.iv_logo);
+        ivLogo = findViewById(R.id.logo_login);
 
         tilEmail = findViewById(R.id.til_email_login);
         etEmail = findViewById(R.id.et_email_login);
