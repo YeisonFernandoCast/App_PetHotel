@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
@@ -18,6 +19,10 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
+
+    private final static String EMAIL_KEY = "email";
+    private final static String PASSWORD_KEY = "password";
+
     private LinearProgressIndicator piWaitingLogin;
     private ImageView ivLogo;
     private TextInputLayout tilEmail;
@@ -37,7 +42,25 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
         setContentView(R.layout.activity_login);
 
         presenter = new LoginPresenter(this);
+        presenter.islogged();
         initIU();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putString(EMAIL_KEY, etEmail.getText().toString());
+        outState.putString(PASSWORD_KEY, etPassword.getText().toString());
+
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        etEmail.setText(savedInstanceState.getString(EMAIL_KEY));
+        etPassword.setText(savedInstanceState.getString(PASSWORD_KEY));
+
     }
 
     private void initIU() {
