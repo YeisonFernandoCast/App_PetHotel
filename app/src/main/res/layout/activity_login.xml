@@ -9,22 +9,22 @@
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
         android:id="@+id/pi_waiting_login"
-        android:indeterminate="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
-        android:visibility="gone"/>
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/logo_login"
         android:layout_width="@dimen/logo_register_users"
         android:layout_height="@dimen/logo_register_users"
         android:layout_gravity="center"
-        android:layout_marginTop="72dp"
         android:contentDescription="@string/register_logo_descriptionApp"
         android:src="@drawable/ic_pet_hotel_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,7 +37,7 @@
         app:boxCornerRadiusBottomEnd="@dimen/margin_8"
         app:boxCornerRadiusBottomStart="@dimen/margin_8"
         android:layout_marginTop="@dimen/margin_16"
-        app:startIconDrawable="@drawable/email"
+        app:startIconDrawable="@drawable/ic_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_login">

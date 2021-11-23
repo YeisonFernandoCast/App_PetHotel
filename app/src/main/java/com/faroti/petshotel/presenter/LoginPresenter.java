@@ -1,16 +1,33 @@
 package com.faroti.petshotel.presenter;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
 import com.faroti.petshotel.model.LoginInteractor;
 import com.faroti.petshotel.mvp.LoginMVP;
 
+import java.util.prefs.PreferenceChangeEvent;
+
 public class LoginPresenter implements LoginMVP.Presenter{
 
+    private final String AUTH_PREFERENCE = "authentication";
+    private final String LOGGED_KEY = "logged";
     private LoginMVP.View view;
     private LoginMVP.Model model;
 
     public LoginPresenter(LoginMVP.View view){
         this.view = view;
-        this.model = new LoginInteractor();
+        this.model = new LoginInteractor(view.getActivity());
+    }
+
+    @Override
+    public void islogged() {
+        SharedPreferences preferences = view.getActivity()
+                .getSharedPreferences(AUTH_PREFERENCE, Context.MODE_PRIVATE);
+        boolean isLogged = preferences.getBoolean(LOGGED_KEY, false);
+        if(isLogged){
+            view.openSearchContactActivity();
+        }
     }
 
     @Override
@@ -46,6 +63,11 @@ public class LoginPresenter implements LoginMVP.Presenter{
                             new LoginMVP.Model.ValidateCredentialsCallback(){
                                 @Override
                                 public void onSuccess() {
+                                    SharedPreferences preferences = view.getActivity()
+                                            .getSharedPreferences(AUTH_PREFERENCE, Context.MODE_PRIVATE);
+                                    preferences.edit().putBoolean(LOGGED_KEY, true)
+                                    .apply();
+
                                     view.getActivity().runOnUiThread(()-> {
                                         view.stopWaiting();
                                         view.openSearchContactActivity();

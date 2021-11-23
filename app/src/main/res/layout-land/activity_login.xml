@@ -31,7 +31,7 @@
         app:boxCornerRadiusBottomStart="@dimen/margin_8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:startIconDrawable="@drawable/email">
+        app:startIconDrawable="@drawable/ic_email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_email_login"
@@ -116,7 +116,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="Registrese Aqui"
+        android:text="@string/register_here"
         android:textColor="@color/red"
         android:textSize="12sp"
         android:textStyle="italic"
