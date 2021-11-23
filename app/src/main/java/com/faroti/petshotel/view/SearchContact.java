@@ -2,6 +2,7 @@ package com.faroti.petshotel.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 import com.faroti.petshotel.R;
 import com.faroti.petshotel.mvp.SearchContactMVP;
 import com.faroti.petshotel.presenter.SearchContactPresenter;
+import com.faroti.petshotel.view.adapter.SearchContactAdapter;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
@@ -38,6 +40,7 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
     private SearchContactMVP.Presenter presenter;
 
     private LinearProgressIndicator piWaiting;
+    private SearchContactAdapter searchContactAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +71,9 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
 
         piWaiting = findViewById(R.id.pi_waiting_search);
         rvSearchContact = findViewById(R.id.rv_search_contact);
+        rvSearchContact.setLayoutManager(new LinearLayoutManager(SearchContact.this));
+        searchContactAdapter = new SearchContactAdapter();
+        rvSearchContact.setAdapter(searchContactAdapter);
 
         ivInitContact.setOnClickListener((evt) -> onInitClick());
 
@@ -106,7 +112,9 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
 
     @Override
     public void showSearchContactInfo(List<SearchContactMVP.SearchContactInfo> searchContactInfo) {
-        //TODO Cargar la información en el RecyclerView
+        searchContactAdapter.setData(searchContactInfo);
+
+        //TODO Cargar la información en el RecyclerView - Youtube 1:20min
         Toast.makeText(SearchContact.this, "Datos cargados", Toast.LENGTH_SHORT).show();
     }
 }
