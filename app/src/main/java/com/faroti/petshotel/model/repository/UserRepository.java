@@ -18,6 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 public class UserRepository {
 
     private final static Boolean USE_DATABASE = Boolean. TRUE;
+
     private UserDao userDao ;
 
     private DatabaseReference userRef;
@@ -28,10 +29,10 @@ public class UserRepository {
         FirebaseDatabase database = FirebaseDatabase.getInstance();  //crea la conexión a la BD
         userRef = database.getReference("user");
 
-        loadInitialDatabase();
+        loadInitalDatabase();
     }
 
-    private void loadInitialDatabase() {
+    private void loadInitalDatabase() {
         if (USE_DATABASE) {
             userDao.insert(
                     new User("Yeison Castaño", "yefer08@gmail.com", "yeison123"),
