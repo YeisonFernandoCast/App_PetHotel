@@ -58,10 +58,10 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
         drawerLayout = findViewById(R.id.drawer_layout);
 
         appBar = findViewById(R.id.app_bar);
-        appBar.setNavigationOnClickListener(v ->openDrawer());
+        appBar.setNavigationOnClickListener(v -> openDrawer());
 
         navigationDrawer = findViewById(R.id.navigation_drawer);
-        navigationDrawer.setNavigationItemSelectedListener(this::navigationitenSelected);
+        navigationDrawer.setNavigationItemSelectedListener(this::navigationitemSelected);
 
         ivInitContact = findViewById(R.id.iv_init);
         ivOutContact = findViewById(R.id.iv_out);
@@ -79,20 +79,40 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
 
     }
 
-    private void onInitClick(){
+    private void onInitClick() {
         Intent intent = new Intent(this, InfoContact.class);
         startActivity(intent);
     }
 
-    private void openDrawer(){
+    private void openDrawer() {
         drawerLayout.openDrawer(navigationDrawer);
     }
 
-    private boolean navigationitenSelected(MenuItem menuItem){
+
+    private boolean navigationitemSelected(MenuItem menuItem) {
         menuItem.setChecked(true);
-        Toast.makeText(this, menuItem.getTitle(),Toast.LENGTH_SHORT).show();
-        drawerLayout.closeDrawer(navigationDrawer);
-        return true;
+        switch (menuItem.getItemId()) {
+            case R.id.user:
+                Toast.makeText(this, "ESO HP .....", Toast.LENGTH_LONG).show();
+                drawerLayout.closeDrawer(navigationDrawer);
+                return true;
+            case R.id.acount:
+                drawerLayout.closeDrawer(navigationDrawer);
+                return true;
+            case R.id.tips:
+                drawerLayout.closeDrawer(navigationDrawer);
+                Intent intent = new Intent(this, TipsActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.contact_us:
+                drawerLayout.closeDrawer(navigationDrawer);
+                return true;
+            case R.id.close:
+                drawerLayout.closeDrawer(navigationDrawer);
+                return true;
+            default:
+                return true;
+        }
     }
 
     @Override
