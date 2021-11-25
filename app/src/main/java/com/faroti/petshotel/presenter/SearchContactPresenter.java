@@ -35,4 +35,5 @@ public class SearchContactPresenter implements SearchContactMVP.Presenter {
     public void onInfoContactClick() {
 
     }
+
 }

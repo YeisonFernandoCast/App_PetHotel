@@ -25,6 +25,8 @@ public interface SearchContactMVP {
 
         void hideProgressBar();
 
+        void closeSesion();
+
         void showSearchContactInfo(List<SearchContactInfo> searchContactInfo);
     }
 

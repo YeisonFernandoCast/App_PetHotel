@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
@@ -19,10 +20,16 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class RegisterUserActivity extends AppCompatActivity implements RegisterMVP.View {
 
+    private final static String EMAIL_KEY = "email";
+    private final static String PASSWORD_KEY = "password";
+    private final static String CELLPHONE_KEY = "cellPhone";
+    private final static String USERNAME_KEY = "userName";
+
+
     private CircularProgressIndicator  progressCircularWaiting;
     private ImageView logoRegister;
     private TextInputLayout tilEmail;
-    private TextInputEditText EmailRegister;
+    private TextInputEditText emailRegister;
     private TextInputLayout tilPassword;
     private TextInputEditText passwordRegister;
     private TextInputLayout tilCellPhoneUser;
@@ -45,14 +52,36 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
         initUI();
     }
 
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+
+        outState.putString(EMAIL_KEY,emailRegister.getText().toString());
+        outState.putString(PASSWORD_KEY,passwordRegister.getText().toString());
+        outState.putString(CELLPHONE_KEY,cellPhoneUser.getText().toString());
+        outState.putString(USERNAME_KEY,userName.getText().toString());
+
+        super.onSaveInstanceState(outState);
+    }
+
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        emailRegister.setText(savedInstanceState.getString(EMAIL_KEY));
+        passwordRegister.setText(savedInstanceState.getString(PASSWORD_KEY));
+        cellPhoneUser.setText(savedInstanceState.getString(CELLPHONE_KEY));
+        userName.setText(savedInstanceState.getString(USERNAME_KEY));
+    }
+
     private void initUI() {
         progressCircularWaiting = findViewById(R.id.progress_circular_waiting);
 
         logoRegister = findViewById(R.id.logo_register);
 
         tilEmail = findViewById(R.id.til_email_register);
-        EmailRegister = findViewById(R.id.edit_text_email_register);
-        EmailRegister.setText("example@gmail.com");
+        emailRegister = findViewById(R.id.edit_text_email_register);
+        emailRegister.setText("example@gmail.com");
 
         tilPassword = findViewById(R.id.til_password_register);
         passwordRegister = findViewById(R.id.edit_text_password_register);
@@ -83,7 +112,7 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
 
     @Override
     public RegisterMVP.RegisterInfo getRegisterInfo() {
-        return new RegisterMVP.RegisterInfo(EmailRegister.getText().toString(),
+        return new RegisterMVP.RegisterInfo(emailRegister.getText().toString(),
                                             passwordRegister.getText().toString(),
                                             cellPhoneUser.getText().toString(),
                                             userName.getText().toString());
@@ -118,7 +147,7 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
     @Override
     public void clearData() {
         tilEmail.setError("");
-        EmailRegister.setText("");
+        emailRegister.setText("");
         tilPassword.setError("");
         passwordRegister.setText("");
         tilCellPhoneUser.setError("");
