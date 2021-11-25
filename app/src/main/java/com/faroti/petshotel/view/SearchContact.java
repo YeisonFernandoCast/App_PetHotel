@@ -6,14 +6,18 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.faroti.petshotel.R;
+import com.faroti.petshotel.mvp.LoginMVP;
 import com.faroti.petshotel.mvp.SearchContactMVP;
 import com.faroti.petshotel.presenter.SearchContactPresenter;
 import com.faroti.petshotel.view.adapter.SearchContactAdapter;
@@ -90,29 +94,45 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
 
 
     private boolean navigationitemSelected(MenuItem menuItem) {
+        Intent intent;
         menuItem.setChecked(true);
         switch (menuItem.getItemId()) {
             case R.id.user:
-                Toast.makeText(this, "ESO HP .....", Toast.LENGTH_LONG).show();
+                //Toast.makeText(this, "ESO HP .....", Toast.LENGTH_LONG).show();
                 drawerLayout.closeDrawer(navigationDrawer);
+                intent = new Intent(this, InfoContact.class);
+                startActivity(intent);
                 return true;
             case R.id.acount:
                 drawerLayout.closeDrawer(navigationDrawer);
+                Toast.makeText(this, "Pronto ... xD", Toast.LENGTH_LONG).show();
                 return true;
             case R.id.tips:
                 drawerLayout.closeDrawer(navigationDrawer);
-                Intent intent = new Intent(this, TipsActivity.class);
+                intent = new Intent(this, TipsActivity.class);
                 startActivity(intent);
                 return true;
             case R.id.contact_us:
                 drawerLayout.closeDrawer(navigationDrawer);
+                Toast.makeText(this, "Contactenos", Toast.LENGTH_LONG).show();
                 return true;
             case R.id.close:
                 drawerLayout.closeDrawer(navigationDrawer);
+                this.logout();
                 return true;
             default:
                 return true;
         }
+    }
+
+    private void logout() {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.remove("authentication");
+        editor.apply();
+        this.finish();
+        Intent intent = new Intent(this, union_base_activity.class);
+
     }
 
     @Override
