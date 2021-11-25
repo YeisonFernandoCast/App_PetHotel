@@ -25,6 +25,10 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
     private TextInputEditText EmailRegister;
     private TextInputLayout tilPassword;
     private TextInputEditText passwordRegister;
+    private TextInputLayout tilCellPhoneUser;
+    private TextInputEditText cellPhoneUser;
+    private TextInputLayout tilUserName;
+    private TextInputEditText userName;
 
     private AppCompatButton buttonFacebook;
     private AppCompatButton buttonGoogle;
@@ -54,6 +58,14 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
         passwordRegister = findViewById(R.id.edit_text_password_register);
         passwordRegister.setText("Abcd_1234");
 
+        tilCellPhoneUser = findViewById(R.id.til_cellphone_register);
+        cellPhoneUser = findViewById(R.id.edit_text_cellphone_register);
+
+        tilUserName = findViewById(R.id.til_name_register);
+        userName = findViewById(R.id.edit_text_name_register);
+
+
+
         buttonSingUpUser = findViewById(R.id.button_register_user);
         buttonSingUpUser.setOnClickListener((evt) -> presenter.RegisterWithEmail());
 
@@ -72,7 +84,9 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
     @Override
     public RegisterMVP.RegisterInfo getRegisterInfo() {
         return new RegisterMVP.RegisterInfo(EmailRegister.getText().toString(),
-                                            passwordRegister.getText().toString());
+                                            passwordRegister.getText().toString(),
+                                            cellPhoneUser.getText().toString(),
+                                            userName.getText().toString());
     }
 
     @Override
@@ -86,6 +100,17 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
     }
 
     @Override
+    public void showCellPhoneError(String error) {
+        tilCellPhoneUser.setError(error);
+    }
+
+    @Override
+    public void showUserNameError(String error) {
+        tilUserName.setError(error);
+    }
+
+
+    @Override
     public void showGeneralError(String error) {
         Toast.makeText(RegisterUserActivity.this,error, Toast.LENGTH_SHORT).show();
     }
@@ -96,6 +121,10 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
         EmailRegister.setText("");
         tilPassword.setError("");
         passwordRegister.setText("");
+        tilCellPhoneUser.setError("");
+        cellPhoneUser.setText("");
+        tilUserName.setError("");
+        userName.setText("");
     }
 
     @Override

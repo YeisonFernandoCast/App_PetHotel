@@ -1,10 +1,5 @@
 package com.faroti.petshotel.view;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +7,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.faroti.petshotel.R;
 import com.faroti.petshotel.mvp.SearchContactMVP;
@@ -79,10 +79,7 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
 
     }
 
-    private void onInitClick(){
-        Intent intent = new Intent(this, InfoContact.class);
-        startActivity(intent);
-    }
+
 
     private void openDrawer(){
         drawerLayout.openDrawer(navigationDrawer);
@@ -93,6 +90,11 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
         Toast.makeText(this, menuItem.getTitle(),Toast.LENGTH_SHORT).show();
         drawerLayout.closeDrawer(navigationDrawer);
         return true;
+    }
+
+    private void onInitClick(){
+        Intent intent = new Intent(this, InfoContact.class);
+        startActivity(intent);
     }
 
     @Override

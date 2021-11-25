@@ -12,6 +12,7 @@ public class RegisterInteractor implements RegisterMVP.Model {
     public RegisterInteractor(){
         users = new HashMap<>();
         users.put("johan@gmail.com","12345678");
+        users.put("jfpacheco11@gmail.com","12345678");
     }
 
 
