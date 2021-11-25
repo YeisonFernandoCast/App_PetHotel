@@ -17,7 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class UserRepository {
 
-    private final static Boolean USE_DATABASE = Boolean. TRUE;
+    private final static Boolean USE_DATABASE = Boolean.FALSE;
 
     private UserDao userDao ;
 
@@ -39,7 +39,7 @@ public class UserRepository {
                     new User("Usuario Prueba", "test@gmail.com", "87654321")
             );
         } else {
-            userRef.setValue("Hola");
+            userRef.setValue("Hola 123456");
         }
     }
         public User getUserByEmail(String email) {
