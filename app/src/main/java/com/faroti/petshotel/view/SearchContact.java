@@ -66,7 +66,6 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
         navigationDrawer.setNavigationItemSelectedListener(this::navigationitenSelected);
 
         ivOutContact = findViewById(R.id.iv_out);
-        ivOutContact.setOnClickListener(v -> closeSesion());
 
 
         tilSearch = findViewById(R.id.til_search);
@@ -84,8 +83,6 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
         ivInitContact.setOnClickListener((evt) -> onInitClick());
 
     }
-
-
 
     private void openDrawer(){
         drawerLayout.openDrawer(navigationDrawer);
@@ -124,13 +121,5 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
 
         //TODO Cargar la información en el RecyclerView - Youtube 1:20min
         Toast.makeText(SearchContact.this, "Datos cargados", Toast.LENGTH_SHORT).show();
-    }
-
-
-    @Override
-    public void closeSesion() {
-    //    Intent intent = new Intent(this,union_base_activity.class);
-    //        intent.putExtra(LOGGED_KEY,false);
-    //    startActivity(intent);
     }
 }
