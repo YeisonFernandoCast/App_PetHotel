@@ -94,7 +94,7 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
     }
 
     private boolean isPasswordValid(String password) {
-        return password.length() >= 8;
+        return password.length() > 7;
     }
 
     @Override
