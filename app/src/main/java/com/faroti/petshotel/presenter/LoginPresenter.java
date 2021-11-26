@@ -6,8 +6,6 @@ import android.content.SharedPreferences;
 import com.faroti.petshotel.model.LoginInteractor;
 import com.faroti.petshotel.mvp.LoginMVP;
 
-import java.util.prefs.PreferenceChangeEvent;
-
 public class LoginPresenter implements LoginMVP.Presenter{
 
     private final String AUTH_PREFERENCE = "authentication";

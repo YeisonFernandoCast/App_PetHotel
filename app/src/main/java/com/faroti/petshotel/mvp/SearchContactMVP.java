@@ -14,12 +14,15 @@ public interface SearchContactMVP {
     }
 
     interface Presenter{
+        void logout();
         void loadSearchContact();
         void onInfoContactClick();
     }
 
     interface View{
         Activity getActivity();
+
+        void getUnionBaseActivity();
 
         void showProgressBar();
 

@@ -1,12 +1,6 @@
 package com.faroti.petshotel.view;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -16,8 +10,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.faroti.petshotel.R;
-import com.faroti.petshotel.mvp.LoginMVP;
 import com.faroti.petshotel.mvp.SearchContactMVP;
 import com.faroti.petshotel.presenter.SearchContactPresenter;
 import com.faroti.petshotel.view.adapter.SearchContactAdapter;
@@ -118,11 +116,19 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
                 return true;
             case R.id.close:
                 drawerLayout.closeDrawer(navigationDrawer);
+                //presenter.logout();
+                //getUnionBaseActivity();
                 this.logout();
                 return true;
             default:
                 return true;
         }
+    }
+
+    @Override
+    public void getUnionBaseActivity(){
+        Intent intent = new Intent(this, union_base_activity.class);
+        startActivity(intent);
     }
 
     private void logout() {
