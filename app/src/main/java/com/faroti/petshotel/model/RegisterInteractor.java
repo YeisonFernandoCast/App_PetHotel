@@ -34,4 +34,7 @@ public class RegisterInteractor implements RegisterMVP.Model {
        userRepository.newUser(name, email, password, cellPhone);
     }
 
+
+
+
 }
