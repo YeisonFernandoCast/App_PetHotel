@@ -12,9 +12,7 @@ public class LoginInteractor implements LoginMVP.Model {
 
 
     public LoginInteractor (Context context){
-
         userRepository = new UserRepository(context);
-
     }
 
 
