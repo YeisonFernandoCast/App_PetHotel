@@ -11,6 +11,7 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
     public RegisterPresenter (RegisterMVP.View view){
         this.view = view;
         this.model = new RegisterInteractor();
+        //this.model = new RegisterInteractor(view.getActivity());
     }
 
 
@@ -65,6 +66,13 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
                         new RegisterMVP.Model.ValidateCredentialsCallback() {
                             @Override
                             public void onSuccess() {
+                              /*  model.insertNewUser(registerInfo.getUserName(),
+                                        registerInfo.getEmail(),
+                                        registerInfo.getPassword(),
+                                        registerInfo.getCellPhone());
+
+                               */
+
                                 view.getActivity().runOnUiThread(()->{
                                     view.stopWaiting();
                                     view.SearchActivity();
@@ -84,7 +92,7 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
     }
 
     private boolean isCellPhoneValid(String cellPhone) {
-        return cellPhone.length() >9 && cellPhone.length() <11;
+        return cellPhone.length() == 10;
     }
 
     private boolean isEmailValid(String email) {

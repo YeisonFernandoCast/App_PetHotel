@@ -6,11 +6,12 @@ public interface RegisterMVP {
 
     interface Model{
         void validateCredentials(String email, ValidateCredentialsCallback callback);
-
         interface ValidateCredentialsCallback{
             void onSuccess();
             void onFailed(String error);
         }
+
+      //  void insertNewUser(String name, String email, String password, String cellPhone);
     }
 
     interface Presenter{
@@ -56,8 +57,7 @@ public interface RegisterMVP {
         public String getCellPhone() {
             return cellPhone;
         }
-        public String getUserName() {
-            return userName;
+        public String getUserName() { return userName;
         }
     }
 }

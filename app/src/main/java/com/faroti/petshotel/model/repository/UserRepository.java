@@ -15,10 +15,18 @@ public class UserRepository {
         loadInitialDatabase();
     }
 
+
+    public void newUser(String name, String email, String password, String cellPhone){
+        userDao.insert(
+                new User(name, email, password, cellPhone)
+        );
+    }
+
+
     private void loadInitialDatabase() {
         userDao.insert(
-                new User("Jose Pacheco", "jfpacheco11@gmail.com", "12345678"),
-                new User("Usuario Prueba", "test@gmail.com", "87654321")
+                new User("Jose Pacheco", "jfpacheco11@gmail.com", "12345678" , "1234567890"),
+                new User("Usuario Prueba", "test@gmail.com", "87654321", "1234567890")
         );
     }
 

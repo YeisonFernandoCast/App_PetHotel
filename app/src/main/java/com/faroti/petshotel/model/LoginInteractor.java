@@ -6,9 +6,6 @@ import com.faroti.petshotel.model.database.entities.User;
 import com.faroti.petshotel.model.repository.UserRepository;
 import com.faroti.petshotel.mvp.LoginMVP;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class LoginInteractor implements LoginMVP.Model {
 
     private UserRepository userRepository;

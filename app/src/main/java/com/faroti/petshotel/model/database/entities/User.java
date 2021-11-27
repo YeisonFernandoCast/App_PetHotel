@@ -4,8 +4,6 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.util.List;
-
 @Entity
 public class User {
     @PrimaryKey(autoGenerate = true)
@@ -18,20 +16,26 @@ public class User {
 
     private String password;
 
+    private String cellPhone;
+
     private Boolean  enable;
 
-    private List<Proveedor> proveedores;
+    //private List<Proveedor> proveedores;
+
+
 
     public User(){
-
     }
 
-    public User(String name, String email, String password) {
+    public User(String name, String email, String password, String cellPhone) {
         this.name = name;
         this.email = email;
         this.password = password;
+        this.cellPhone = cellPhone;
         this.enable = true;
     }
+
+
 
     public int getId() {
         return id;
@@ -65,6 +69,10 @@ public class User {
         this.password = password;
     }
 
+    public String getCellPhone() { return cellPhone; }
+
+    public void setCellPhone(String cellPhone) { this.cellPhone = cellPhone; }
+
     public Boolean getEnable() {
         return enable;
     }
@@ -73,6 +81,7 @@ public class User {
         this.enable = enable;
     }
 
+    /*
     public List<Proveedor> getProveedores() {
         return proveedores;
     }
@@ -80,4 +89,6 @@ public class User {
     public void setProveedores(List<Proveedor> proveedores) {
         this.proveedores = proveedores;
     }
+
+     */
 }
