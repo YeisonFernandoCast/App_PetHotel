@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "398769477154",
-    "project_id": "pethotel-bbd8e",
-    "storage_bucket": "pethotel-bbd8e.appspot.com"
+    "project_number": "927884686860",
+    "project_id": "welcome-to-pethotel",
+    "storage_bucket": "welcome-to-pethotel.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:398769477154:android:749cfd58769736d1659c7b",
+        "mobilesdk_app_id": "1:927884686860:android:94ca62a16db49dbf1c6029",
         "android_client_info": {
           "package_name": "com.faroti.petshotel"
         }
       },
       "oauth_client": [
         {
-          "client_id": "398769477154-jarab85fhf2klq34u4tnthog408j9gla.apps.googleusercontent.com",
+          "client_id": "927884686860-ttck85kr9qs4qtiesu9jitam6h3rke8t.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDQgcFbiuyTpQjhdgvdOOFv30qmDVohaFs"
+          "current_key": "AIzaSyALwSipA-CR0vFuS8LUKqC-mXUCHeR4e0I"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "398769477154-jarab85fhf2klq34u4tnthog408j9gla.apps.googleusercontent.com",
+              "client_id": "927884686860-ttck85kr9qs4qtiesu9jitam6h3rke8t.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
