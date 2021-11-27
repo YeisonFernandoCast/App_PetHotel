@@ -4,6 +4,8 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.List;
+
 @Entity
 public class User {
     @PrimaryKey(autoGenerate = true)
@@ -17,6 +19,8 @@ public class User {
     private String password;
 
     private Boolean  enable;
+
+    private List<Proveedor> proveedores;
 
     public User(){
 
@@ -67,5 +71,13 @@ public class User {
 
     public void setEnable(Boolean enable) {
         this.enable = enable;
+    }
+
+    public List<Proveedor> getProveedores() {
+        return proveedores;
+    }
+
+    public void setProveedores(List<Proveedor> proveedores) {
+        this.proveedores = proveedores;
     }
 }
