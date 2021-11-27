@@ -1,5 +1,7 @@
 package com.faroti.petshotel.model;
 
+import android.content.Context;
+
 import com.faroti.petshotel.model.database.entities.User;
 import com.faroti.petshotel.model.repository.UserRepository;
 import com.faroti.petshotel.mvp.RegisterMVP;
@@ -8,12 +10,12 @@ public class RegisterInteractor implements RegisterMVP.Model {
 
     private UserRepository userRepository;
 
-    /*
+
     public RegisterInteractor(Context context){
         userRepository = new UserRepository(context);
     }
 
-     */
+
 
 
     @Override
@@ -27,10 +29,9 @@ public class RegisterInteractor implements RegisterMVP.Model {
         }
     }
 
-    /*
+
     public void insertNewUser(String name, String email, String password, String cellPhone){
        userRepository.newUser(name, email, password, cellPhone);
     }
 
-     */
 }

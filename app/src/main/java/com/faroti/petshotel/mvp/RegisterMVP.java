@@ -11,7 +11,7 @@ public interface RegisterMVP {
             void onFailed(String error);
         }
 
-      //  void insertNewUser(String name, String email, String password, String cellPhone);
+        void insertNewUser(String name, String email, String password, String cellPhone);
     }
 
     interface Presenter{

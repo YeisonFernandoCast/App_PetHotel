@@ -10,8 +10,8 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
 
     public RegisterPresenter (RegisterMVP.View view){
         this.view = view;
-        this.model = new RegisterInteractor();
-        //this.model = new RegisterInteractor(view.getActivity());
+        //this.model = new RegisterInteractor();
+        this.model = new RegisterInteractor(view.getActivity());
     }
 
 
@@ -66,12 +66,10 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
                         new RegisterMVP.Model.ValidateCredentialsCallback() {
                             @Override
                             public void onSuccess() {
-                              /*  model.insertNewUser(registerInfo.getUserName(),
+                                model.insertNewUser(registerInfo.getUserName(),
                                         registerInfo.getEmail(),
                                         registerInfo.getPassword(),
                                         registerInfo.getCellPhone());
-
-                               */
 
                                 view.getActivity().runOnUiThread(()->{
                                     view.stopWaiting();
