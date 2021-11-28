@@ -19,7 +19,7 @@ public class LoginPresenter implements LoginMVP.Presenter{
     }
 
     @Override
-    public void islogged() {
+    public void isLogged() {
         SharedPreferences preferences = view.getActivity()
                 .getSharedPreferences(AUTH_PREFERENCE, Context.MODE_PRIVATE);
         boolean isLogged = preferences.getBoolean(LOGGED_KEY, false);
@@ -63,8 +63,9 @@ public class LoginPresenter implements LoginMVP.Presenter{
                                 public void onSuccess() {
                                     SharedPreferences preferences = view.getActivity()
                                             .getSharedPreferences(AUTH_PREFERENCE, Context.MODE_PRIVATE);
-                                    preferences.edit().putBoolean(LOGGED_KEY, true)
-                                    .apply();
+                                    preferences.edit()
+                                            .putBoolean(LOGGED_KEY, true)
+                                            .apply();
 
                                     view.getActivity().runOnUiThread(()-> {
                                         view.stopWaiting();

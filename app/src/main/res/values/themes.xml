@@ -20,7 +20,6 @@
         <item name="colorError">@color/purple_500</item>
     </style>
 
-
     <style name="fullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
@@ -28,8 +27,6 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 <!--    android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/> -->
-
-
 
     <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_screen</item>

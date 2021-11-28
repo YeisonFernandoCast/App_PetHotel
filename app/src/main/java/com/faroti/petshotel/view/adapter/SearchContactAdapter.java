@@ -57,7 +57,7 @@ public class SearchContactAdapter extends RecyclerView.Adapter<SearchContactAdap
 
 
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView ivClient;
         private TextView tvClient;
         private  TextView tvAddress;
