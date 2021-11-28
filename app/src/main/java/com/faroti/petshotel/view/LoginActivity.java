@@ -33,6 +33,7 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
     private AppCompatButton buttonSingLogin;
     private AppCompatButton buttonFacebook;
     private AppCompatButton buttonGoogle;
+    private AppCompatButton buttonRegister;
 
     private LoginMVP.Presenter presenter;
 
@@ -82,6 +83,9 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
 
         buttonGoogle = findViewById(R.id.button_google_login);
         buttonGoogle.setOnClickListener((evt) -> presenter.loginWithGoogle());
+
+        buttonRegister = findViewById(R.id.register_init_login);
+        buttonRegister.setOnClickListener((evt) -> goToRegister());
     }
 
 
@@ -122,7 +126,6 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
     public void openSearchContactActivity() {
         Intent intent = new Intent(this, SearchContact.class);
         startActivity(intent);
-
     }
 
     @Override
@@ -139,5 +142,10 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
         buttonSingLogin.setEnabled(true);
         buttonFacebook.setEnabled(true);
         buttonGoogle.setEnabled(true);
+    }
+
+    public void goToRegister(){
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
     }
 }

@@ -20,8 +20,6 @@ public interface LoginMVP {
         void loginWithEmail();
         void loginWithFacebook();
         void loginWithGoogle();
-
-
     }
 
     interface View {

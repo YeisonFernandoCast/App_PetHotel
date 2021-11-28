@@ -12,9 +12,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-
 public class UserRepository {
-    private final static Boolean USE_DATABASE_LOCAL = Boolean.FALSE;
+    private final static Boolean USE_DATABASE_LOCAL = Boolean.TRUE;
     private UserDao userDao ;
     private DatabaseReference userRef;
     //public FirebaseDatabase dataBase;
@@ -23,7 +22,7 @@ public class UserRepository {
         userDao = PetDatabase.getDatabase(context).getUserDao();
         FirebaseDatabase dataBase = FirebaseDatabase.getInstance(); // instancia firebase en database
         userRef = dataBase.getReference("user");
-        loadInitialDatabase();
+        //loadInitialDatabase();
     }
 
     public void newUser(String name, String email, String password, String cellPhone){
