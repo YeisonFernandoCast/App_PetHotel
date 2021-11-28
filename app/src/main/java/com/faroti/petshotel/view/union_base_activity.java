@@ -58,11 +58,11 @@ public class union_base_activity extends AppCompatActivity {
 
     private void initIU() {
 
-        buttonTips = findViewById(R.id.union_tips);
-        buttonTips.setOnClickListener((evt)-> onUnionTipsClick());
+        //buttonTips = findViewById(R.id.union_tips);
+        //buttonTips.setOnClickListener((evt)-> onUnionTipsClick());
 
-        buttonContact = findViewById(R.id.union_contact);
-        buttonContact.setOnClickListener((evt)-> onUnionContactClick());
+        //buttonContact = findViewById(R.id.union_contact);
+        //buttonContact.setOnClickListener((evt)-> onUnionContactClick());
 
         buttonRegister = findViewById(R.id.union_register);
         buttonRegister.setOnClickListener((evt)-> onUnionRegisterClick());

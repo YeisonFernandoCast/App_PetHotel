@@ -58,33 +58,6 @@
         style="@style/Widget.MaterialComponents.Button.TextButton"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/union_tips"
-        android:layout_width="@dimen/margin_100"
-        android:layout_height="@dimen/margin_50"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/red_dark"
-        app:rippleColor="@color/red"
-        app:cornerRadius="@dimen/margin_80"
-        android:text="@string/tips"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/union_contact"
-        android:layout_width="130dp"
-        android:layout_height="@dimen/margin_50"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="12dp"
-        android:backgroundTint="@color/red_dark"
-        app:rippleColor="@color/red"
-        app:cornerRadius="@dimen/margin_80"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:text="@string/contact_us"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

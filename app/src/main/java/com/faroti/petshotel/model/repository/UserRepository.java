@@ -14,7 +14,7 @@ import com.google.firebase.database.ValueEventListener;
 
 
 public class UserRepository {
-    private final static Boolean USE_DATABASE_LOCAL = Boolean.FALSE;
+    private final static Boolean USE_DATABASE_LOCAL = Boolean.TRUE;
     private UserDao userDao ;
     private DatabaseReference userRef;
     //public FirebaseDatabase dataBase;
@@ -35,7 +35,7 @@ public class UserRepository {
     private void loadInitialDatabase() {
         if(USE_DATABASE_LOCAL) {
             userDao.insert(
-                    new User("Usuario Prueba", "test@gmail.com", "87654321", "1234567890")
+                    //new User("Usuario Prueba", "test@gmail.com", "87654321", "1234567890")
             );
         } else {
             userRef.setValue("Bienvenido a Pet Hotel");

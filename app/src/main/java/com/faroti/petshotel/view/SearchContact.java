@@ -65,7 +65,7 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
         navigationDrawer = findViewById(R.id.navigation_drawer);
         navigationDrawer.setNavigationItemSelectedListener(this::navigationitemSelected);
 
-        ivOutContact = findViewById(R.id.iv_out);
+        //ivOutContact = findViewById(R.id.iv_out);
 
 
         tilSearch = findViewById(R.id.til_search);
@@ -79,8 +79,8 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
         rvSearchContact.setAdapter(searchContactAdapter);
 
 
-        ivInitContact = findViewById(R.id.iv_init);
-        ivInitContact.setOnClickListener((evt) -> onInitClick());
+        //ivInitContact = findViewById(R.id.iv_init);
+        //ivInitContact.setOnClickListener((evt) -> onInitClick());
 
     }
 

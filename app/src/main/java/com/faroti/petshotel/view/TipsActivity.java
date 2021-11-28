@@ -16,6 +16,8 @@ public class TipsActivity extends AppCompatActivity {
     AppCompatButton buttonTipThree;
     AppCompatButton buttonTipFour;
     AppCompatButton buttonTipFive;
+    AppCompatButton fab;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,11 @@ public class TipsActivity extends AppCompatActivity {
 
         buttonTipFive = findViewById(R.id.button5_tip);
         buttonTipFive.setOnClickListener((evt)-> onClickTipFive());
+
+        fab = findViewById(R.id.fab_back);
+        fab.setOnClickListener((evt) -> onClickBack());
+
+
     }
 
     private void onClickTipOne() {
@@ -66,6 +73,11 @@ public class TipsActivity extends AppCompatActivity {
 
     private void onClickTipFive() {
         Intent intent = new Intent(this, ActivityFive.class);
+        startActivity(intent);
+    }
+
+    public void onClickBack(){
+        Intent intent = new Intent(TipsActivity.this,SearchContact.class);
         startActivity(intent);
     }
 
