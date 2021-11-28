@@ -1,10 +1,5 @@
 package com.faroti.petshotel.view;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +7,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.faroti.petshotel.R;
 import com.faroti.petshotel.mvp.SearchContactMVP;
@@ -58,10 +58,10 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
         drawerLayout = findViewById(R.id.drawer_layout);
 
         appBar = findViewById(R.id.app_bar);
-        appBar.setNavigationOnClickListener(v ->openDrawer());
+        appBar.setNavigationOnClickListener(v -> openDrawer());
 
         navigationDrawer = findViewById(R.id.navigation_drawer);
-        navigationDrawer.setNavigationItemSelectedListener(this::navigationitenSelected);
+        navigationDrawer.setNavigationItemSelectedListener(this::navigationitemSelected);
 
         ivInitContact = findViewById(R.id.iv_init);
         ivOutContact = findViewById(R.id.iv_out);
@@ -79,25 +79,58 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
 
     }
 
-    private void onInitClick(){
+    private void onInitClick() {
         Intent intent = new Intent(this, InfoContact.class);
         startActivity(intent);
     }
 
-    private void openDrawer(){
+    private void openDrawer() {
         drawerLayout.openDrawer(navigationDrawer);
     }
 
-    private boolean navigationitenSelected(MenuItem menuItem){
+
+    private boolean navigationitemSelected(MenuItem menuItem) {
+        Intent intent;
         menuItem.setChecked(true);
-        Toast.makeText(this, menuItem.getTitle(),Toast.LENGTH_SHORT).show();
-        drawerLayout.closeDrawer(navigationDrawer);
-        return true;
+        switch (menuItem.getItemId()) {
+            case R.id.user:
+                //Toast.makeText(this, "ESO HP .....", Toast.LENGTH_LONG).show();
+                drawerLayout.closeDrawer(navigationDrawer);
+                intent = new Intent(this, InfoContact.class);
+                startActivity(intent);
+                return true;
+            case R.id.acount:
+                drawerLayout.closeDrawer(navigationDrawer);
+                Toast.makeText(this, "Pronto ... xD", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.tips:
+                drawerLayout.closeDrawer(navigationDrawer);
+                intent = new Intent(this, TipsActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.contact_us:
+                drawerLayout.closeDrawer(navigationDrawer);
+                Toast.makeText(this, "Contactenos", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.close:
+                drawerLayout.closeDrawer(navigationDrawer);
+                presenter.logout();
+                getUnionBaseActivity();
+                return true;
+            default:
+                return true;
+        }
     }
 
     @Override
     public Activity getActivity() {
         return SearchContact.this;
+    }
+
+    @Override
+    public void getUnionBaseActivity(){
+        Intent intent = new Intent(this, union_base_activity.class);
+        startActivity(intent);
     }
 
     @Override

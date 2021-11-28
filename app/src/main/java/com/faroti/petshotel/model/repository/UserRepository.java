@@ -3,9 +3,6 @@ package com.faroti.petshotel.model.repository;
 import android.content.Context;
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.room.Database;
-
 import com.faroti.petshotel.model.database.PetDatabase;
 import com.faroti.petshotel.model.database.dao.UserDao;
 import com.faroti.petshotel.model.database.entities.User;
@@ -17,7 +14,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class UserRepository {
 
-    private final static Boolean USE_DATABASE = Boolean.FALSE;
+    private final static Boolean USE_DATABASE = Boolean.TRUE;
 
     private UserDao userDao ;
 
