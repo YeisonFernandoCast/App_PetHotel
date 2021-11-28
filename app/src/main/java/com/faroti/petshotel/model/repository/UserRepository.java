@@ -19,6 +19,8 @@ public class UserRepository {
     private DatabaseReference userRef;
     //public FirebaseDatabase dataBase;
 
+    private DatabaseReference userRef;
+
     public UserRepository(Context context) {
         userDao = PetDatabase.getDatabase(context).getUserDao();
         FirebaseDatabase dataBase = FirebaseDatabase.getInstance(); // instancia firebase en database
@@ -31,6 +33,30 @@ public class UserRepository {
                 new User(name, email, password, cellPhone)
         );
     }
+        public User getUserByEmail(String email) {
+        if (USE_DATABASE){
+            return userDao.getUserByEmail(email);
+        } else {
+            // usar FireBase
+            // leer de Bd
+            userRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+
+                    String value = dataSnapshot.getValue(String.class);
+                    Log.d(UserRepository.class.getSimpleName(), "value is: " + value);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError error) {
+                    Log.w(UserRepository.class.getSimpleName(), "Failed to read value", error.toException());
+                }
+            });
+
+        }
+        return null;
+    }
+
 
     private void loadInitialDatabase() {
         if(USE_DATABASE_LOCAL) {

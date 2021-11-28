@@ -1,5 +1,8 @@
 package com.faroti.petshotel.presenter;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
 import com.faroti.petshotel.model.SearchContactInteractor;
 import com.faroti.petshotel.mvp.SearchContactMVP;
 
@@ -34,6 +37,14 @@ public class SearchContactPresenter implements SearchContactMVP.Presenter {
     @Override
     public void onInfoContactClick() {
 
+    }
+
+    public void logout() {
+        SharedPreferences preferences= view.getActivity()
+                .getSharedPreferences("authentication", Context.MODE_PRIVATE);
+        preferences.edit()
+                .putBoolean("logged",false)
+                .apply();
     }
 
 }
