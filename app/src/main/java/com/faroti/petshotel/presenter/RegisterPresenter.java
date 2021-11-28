@@ -94,6 +94,7 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
     }
 
     private boolean isEmailValid(String email) {
+
          return  email.contains("@")
                  && email.endsWith(".com")
                  && email.contains("gmail") || email.contains("outlook") || email.contains("hotmail");

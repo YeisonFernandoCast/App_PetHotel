@@ -12,8 +12,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class UserRepository {
 
+public class UserRepository {
     private final static Boolean USE_DATABASE_LOCAL = Boolean.FALSE;
     private UserDao userDao ;
     private DatabaseReference userRef;
