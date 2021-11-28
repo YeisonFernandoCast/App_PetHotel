@@ -29,7 +29,6 @@ public class RegisterInteractor implements RegisterMVP.Model {
         }
     }
 
-
     public void insertNewUser(String name, String email, String password, String cellPhone){
        userRepository.newUser(name, email, password, cellPhone);
     }
