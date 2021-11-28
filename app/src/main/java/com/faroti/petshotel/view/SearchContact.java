@@ -127,10 +127,6 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
         }
     }
 
-    private void onInitClick(){
-        Intent intent = new Intent(this, InfoContact.class);
-        startActivity(intent);
-    }
 
     @Override
     public Activity getActivity() {
