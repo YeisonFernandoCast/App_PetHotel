@@ -116,9 +116,9 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
                 return true;
             case R.id.close:
                 drawerLayout.closeDrawer(navigationDrawer);
-                //presenter.logout();
-                //getUnionBaseActivity();
-                this.logout();
+                presenter.logout();
+                getUnionBaseActivity();
+                //logout();
                 return true;
             default:
                 return true;
@@ -138,7 +138,7 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
         editor.apply();
         this.finish();
         Intent intent = new Intent(this, union_base_activity.class);
-
+        startActivity(intent);
     }
 
     @Override
