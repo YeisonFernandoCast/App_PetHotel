@@ -10,7 +10,8 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
 
     public RegisterPresenter (RegisterMVP.View view){
         this.view = view;
-        this.model = new RegisterInteractor();
+        //this.model = new RegisterInteractor();
+        this.model = new RegisterInteractor(view.getActivity());
     }
 
 
@@ -22,6 +23,8 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
         boolean error = false;
         view.showEmailError("");
         view.showPasswordError("");
+        view.showCellPhoneError("");
+        view.showUserNameError("");
 
         RegisterMVP.RegisterInfo registerInfo = view.getRegisterInfo();
         if(registerInfo.getEmail().trim().isEmpty()){
@@ -32,28 +35,6 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
             error = true;
         }
 
-        if(!error) {
-            view.startWaiting();
-            new Thread(()-> model.validateCredentials(
-                    registerInfo.getEmail().trim(),
-                    new RegisterMVP.Model.ValidateCredentialsCallback() {
-                        @Override
-                        public void onSuccess() {
-                            view.getActivity().runOnUiThread(()->{
-                                view.stopWaiting();
-                                view.SearchActivity();
-                            });
-                        }
-                        @Override
-                        public void onFailed(String error) {
-                            view.getActivity().runOnUiThread(()->{
-                                view.stopWaiting();
-                                view.showEmailError(error);
-                            });
-                        }
-                    })).start();
-        }
-
         if(registerInfo.getPassword().trim().isEmpty()){
             view.showPasswordError("Contraseña es obligatoria");
             error = true;
@@ -62,7 +43,20 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
             error = true;
         }
 
-        /*
+        if(registerInfo.getCellPhone().trim().isEmpty()){
+            view.showCellPhoneError("Campo Obligatorio");
+            error = true;
+        } else if (!isCellPhoneValid (registerInfo.getCellPhone().trim())){
+            view.showCellPhoneError("Telefono no valido");
+            error = true;
+        }
+
+        if(registerInfo.getUserName().trim().isEmpty()){
+            view.showUserNameError("Campo Obligatorio");
+            error = true;
+        }
+
+
         //validar credenciales
         if(!error) {
             view.startWaiting();
@@ -72,6 +66,11 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
                         new RegisterMVP.Model.ValidateCredentialsCallback() {
                             @Override
                             public void onSuccess() {
+                                model.insertNewUser(registerInfo.getUserName(),
+                                        registerInfo.getEmail(),
+                                        registerInfo.getPassword(),
+                                        registerInfo.getCellPhone());
+
                                 view.getActivity().runOnUiThread(()->{
                                     view.stopWaiting();
                                     view.SearchActivity();
@@ -87,15 +86,22 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
                         });
             }).start();
         }
-         */
+
+    }
+
+    private boolean isCellPhoneValid(String cellPhone) {
+        return cellPhone.length() == 10;
     }
 
     private boolean isEmailValid(String email) {
-         return email.contains("@") && email.endsWith(".com");
+
+         return  email.contains("@")
+                 && email.endsWith(".com")
+                 && email.contains("gmail") || email.contains("outlook") || email.contains("hotmail");
     }
 
     private boolean isPasswordValid(String password) {
-        return password.length() >= 8;
+        return password.length() > 7;
     }
 
     @Override

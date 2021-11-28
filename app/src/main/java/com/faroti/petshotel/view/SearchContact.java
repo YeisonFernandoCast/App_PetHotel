@@ -27,10 +27,12 @@ import java.util.List;
 
 public class SearchContact extends AppCompatActivity implements SearchContactMVP.View {
 
-    ImageView ivInitContact;
-    ImageView ivOutContact;
-    TextInputLayout tilSearch;
-    TextInputEditText etSearch;
+    private final static String LOGGED_KEY = "logged";
+
+    private ImageView ivInitContact;
+    private ImageView ivOutContact;
+    private TextInputLayout tilSearch;
+    private TextInputEditText etSearch;
 
     private DrawerLayout drawerLayout;
     private MaterialToolbar appBar;
@@ -63,11 +65,12 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
         navigationDrawer = findViewById(R.id.navigation_drawer);
         navigationDrawer.setNavigationItemSelectedListener(this::navigationitemSelected);
 
-        ivInitContact = findViewById(R.id.iv_init);
         ivOutContact = findViewById(R.id.iv_out);
+
 
         tilSearch = findViewById(R.id.til_search);
         etSearch = findViewById(R.id.et_search);
+
 
         piWaiting = findViewById(R.id.pi_waiting_search);
         rvSearchContact = findViewById(R.id.rv_search_contact);
@@ -75,6 +78,8 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
         searchContactAdapter = new SearchContactAdapter();
         rvSearchContact.setAdapter(searchContactAdapter);
 
+
+        ivInitContact = findViewById(R.id.iv_init);
         ivInitContact.setOnClickListener((evt) -> onInitClick());
 
     }
@@ -120,6 +125,11 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
             default:
                 return true;
         }
+    }
+
+    private void onInitClick(){
+        Intent intent = new Intent(this, InfoContact.class);
+        startActivity(intent);
     }
 
     @Override

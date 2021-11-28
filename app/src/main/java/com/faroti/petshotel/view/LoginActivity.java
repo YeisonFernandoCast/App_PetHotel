@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
         setContentView(R.layout.activity_login);
 
         presenter = new LoginPresenter(this);
-        presenter.islogged();
+        presenter.isLogged();
         initIU();
     }
 

@@ -6,11 +6,12 @@ public interface RegisterMVP {
 
     interface Model{
         void validateCredentials(String email, ValidateCredentialsCallback callback);
-
         interface ValidateCredentialsCallback{
             void onSuccess();
             void onFailed(String error);
         }
+
+        void insertNewUser(String name, String email, String password, String cellPhone);
     }
 
     interface Presenter{
@@ -24,6 +25,8 @@ public interface RegisterMVP {
         RegisterInfo getRegisterInfo();
         void showEmailError(String error);
         void showPasswordError (String error);
+        void showCellPhoneError(String error);
+        void showUserNameError (String error);
         void showGeneralError(String error);
         void clearData();
         void SearchActivity();
@@ -35,10 +38,14 @@ public interface RegisterMVP {
     class RegisterInfo{
         private String email;
         private String password;
+        private String cellPhone;
+        private String userName;
 
-        public RegisterInfo(String email, String password) {
+        public RegisterInfo(String email, String password, String cellPhone, String userName) {
             this.email = email;
             this.password = password;
+            this.cellPhone = cellPhone;
+            this.userName = userName;
         }
 
         public String getEmail() {
@@ -46,6 +53,11 @@ public interface RegisterMVP {
         }
         public String getPassword() {
             return password;
+        }
+        public String getCellPhone() {
+            return cellPhone;
+        }
+        public String getUserName() { return userName;
         }
     }
 }

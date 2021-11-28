@@ -22,7 +22,7 @@ public class ActivityFive extends AppCompatActivity {
     }
 
     public void onClickBack(){
-        Intent intent = new Intent(this, TipsActivity.class);
+        Intent intent = new Intent(ActivityFive.this,TipsActivity.class);
         startActivity(intent);
     }
 }

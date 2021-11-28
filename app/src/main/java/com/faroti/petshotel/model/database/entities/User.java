@@ -16,18 +16,26 @@ public class User {
 
     private String password;
 
+    private String cellPhone;
+
     private Boolean  enable;
 
-    public User(){
+    //private List<Proveedor> proveedores;
 
+
+
+    public User(){
     }
 
-    public User(String name, String email, String password) {
+    public User(String name, String email, String password, String cellPhone) {
         this.name = name;
         this.email = email;
         this.password = password;
+        this.cellPhone = cellPhone;
         this.enable = true;
     }
+
+
 
     public int getId() {
         return id;
@@ -61,6 +69,10 @@ public class User {
         this.password = password;
     }
 
+    public String getCellPhone() { return cellPhone; }
+
+    public void setCellPhone(String cellPhone) { this.cellPhone = cellPhone; }
+
     public Boolean getEnable() {
         return enable;
     }
@@ -68,4 +80,15 @@ public class User {
     public void setEnable(Boolean enable) {
         this.enable = enable;
     }
+
+    /*
+    public List<Proveedor> getProveedores() {
+        return proveedores;
+    }
+
+    public void setProveedores(List<Proveedor> proveedores) {
+        this.proveedores = proveedores;
+    }
+
+     */
 }

@@ -1,33 +1,40 @@
 package com.faroti.petshotel.model;
 
-import com.faroti.petshotel.mvp.RegisterMVP;
+import android.content.Context;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.faroti.petshotel.model.database.entities.User;
+import com.faroti.petshotel.model.repository.UserRepository;
+import com.faroti.petshotel.mvp.RegisterMVP;
 
 public class RegisterInteractor implements RegisterMVP.Model {
 
-    Map<String,String> users;
+    private UserRepository userRepository;
 
-    public RegisterInteractor(){
-        users = new HashMap<>();
-        users.put("johan@gmail.com","12345678");
+
+    public RegisterInteractor(Context context){
+        userRepository = new UserRepository(context);
     }
+
+
 
 
     @Override
     public void validateCredentials(String email, ValidateCredentialsCallback callback) {
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        User user = userRepository.getUserByEmail(email);
 
-        if(users.get(email) != null) {
+        if(user != null) {
             callback.onFailed("Correo ya existe");
         }else{
             callback.onSuccess();
         }
-
     }
+
+
+    public void insertNewUser(String name, String email, String password, String cellPhone){
+       userRepository.newUser(name, email, password, cellPhone);
+    }
+
+
+
+
 }
