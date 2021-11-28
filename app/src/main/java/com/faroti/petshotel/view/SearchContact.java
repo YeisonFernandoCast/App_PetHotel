@@ -2,9 +2,7 @@ package com.faroti.petshotel.view;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -118,7 +116,6 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
                 drawerLayout.closeDrawer(navigationDrawer);
                 presenter.logout();
                 getUnionBaseActivity();
-                //logout();
                 return true;
             default:
                 return true;
@@ -126,24 +123,14 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
     }
 
     @Override
-    public void getUnionBaseActivity(){
-        Intent intent = new Intent(this, union_base_activity.class);
-        startActivity(intent);
-    }
-
-    private void logout() {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.remove("authentication");
-        editor.apply();
-        this.finish();
-        Intent intent = new Intent(this, union_base_activity.class);
-        startActivity(intent);
+    public Activity getActivity() {
+        return SearchContact.this;
     }
 
     @Override
-    public Activity getActivity() {
-        return SearchContact.this;
+    public void getUnionBaseActivity(){
+        Intent intent = new Intent(this, union_base_activity.class);
+        startActivity(intent);
     }
 
     @Override
