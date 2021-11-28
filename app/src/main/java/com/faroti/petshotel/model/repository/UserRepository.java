@@ -12,9 +12,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class UserRepository {
-    private final static Boolean USE_DATABASE_LOCAL = Boolean.TRUE;
+    private final static Boolean USE_DATABASE_LOCAL = Boolean.FALSE;
     private UserDao userDao ;
     private DatabaseReference userRef;
     //public FirebaseDatabase dataBase;
@@ -36,40 +39,66 @@ public class UserRepository {
         if(USE_DATABASE_LOCAL) {
             userDao.insert(
                     //new User("Usuario Prueba", "test@gmail.com", "87654321", "1234567890")
+
             );
         } else {
-            userRef.setValue("Bienvenido a Pet Hotel");
+            //userRef.setValue("Bienvenido a Pet Hotel");
+            String username = ("Yeison Castaño");
+            userRef.child(username).setValue(new User("yeison", "yei@gmail.com", "asdfghjk", "3014225187"));
         }
+
+    }
+
+    public void getUserByEmail(String email, UserCallback<User> callback) {
+        if (USE_DATABASE_LOCAL){
+            callback.onSuccess(userDao.getUserByEmail(email)); //BD local
+        } else {
+
+            // leer de Bd de FireBase  hacer consulta
+            String username = email.replace("@","_").replace(".", "_");
+            userRef.child(username).get()
+                    .addOnCompleteListener(task ->  {
+                        if (task.isSuccessful()){
+                            User value = task.getResult().getValue(User.class);
+                            callback.onSuccess(value);
+                        } else{
+                            callback.onFailure();
+                        }
+                    });
+        }
+    }
+    public void getAll(UserCallback<List<User>> callback){
+        userRef.get().addOnCompleteListener(task -> {
+            if(task.isSuccessful()){
+                DataSnapshot dataSnapshot =task.getResult();
+                if(dataSnapshot.hasChildren()){
+                    List<User> users = new ArrayList<>();
+                    for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+                        User user = snapshot.getValue(User.class);
+                        Log.d(UserRepository.class.getSimpleName(),user.toString());
+                        users.add(user);
+                    }
+                    callback.onSuccess(users);
+                }
+
+            }else{
+                callback.onFailure();
+            }
+        });
 
     }
 
     public User getUserByEmail(String email) {
-        if(USE_DATABASE_LOCAL) {
-            return userDao.getUserByEmail(email);
-        } else {
-            //usar firebase
-            // Read from the database
-            userRef.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    // This method is called once with the initial value and again
-                    // whenever data at this location is updated.
-                    String value = dataSnapshot.getValue(String.class);
-                    Log.d(UserRepository.class.getSimpleName(), "Value is: " + value);
-                }
-
-                @Override
-                public void onCancelled(DatabaseError error) {
-                    // Failed to read value
-                    Log.w(UserRepository.class.getSimpleName(), "Failed to read value.", error.toException());
-                }
-            });
-        }
-        return null;
+        return userDao.getUserByEmail(email);
     }
 
+    public interface UserCallback<T>{
+        void onSuccess(T data);
 
-    public  User getUserByEmailDataBaseOnline(String email){
+        void onFailure();
+    }
+
+    public  User getUserByEmailDataBase(String email){
         return userDao.getUserByEmail(email);
     }
 }
