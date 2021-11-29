@@ -77,7 +77,11 @@ public class LoginPresenter implements LoginMVP.Presenter{
                                 public void onFailure(String error) {
                                     view.getActivity().runOnUiThread(()-> {
                                         view.stopWaiting();
-                                        view.showGeneralError(error);
+                                        if (error.equals("Usuario no existe")){
+                                            view.showEmailError(error);
+                                        } else{
+                                            view.showPasswordError(error);
+                                        }
                                     });
 
                                 }
