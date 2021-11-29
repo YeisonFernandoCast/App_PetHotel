@@ -27,3 +27,5 @@ public class RetrofitConfig {
         return retrofit;
     }
 }
+
+//TODO clase del 25 noviembre api rest
