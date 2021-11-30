@@ -9,6 +9,8 @@ public interface LoginMVP {
 
         void validateCredentials(String email, String password, ValidateCredentialsCallback callback);
 
+        boolean isAuthenticated();
+
         interface ValidateCredentialsCallback{
             void onSuccess();
             void onFailure(String error);
@@ -16,6 +18,7 @@ public interface LoginMVP {
     }
 
     interface Presenter {
+        void isAuthenticated();
         void isLogged();
         void loginWithEmail();
         void loginWithFacebook();

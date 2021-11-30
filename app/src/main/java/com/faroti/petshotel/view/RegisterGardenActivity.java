@@ -10,7 +10,7 @@ import com.google.android.material.textfield.MaterialAutoCompleteTextView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-public class RegisterGarden extends AppCompatActivity {
+public class RegisterGardenActivity extends AppCompatActivity {
 
     private TextInputLayout tilGardenName;
     private TextInputEditText editTextGardenName;

@@ -19,6 +19,14 @@ public class LoginPresenter implements LoginMVP.Presenter{
     }
 
     @Override
+    public void isAuthenticated() {
+        boolean isAuthenticated = model.isAuthenticated();
+        if(isAuthenticated){
+            view.openSearchContactActivity();
+        }
+    }
+
+    @Override
     public void isLogged() {
         SharedPreferences preferences = view.getActivity()
                 .getSharedPreferences(AUTH_PREFERENCE, Context.MODE_PRIVATE);
@@ -43,8 +51,6 @@ public class LoginPresenter implements LoginMVP.Presenter{
                 view.showEmailError("Correo electrónico no es válido");
                 error = true;
             }
-
-
             if(loginInfo.getPassword().trim().isEmpty()){
                 view.showPasswordError("Contraseña es obligatoria");
                 error = true;
@@ -77,11 +83,8 @@ public class LoginPresenter implements LoginMVP.Presenter{
                                 public void onFailure(String error) {
                                     view.getActivity().runOnUiThread(()-> {
                                         view.stopWaiting();
-                                        if (error.equals("Usuario no existe")){
-                                            view.showEmailError(error);
-                                        } else{
-                                            view.showPasswordError(error);
-                                        }
+                                            view.showGeneralError(error);
+
                                     });
 
                                 }

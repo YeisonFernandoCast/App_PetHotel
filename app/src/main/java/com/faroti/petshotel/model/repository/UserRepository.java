@@ -31,7 +31,7 @@ public class UserRepository {
     private UserRepository(Context context) {
         userDao = PetDatabase.getDatabase(context).getUserDao();
         dataBase = FirebaseDatabase.getInstance(); // instancia firebase en database
-        userRef = dataBase.getReference("Users");
+        userRef = dataBase.getReference("Garden");
         //loadInitialDatabase();
     }
 

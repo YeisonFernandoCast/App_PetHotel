@@ -50,7 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void onRegisterGardenClick() {
-        Intent intent = new Intent(this, RegisterGarden.class);
+        Intent intent = new Intent(this, RegisterGardenActivity.class);
         startActivity(intent);
     }
 }

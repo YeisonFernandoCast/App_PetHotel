@@ -1,26 +1,39 @@
 package com.faroti.petshotel.model;
 
 import android.content.Context;
-import android.util.Log;
 
-import com.faroti.petshotel.model.database.entities.User;
+import com.faroti.petshotel.model.repository.FirebaseAuthRepository;
 import com.faroti.petshotel.model.repository.UserRepository;
 import com.faroti.petshotel.mvp.LoginMVP;
-
-import java.util.List;
 
 public class LoginInteractor implements LoginMVP.Model {
 
     private UserRepository userRepository;
+    private FirebaseAuthRepository AUTH;
 
 
-    public LoginInteractor (Context context){
+    public LoginInteractor(Context context) {
+        AUTH = new FirebaseAuthRepository(context);
         userRepository = UserRepository.getInstance(context);
     }
 
 
     @Override
     public void validateCredentials(String email, String password, ValidateCredentialsCallback callback) {
+        AUTH.login(email, password,
+                new FirebaseAuthRepository.FirebaseAuthCallback() {
+                    @Override
+                    public void onSuccess() {
+                        callback.onSuccess();
+                    }
+
+                    @Override
+                    public void onFail() {
+                        callback.onFailure("Credenciales invalidas");
+                    }
+                });
+
+        /*
         userRepository.getUserByEmail(email, new UserRepository.UserCallBack<User>() {
             @Override
             public void onSuccess(User user) {
@@ -55,5 +68,12 @@ public class LoginInteractor implements LoginMVP.Model {
             }
         });
 
+         */
+
+    }
+
+    @Override
+    public boolean isAuthenticated() {
+        return AUTH.isAuthenticated();
     }
 }
