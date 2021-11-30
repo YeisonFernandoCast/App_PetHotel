@@ -32,7 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
         buttonRegisterUser.setOnClickListener((evt) -> onRegisterUserClick());
 
         buttonGoToRegisterGarden = findViewById(R.id.button_go_to_register_garden);
-        buttonGoToLogin.setOnClickListener((evt) -> onRegisterGardenClick());
+        buttonGoToRegisterGarden.setOnClickListener((evt) -> onRegisterGardenClick());
 
         buttonGoToLogin = findViewById(R.id.login_register);
         buttonGoToLogin.setOnClickListener((evt) -> onLoginClick());

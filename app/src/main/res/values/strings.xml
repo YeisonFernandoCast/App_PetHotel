@@ -44,5 +44,7 @@
     <string name="account">Mi cuenta</string>
     <string name="log_out">Cerrar Sesión</string>
     <string name="name_garden">Nombre de su Guardería</string>
+    <string name="city">Ciudad</string>
+    <string name="address">Dirección</string>
 
 </resources>

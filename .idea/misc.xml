@@ -32,6 +32,7 @@
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/drawable/ic_pets_hotel_garden.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/drawable/ic_pets_hotel_garden_image_the_hotel.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/drawable/ic_phone.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/drawable/ic_tips.xml" value="0.2064814814814815" />
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/drawable/ic_user.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/drawable/splash.xml" value="0.2212962962962963" />
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/drawable/splash_screen.xml" value="0.22552083333333334" />
@@ -57,7 +58,7 @@
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/layout/activity_one.xml" value="0.22" />
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/layout/activity_register_activity.xml" value="0.25" />
-        <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/layout/activity_register_garden.xml" value="0.25" />
+        <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/layout/activity_register_garden.xml" value="0.22" />
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/layout/activity_register_user.xml" value="0.25" />
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/layout/activity_search_contact.xml" value="0.25" />
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/layout/activity_splash.xml" value="0.16530797101449277" />
@@ -67,6 +68,7 @@
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/layout/activity_union_base.xml" value="0.25" />
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/layout/header_navigation_drawer.xml" value="0.25" />
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/layout/item_contact_search.xml" value="0.15443840579710144" />
+        <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/layout/list_item.xml" value="0.20697463768115942" />
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/menu/navigation_drawer.xml" value="0.209375" />
         <entry key="..\:/Users/Johan/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/proyecto-c4g01-06/app/src/main/res/layout/activity_five.xml" value="0.13489583333333333" />
