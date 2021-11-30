@@ -15,6 +15,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     MaterialButton buttonRegisterUser;
     AppCompatButton buttonGoToLogin;
+    AppCompatButton buttonGoToRegisterGarden;
 
 
 
@@ -30,6 +31,9 @@ public class RegisterActivity extends AppCompatActivity {
         buttonRegisterUser = findViewById(R.id.button_go_to_register_user);
         buttonRegisterUser.setOnClickListener((evt) -> onRegisterUserClick());
 
+        buttonGoToRegisterGarden = findViewById(R.id.button_go_to_register_garden);
+        buttonGoToLogin.setOnClickListener((evt) -> onRegisterGardenClick());
+
         buttonGoToLogin = findViewById(R.id.login_register);
         buttonGoToLogin.setOnClickListener((evt) -> onLoginClick());
     }
@@ -43,5 +47,10 @@ public class RegisterActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RegisterUserActivity.class);
         startActivity(intent);
         Toast.makeText(this, "Registro Completo", Toast.LENGTH_SHORT).show();
+    }
+
+    private void onRegisterGardenClick() {
+        Intent intent = new Intent(this, RegisterGarden.class);
+        startActivity(intent);
     }
 }
