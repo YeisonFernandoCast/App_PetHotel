@@ -93,8 +93,6 @@ public class UserRepository {
                     /*
                     .addValueEventListener(new ValueEventListener() { // este metodo es para actualizar cada cambio que se haga en la
                                                                         //base de datos sobre la tabla users que le da userRef
-
-
             @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     User value = dataSnapshot.getValue(User.class);
@@ -120,7 +118,6 @@ public class UserRepository {
                    List<User> users = new ArrayList<>();
                    for(DataSnapshot snapshot:dataSnapshot.getChildren()){
                        //snapshot.child("name").getValue(String.class);
-
                        User user = snapshot.getValue(User.class);
                        users.add(user);
                    }
