@@ -8,8 +8,6 @@ public interface RegisterMVP {
 
     interface Model{
 
-        boolean isAuthenticated();
-
         void validateCredentials(String email, ValidateCredentialsCallback callback);
         interface ValidateCredentialsCallback{
             void onSuccess();

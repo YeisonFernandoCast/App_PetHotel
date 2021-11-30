@@ -26,12 +26,14 @@ public class UserRepository {
     private final static Boolean USE_DATABASE_LOCAL = Boolean.FALSE;
     private UserDao userDao ;
     private DatabaseReference userRef;
+    private DatabaseReference GardenRef;
     private FirebaseDatabase dataBase;
 
     private UserRepository(Context context) {
         userDao = PetDatabase.getDatabase(context).getUserDao();
         dataBase = FirebaseDatabase.getInstance(); // instancia firebase en database
-        userRef = dataBase.getReference("Garden");
+        GardenRef = dataBase.getReference("Garden");
+        userRef = dataBase.getReference("Users");
         //loadInitialDatabase();
     }
 

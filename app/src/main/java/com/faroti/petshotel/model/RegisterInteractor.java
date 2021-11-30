@@ -20,15 +20,7 @@ public class RegisterInteractor implements RegisterMVP.Model {
 
 
     @Override
-    public boolean isAuthenticated() {
-        return !AUTH.isAuthenticated();
-    }
-
-    @Override
     public void validateCredentials(String email, ValidateCredentialsCallback callback) {
-
-
-        /*
         userRepository.getUserByEmail(email, new UserRepository.UserCallBack<User>() {
            @Override
            public void onSuccess(User user) {
@@ -44,7 +36,7 @@ public class RegisterInteractor implements RegisterMVP.Model {
                callback.onFailed("Error al conectar a la base de datos");
            }
        });
-*/
+
 
     }
 
