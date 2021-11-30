@@ -111,7 +111,7 @@ public class UserRepository {
     }
 
     public void getAll(UserCallBack<List<User>> callBack){
-        userRef.get().addOnCompleteListener(task ->{
+        userRef.getParent().get().addOnCompleteListener(task ->{
             if (task.isSuccessful()){
                DataSnapshot dataSnapshot = task.getResult();
                if(dataSnapshot.hasChildren()){

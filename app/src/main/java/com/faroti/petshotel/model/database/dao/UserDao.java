@@ -18,6 +18,7 @@ public interface UserDao {
     @Query("SELECT * FROM user WHERE email = :email")
     User getUserByEmail(String email);
 
+
     @Insert
     void insert(User...users);
 
