@@ -58,8 +58,8 @@ public class UserRepository {
     private void loadInitialDatabase() {
         if(USE_DATABASE_LOCAL) {
             userDao.insert(
-                    new User("Jose Pacheco", "jfpacheco11@gmail.com", "12345678" , "1234567890"),
-                    new User("Usuario Prueba", "test@gmail.com", "87654321", "1234567890")
+                    //new User("Usuario Prueba", "test@gmail.com", "87654321", "1234567890")
+
             );
         } else {
             String userName = "testmanual@gmail.com".replace('@','_').replace('.','_');

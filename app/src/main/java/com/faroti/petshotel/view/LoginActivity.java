@@ -78,6 +78,9 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
         buttonSingLogin = findViewById(R.id.button_sign_in_login);
         buttonSingLogin.setOnClickListener((evt) -> presenter.loginWithEmail());
 
+        //*buttonRegister = findViewById(R.id.register_init_login);
+        //buttonRegister.setOnClickListener((evt) -> presenter.());
+
         buttonFacebook = findViewById(R.id.button_facebook_login);
         buttonFacebook.setOnClickListener((evt) -> presenter.loginWithFacebook());
 
