@@ -56,6 +56,12 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
         presenter.loadSearchContact();
     }
 
+    @Override
+    public void onBackPressed() {
+        presenter.onBackPressed();
+        //super.onBackPressed();
+    }
+
     private void initUI() {
         drawerLayout = findViewById(R.id.drawer_layout);
 
@@ -113,14 +119,14 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
                 return true;
             case R.id.close:
                 drawerLayout.closeDrawer(navigationDrawer);
-                presenter.logout();
-                getUnionBaseActivity();
+                presenter.onBackPressed();
+                //presenter.logout();
+                //getUnionBaseActivity();
                 return true;
             default:
                 return true;
         }
     }
-
 
     @Override
     public Activity getActivity() {
@@ -128,7 +134,7 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
     }
 
     @Override
-    public void getUnionBaseActivity(){
+    public void getUnionBaseActivity() {
         Intent intent = new Intent(this, union_base_activity.class);
         startActivity(intent);
     }

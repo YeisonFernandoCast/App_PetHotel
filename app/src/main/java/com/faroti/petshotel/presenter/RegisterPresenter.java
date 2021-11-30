@@ -56,7 +56,8 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
             error = true;
         }
 
-        User user = new User(registerInfo.getUserName(),
+        User user = new User(
+                registerInfo.getUserName(),
                 registerInfo.getEmail(),
                 registerInfo.getPassword(),
                 registerInfo.getCellPhone());
@@ -70,7 +71,7 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
                         new RegisterMVP.Model.ValidateCredentialsCallback() {
                             @Override
                             public void onSuccess() {
-                                //model.insertNewUser(user);
+                                model.insertNewUser(user);
                                 view.getActivity().runOnUiThread(()->{
                                     view.stopWaiting();
                                     view.SearchActivity();

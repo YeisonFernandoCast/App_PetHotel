@@ -14,6 +14,7 @@ public interface SearchContactMVP {
     }
 
     interface Presenter{
+        void onBackPressed();
         void logout();
         void loadSearchContact();
         void onInfoContactClick();

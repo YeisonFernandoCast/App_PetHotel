@@ -8,11 +8,20 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class FirebaseAuthRepository {
 
+    private static FirebaseAuthRepository instance;
+
+    public static FirebaseAuthRepository getInstance(Context context) {
+        if(instance ==null){
+            instance = new FirebaseAuthRepository(context);
+        }
+        return instance;
+    }
+
     private final FirebaseAuth AUTH;
     public FirebaseUser currentUser;
     private UserRepository userRepository;
 
-    public FirebaseAuthRepository(Context context) {
+    private FirebaseAuthRepository(Context context) {
         this.userRepository = UserRepository.getInstance(context);
         this.AUTH = FirebaseAuth.getInstance();
     }
@@ -64,6 +73,9 @@ public class FirebaseAuthRepository {
         if (currentUser != null) {
             AUTH.signOut();
             currentUser = null;
+            callback.onSuccess();
+        }else {
+            callback.onFail();
         }
     }
 

@@ -13,7 +13,7 @@ public class LoginInteractor implements LoginMVP.Model {
 
 
     public LoginInteractor(Context context) {
-        AUTH = new FirebaseAuthRepository(context);
+        AUTH = FirebaseAuthRepository.getInstance(context);
         userRepository = UserRepository.getInstance(context);
     }
 

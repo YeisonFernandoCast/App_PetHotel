@@ -14,7 +14,7 @@ public class RegisterInteractor implements RegisterMVP.Model {
 
 
     public RegisterInteractor(Context context){
-        AUTH = new FirebaseAuthRepository(context);
+        AUTH = FirebaseAuthRepository.getInstance(context);
         userRepository = UserRepository.getInstance(context);
     }
 
