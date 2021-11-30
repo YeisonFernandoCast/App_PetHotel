@@ -85,10 +85,11 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
 
         tilPassword = findViewById(R.id.til_password_register);
         passwordRegister = findViewById(R.id.edit_text_password_register);
-        passwordRegister.setText("Abcd_1234");
+        passwordRegister.setText("12345678");
 
         tilCellPhoneUser = findViewById(R.id.til_cellphone_register);
         cellPhoneUser = findViewById(R.id.edit_text_cellphone_register);
+        cellPhoneUser.setText("1234567890");
 
         tilUserName = findViewById(R.id.til_name_register);
         userName = findViewById(R.id.edit_text_name_register);

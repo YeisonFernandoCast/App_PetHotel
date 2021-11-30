@@ -84,15 +84,9 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
 
     }
 
-    private void onInitClick() {
-        Intent intent = new Intent(this, InfoContact.class);
-        startActivity(intent);
-    }
-
     private void openDrawer() {
         drawerLayout.openDrawer(navigationDrawer);
     }
-
 
     private boolean navigationitemSelected(MenuItem menuItem) {
         Intent intent;

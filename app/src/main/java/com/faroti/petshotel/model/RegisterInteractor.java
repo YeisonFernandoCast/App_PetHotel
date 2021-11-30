@@ -12,7 +12,7 @@ public class RegisterInteractor implements RegisterMVP.Model {
 
 
     public RegisterInteractor(Context context){
-        userRepository = new UserRepository(context);
+        userRepository = UserRepository.getInstance(context);
     }
 
 
@@ -20,13 +20,23 @@ public class RegisterInteractor implements RegisterMVP.Model {
 
     @Override
     public void validateCredentials(String email, ValidateCredentialsCallback callback) {
-        User user = userRepository.getUserByEmail(email);
+       userRepository.getUserByEmail(email, new UserRepository.UserCallBack<User>() {
+           @Override
+           public void onSuccess(User user) {
+               if(user != null) {
+                   callback.onFailed("Correo ya existe");
+               }else{
+                   callback.onSuccess();
+               }
+           }
 
-        if(user != null) {
-            callback.onFailed("Correo ya existe");
-        }else{
-            callback.onSuccess();
-        }
+           @Override
+           public void onFail() {
+               callback.onFailed("Error al conectar a la base de datos");
+           }
+       });
+
+
     }
 
     public void insertNewUser(String name, String email, String password, String cellPhone){
