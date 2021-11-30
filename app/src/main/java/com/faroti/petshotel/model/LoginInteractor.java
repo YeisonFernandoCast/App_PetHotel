@@ -1,13 +1,10 @@
 package com.faroti.petshotel.model;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.faroti.petshotel.model.database.entities.User;
 import com.faroti.petshotel.model.repository.UserRepository;
 import com.faroti.petshotel.mvp.LoginMVP;
-
-import java.util.List;
 
 public class LoginInteractor implements LoginMVP.Model {
 
@@ -40,6 +37,8 @@ public class LoginInteractor implements LoginMVP.Model {
             }
         });
 
+
+        /*
         userRepository.getAll(new UserRepository.UserCallBack<List<User>>() {
             @Override
             public void onSuccess(List<User> data) {
@@ -53,6 +52,6 @@ public class LoginInteractor implements LoginMVP.Model {
                 Log.w(LoginInteractor.class.getSimpleName(),"Problemas al obtener los datos");
             }
         });
-
+        */
     }
 }
