@@ -33,6 +33,8 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
     private AppCompatButton buttonSingLogin;
     private AppCompatButton buttonFacebook;
     private AppCompatButton buttonGoogle;
+    //private AppCompatButton buttonRegister;
+
 
     private LoginMVP.Presenter presenter;
 
@@ -76,6 +78,9 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
 
         buttonSingLogin = findViewById(R.id.button_sign_in_login);
         buttonSingLogin.setOnClickListener((evt) -> presenter.loginWithEmail());
+
+        //*buttonRegister = findViewById(R.id.register_init_login);
+        //buttonRegister.setOnClickListener((evt) -> presenter.());
 
         buttonFacebook = findViewById(R.id.button_facebook_login);
         buttonFacebook.setOnClickListener((evt) -> presenter.loginWithFacebook());

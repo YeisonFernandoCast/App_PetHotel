@@ -49,13 +49,7 @@ android:fitsSystemWindows="true">
             android:orientation="horizontal"
             android:padding="@dimen/margin_8">
 
-        <ImageView
-            android:id="@+id/iv_init"
-            android:layout_width="@dimen/margin_24"
-            android:layout_height="@dimen/margin_24"
-            android:contentDescription="@string/contacto_home"
-            app:srcCompat="@drawable/ic_home_circle"
-            android:layout_weight="1"/>
+
         <TextView
             android:layout_width="@dimen/margin_150"
             android:layout_height="@dimen/margin_32"
@@ -67,12 +61,6 @@ android:fitsSystemWindows="true">
             android:gravity="center"
             android:layout_weight="3"/>
 
-        <ImageView
-            android:id="@+id/iv_out"
-            android:layout_width="@dimen/margin_24"
-            android:layout_height="@dimen/margin_24"
-            app:srcCompat="@drawable/ic_close_circle_outline"
-            android:layout_weight="1"/>
 
         </LinearLayout>
 
