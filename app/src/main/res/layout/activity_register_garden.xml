@@ -8,10 +8,6 @@
     android:padding="@dimen/window_paddingRegister"
     tools:context=".view.RegisterGarden">
 
-    <!-- <androidx.core.widget.NestedScrollView
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content" -->
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -95,7 +91,7 @@
             android:hint="@string/city"
             app:startIconDrawable="@drawable/ic_user">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
                 android:id="@+id/edit_text_city_register_garden"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -178,58 +174,48 @@
             android:textColor="@color/red" />
 
         <com.google.android.material.progressindicator.CircularProgressIndicator
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/button_register_user_garden" />
-
-        <com.google.android.material.progressindicator.CircularProgressIndicator
             android:id="@+id/progress_circular_waiting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/button_register_user_garden"
-            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_8"
             android:indeterminate="true"
             android:visibility="gone"
             app:indicatorColor="@color/blue" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ingrese_con_su_red_social"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progress_circular_waiting"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:text="@string/register_start_whit_social_network" />
 
-    </RelativeLayout>
-    <!--
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_8"
-        android:text="@string/register_start_whit_social_network" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_facebook_register_garden"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_48"
-            android:layout_marginEnd="@dimen/margin_8"
-            android:layout_weight="1"
+            android:layout_below="@id/ingrese_con_su_red_social"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_80"
+            android:layout_marginTop="@dimen/margin_16"
             android:background="@color/facebook_color"
             android:text="@string/register_facebook"
             android:textColor="@color/white" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_google_register_garden"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_8"
-            android:layout_marginEnd="@dimen/margin_48"
-            android:layout_weight="1"
+            android:layout_below="@id/ingrese_con_su_red_social"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_16"
             android:background="@color/google_color"
             android:text="@string/register_google"
+            android:layout_marginEnd="@dimen/margin_80"
             android:textColor="@color/white" />
-    </LinearLayout>
-</RelativeLayout>
-<!--/androidx.core.widget.NestedScrollView-->
-</LinearLayout>
 
+    </RelativeLayout>
+</LinearLayout>
