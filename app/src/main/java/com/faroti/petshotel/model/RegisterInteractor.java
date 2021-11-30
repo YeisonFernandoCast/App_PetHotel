@@ -36,8 +36,6 @@ public class RegisterInteractor implements RegisterMVP.Model {
                callback.onFailed("Error al conectar a la base de datos");
            }
        });
-
-
     }
 
     public void insertNewUser(User user){
@@ -57,6 +55,5 @@ public class RegisterInteractor implements RegisterMVP.Model {
      }
 
   */
-
 
 }

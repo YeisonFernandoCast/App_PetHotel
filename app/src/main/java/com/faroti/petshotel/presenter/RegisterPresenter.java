@@ -56,15 +56,38 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
             error = true;
         }
 
+        User user = new User(registerInfo.getUserName(),
+                registerInfo.getEmail(),
+                registerInfo.getPassword(),
+                registerInfo.getCellPhone());
 
         //validar credenciales
         if (!error) {
             view.startWaiting();
-            User user = new User(registerInfo.getUserName(),
-                    registerInfo.getEmail(),
-                    registerInfo.getPassword(),
-                    registerInfo.getCellPhone());
             new Thread(() -> {
+                model.validateCredentials(
+                        registerInfo.getEmail().trim(),
+                        new RegisterMVP.Model.ValidateCredentialsCallback() {
+                            @Override
+                            public void onSuccess() {
+                                //model.insertNewUser(user);
+                                view.getActivity().runOnUiThread(()->{
+                                    view.stopWaiting();
+                                    view.SearchActivity();
+                                });
+                            }
+
+                            @Override
+                            public void onFailed(String error) {
+                                view.getActivity().runOnUiThread(()->{
+                                    view.stopWaiting();
+                                    view.showEmailError(error);
+                                });
+                            }
+                        });
+            }).start();
+        }
+
                /* if (model.isAuthenticated()) {
                     view.getActivity().runOnUiThread(() -> {
                         view.stopWaiting();
@@ -91,28 +114,6 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
                   ---------------------------------------------------------------
 
                          */
-
-                model.validateCredentials(
-                        registerInfo.getEmail().trim(),
-                        new RegisterMVP.Model.ValidateCredentialsCallback() {
-                            @Override
-                            public void onSuccess() {
-                                model.insertNewUser(user);
-                                view.getActivity().runOnUiThread(()->{
-                                    view.stopWaiting();
-                                    view.SearchActivity();
-                                });
-                            }
-                            @Override
-                            public void onFailed(String error) {
-                                view.getActivity().runOnUiThread(()->{
-                                    view.stopWaiting();
-                                    view.showEmailError(error);
-                                });
-                            }
-                        });
-            }).start();
-        }
 
 
     }
