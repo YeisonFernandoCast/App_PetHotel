@@ -65,10 +65,7 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
                     registerInfo.getPassword(),
                     registerInfo.getCellPhone());
             new Thread(() -> {
-                if (
-
-
-                        /*model.isAuthenticated()) {
+               /* if (model.isAuthenticated()) {
                     view.getActivity().runOnUiThread(() -> {
                         view.stopWaiting();
                         view.showEmailError("correo ya existe");
@@ -101,7 +98,6 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
                             @Override
                             public void onSuccess() {
                                 model.insertNewUser(user);
-
                                 view.getActivity().runOnUiThread(()->{
                                     view.stopWaiting();
                                     view.SearchActivity();
