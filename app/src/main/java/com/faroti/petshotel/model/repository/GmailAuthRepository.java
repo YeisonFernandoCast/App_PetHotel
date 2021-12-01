@@ -21,11 +21,13 @@ public class GmailAuthRepository {
         return instance;
     }
 
-    private Context context;
-    private GoogleSignInClient googleSignInClient;
+    private final FirebaseAuthRepository firebaseAuthRepository;
+    private final Context context;
+    private final GoogleSignInClient googleSignInClient;
     private GoogleSignInAccount account;
 
     private GmailAuthRepository(Context context) {
+        firebaseAuthRepository = FirebaseAuthRepository.getInstance(context);
         this.context = context;
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(context.getString(R.string.default_web_client_id))
@@ -55,15 +57,31 @@ public class GmailAuthRepository {
         Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
         try {
             account = task.getResult(ApiException.class);
+            firebaseAuthRepository.gmailAuth(account.getIdToken(),callback);
             callback.onSuccess();
         } catch (ApiException e) {
             callback.onFail();
         }
     }
 
+    /*
+    private void gmailAuth(String idToken, GmailAuthCallback callback) {
+        AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
+        AUTH.signInWithCredential(credential)
+                .addOnCompleteListener(task -> {
+                            if (task.isSuccessful()) {
+                               currentUser= AUTH.getCurrentUser();
+                               callback.onSuccess();
+                            } else {
+                                callback.onFail();
+                            }
+                        });
+    }
+    */
 
-    public interface GmailAuthCallback{
+    public interface GmailAuthCallback {
         void onSuccess();
+
         void onFail();
     }
 }

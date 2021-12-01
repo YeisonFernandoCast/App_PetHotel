@@ -99,6 +99,8 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
                     if (result.getResultCode() == Activity.RESULT_OK) {
                         Intent data = result.getData();
                         presenter.setGoogleData(data);
+                    }else {
+                        stopWaiting();
                     }
                 });
     }

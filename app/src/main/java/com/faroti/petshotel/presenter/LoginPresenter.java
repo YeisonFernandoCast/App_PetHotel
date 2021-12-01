@@ -11,8 +11,8 @@ public class LoginPresenter implements LoginMVP.Presenter {
 
     private final String AUTH_PREFERENCE = "authentication";
     private final String LOGGED_KEY = "logged";
-    private LoginMVP.View view;
-    private LoginMVP.Model model;
+    private final LoginMVP.View view;
+    private final LoginMVP.Model model;
 
     public LoginPresenter(LoginMVP.View view) {
         this.view = view;
@@ -62,36 +62,34 @@ public class LoginPresenter implements LoginMVP.Presenter {
         if (!error) {
             view.startWaiting();
             // Validar que el usuario/contraseña sean correctos
-            new Thread(() -> {
-                model.validateCredentials(loginInfo.getEmail().trim(),
-                        loginInfo.getPassword().trim(),
-                        new LoginMVP.Model.ValidateCredentialsCallback() {
-                            @Override
-                            public void onSuccess() {
-                                SharedPreferences preferences = view.getActivity()
-                                        .getSharedPreferences(AUTH_PREFERENCE, Context.MODE_PRIVATE);
-                                preferences.edit()
-                                        .putBoolean(LOGGED_KEY, true)
-                                        .apply();
+            new Thread(() ->
+                    model.validateCredentials(loginInfo.getEmail().trim(),
+                            loginInfo.getPassword().trim(),
+                            new LoginMVP.Model.ValidateCredentialsCallback() {
+                                @Override
+                                public void onSuccess() {
+                                    SharedPreferences preferences = view.getActivity()
+                                            .getSharedPreferences(AUTH_PREFERENCE, Context.MODE_PRIVATE);
+                                    preferences.edit()
+                                            .putBoolean(LOGGED_KEY, true)
+                                            .apply();
 
-                                view.getActivity().runOnUiThread(() -> {
-                                    view.stopWaiting();
-                                    view.openSearchContactActivity();
-                                });
-                            }
+                                    view.getActivity().runOnUiThread(() -> {
+                                        view.stopWaiting();
+                                        view.openSearchContactActivity();
+                                    });
+                                }
 
-                            @Override
-                            public void onFailure(String error) {
-                                view.getActivity().runOnUiThread(() -> {
-                                    view.stopWaiting();
-                                    view.showGeneralError(error);
+                                @Override
+                                public void onFailure(String error) {
+                                    view.getActivity().runOnUiThread(() -> {
+                                        view.stopWaiting();
+                                        view.showGeneralError(error);
 
-                                });
+                                    });
 
-                            }
-                        });
-
-            }).start();
+                                }
+                            })).start();
 
         }
     }
@@ -119,25 +117,23 @@ public class LoginPresenter implements LoginMVP.Presenter {
     @Override
     public void setGoogleData(Intent data) {
         view.startWaiting();
-     //   new Thread(() -> {
-            model.setGoogleData(data, new LoginMVP.Model.ValidateCredentialsCallback() {
-                @Override
-                public void onSuccess() {
-                    view.getActivity().runOnUiThread(()->{
-                        view.stopWaiting();
-                        view.openSearchContactActivity();
-                    });
-                }
+        model.setGoogleData(data, new LoginMVP.Model.ValidateCredentialsCallback() {
+            @Override
+            public void onSuccess() {
+                view.getActivity().runOnUiThread(() -> {
+                    view.stopWaiting();
+                    view.openSearchContactActivity();
+                });
+            }
 
-                @Override
-                public void onFailure(String error) {
-                    view.getActivity().runOnUiThread(()->{
-                        view.stopWaiting();
-                        view.showToastError(error);
-                    });
-                }
-            });
-      //  }).start();
+            @Override
+            public void onFailure(String error) {
+                view.getActivity().runOnUiThread(() -> {
+                    view.stopWaiting();
+                    view.showToastError(error);
+                });
+            }
+        });
 
     }
 }

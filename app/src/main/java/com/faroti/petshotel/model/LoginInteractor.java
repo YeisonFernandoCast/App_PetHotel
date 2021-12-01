@@ -10,9 +10,9 @@ import com.faroti.petshotel.mvp.LoginMVP;
 
 public class LoginInteractor implements LoginMVP.Model {
 
-    private UserRepository userRepository;
-    private FirebaseAuthRepository AUTH;
-    private GmailAuthRepository gmailAuthRepository;
+    private final UserRepository userRepository;
+    private final FirebaseAuthRepository AUTH;
+    private final GmailAuthRepository gmailAuthRepository;
 
 
     public LoginInteractor(Context context) {
