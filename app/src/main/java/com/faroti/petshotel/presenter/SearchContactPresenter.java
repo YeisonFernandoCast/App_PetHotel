@@ -3,6 +3,7 @@ package com.faroti.petshotel.presenter;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.widget.Toast;
 
 import com.faroti.petshotel.R;
@@ -41,6 +42,15 @@ public class SearchContactPresenter implements SearchContactMVP.Presenter {
     @Override
     public void onInfoContactClick() {
 
+    }
+
+    @Override
+    public void onItemSelected(SearchContactMVP.SearchContactInfo info) {
+        Bundle params = new Bundle();
+        params.putString("name", info.getName());
+        params.putString("address", info.getAddress());
+
+        view.openLocationActivity(params);
     }
 
     public void onBackPressed() {

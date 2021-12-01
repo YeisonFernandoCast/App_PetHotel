@@ -33,7 +33,6 @@ android {
 dependencies {
     //Bibliotecas de Room
     implementation 'androidx.room:room-runtime:2.3.0'
-    implementation 'com.google.android.gms:play-services-maps:18.0.0'
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testImplementation 'org.junit.jupiter:junit-jupiter'
     annotationProcessor 'androidx.room:room-compiler:2.3.0'
@@ -62,4 +61,6 @@ dependencies {
     //Retrofit (HTTP)
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
 
+    //Google Maps
+    implementation 'com.google.android.gms:play-services-maps:18.0.0'
 }

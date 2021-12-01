@@ -1,6 +1,7 @@
 package com.faroti.petshotel.mvp;
 
 import android.app.Activity;
+import android.os.Bundle;
 
 import java.util.List;
 
@@ -18,6 +19,8 @@ public interface SearchContactMVP {
         void logout();
         void loadSearchContact();
         void onInfoContactClick();
+
+        void onItemSelected(SearchContactInfo info);
     }
 
     interface View{
@@ -30,6 +33,8 @@ public interface SearchContactMVP {
         void hideProgressBar();
 
         void showSearchContactInfo(List<SearchContactInfo> searchContactInfo);
+
+        void openLocationActivity(Bundle params);
     }
 
     class SearchContactInfo{

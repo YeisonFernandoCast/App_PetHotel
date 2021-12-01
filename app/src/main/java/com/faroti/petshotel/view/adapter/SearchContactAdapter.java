@@ -45,11 +45,9 @@ public class SearchContactAdapter extends RecyclerView.Adapter<SearchContactAdap
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         SearchContactMVP.SearchContactInfo item = data.get(position);
 
-        //TODO Agregar un evento a la vista
+        //Agregar un evento a la vista
         if(onItemClickListener != null) {
-            holder.itemView.setOnClickListener(v -> {
-                onItemClickListener.onItemClick(item);
-            });
+            holder.itemView.setOnClickListener(v -> onItemClickListener.onItemClick(item));
         }
         //TODO holder.getIvClient().setImageIcon();
         holder.getTvClient().setText(item.getName());

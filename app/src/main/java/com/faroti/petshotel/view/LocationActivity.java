@@ -3,6 +3,8 @@ package com.faroti.petshotel.view;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 
 
@@ -14,6 +16,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.List;
+import java.util.Locale;
 
 public class LocationActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -35,9 +39,31 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
+        mMap.getUiSettings().setMapToolbarEnabled(true);
+
+        String name = getIntent().getStringExtra("name");
+        String address = getIntent().getStringExtra("address");
+
+        LatLng location = new LatLng(4, -72);
+        try {
+            Geocoder geo = new Geocoder(LocationActivity.this.getApplicationContext(), Locale.getDefault());
+            List<Address> addresses = geo.getFromLocationName(address, 1);
+            if (!addresses.isEmpty()) {
+                location = new LatLng(addresses.get(0).getLatitude(),
+                        addresses.get(0).getLongitude());
+            }
+        } catch (Exception e) {
+            e.printStackTrace(); // getFromLocation() may sometimes fail
+        }
+
+
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
+        mMap.addMarker(new MarkerOptions()
+                .position(location)
+                .title(name+" - "+address));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location, 14f));
     }
 }
