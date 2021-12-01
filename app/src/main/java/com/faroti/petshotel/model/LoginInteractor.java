@@ -87,7 +87,17 @@ public class LoginInteractor implements LoginMVP.Model {
     }
 
     @Override
-    public void setGoogleData(Intent data) {
-        gmailAuthRepository.setLoginData(data);
+    public void setGoogleData(Intent data, ValidateCredentialsCallback callback) {
+        gmailAuthRepository.setLoginData(data, new GmailAuthRepository.GmailAuthCallback() {
+            @Override
+            public void onSuccess() {
+                callback.onSuccess();
+            }
+
+            @Override
+            public void onFail() {
+                callback.onFailure("autenticacion no se pudo finalizar");
+            }
+        });
     }
 }

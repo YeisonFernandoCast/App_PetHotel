@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "927884686860",
+    "firebase_url": "https://welcome-to-pethotel-default-rtdb.firebaseio.com",
     "project_id": "welcome-to-pethotel",
     "storage_bucket": "welcome-to-pethotel.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "927884686860-r5c7u87mrntdo70iajut6tf5ih32cne6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.faroti.petshotel",
+            "certificate_hash": "8b5f04bc3ced1a3420e8f1cd73ea900a6e3322be"
+          }
+        },
         {
           "client_id": "927884686860-ttck85kr9qs4qtiesu9jitam6h3rke8t.apps.googleusercontent.com",
           "client_type": 3

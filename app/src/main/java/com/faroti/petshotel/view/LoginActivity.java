@@ -5,14 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContract;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
@@ -42,6 +39,7 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
     private AppCompatButton buttonRegister;
 
     private LoginMVP.Presenter presenter;
+    private ActivityResultLauncher<Intent> gmailLauncher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +93,14 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
 
         buttonRegister = findViewById(R.id.register_init_login);
         buttonRegister.setOnClickListener((evt) -> goToRegister());
+        gmailLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        Intent data = result.getData();
+                        presenter.setGoogleData(data);
+                    }
+                });
     }
 
 
@@ -123,6 +129,12 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
         tilPassword.setError(error);
         tilEmail.setError(error);
         //Toast.makeText(LoginActivity.this, error, Toast.LENGTH_SHORT).show();
+    }
+
+
+    @Override
+    public void showToastError(String error) {
+        Toast.makeText(LoginActivity.this, error, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -157,15 +169,7 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
 
     @Override
     public void openGoogleSignInActivity(Intent intent) {
-        registerForActivityResult(
-                new ActivityResultContracts.StartActivityForResult(),
-                result -> {
-                    if (result.getResultCode() == Activity.RESULT_OK) {
-                        Intent data = result.getData();
-                        presenter.setGoogleData(data);
-                    }
-                })
-                .launch(intent);
+        gmailLauncher.launch(intent);
     }
 
     public void goToRegister() {

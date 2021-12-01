@@ -51,14 +51,13 @@ public class GmailAuthRepository {
         return googleSignInClient.getSignInIntent();
     }
 
-    public void setLoginData(Intent data) {
+    public void setLoginData(Intent data, GmailAuthCallback callback) {
         Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
         try {
             account = task.getResult(ApiException.class);
-            //Signin successfully
-            updateUI(account);
+            callback.onSuccess();
         } catch (ApiException e) {
-            updateUI(null);
+            callback.onFail();
         }
     }
 

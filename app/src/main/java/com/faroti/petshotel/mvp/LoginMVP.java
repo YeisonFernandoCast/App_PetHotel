@@ -14,7 +14,7 @@ public interface LoginMVP {
 
         Intent getGoogleSignIntent();
 
-        void setGoogleData(Intent data);
+        void setGoogleData(Intent data, ValidateCredentialsCallback callback);
 
         interface ValidateCredentialsCallback{
             void onSuccess();
@@ -39,6 +39,7 @@ public interface LoginMVP {
         void showEmailError(String error);
         void showPasswordError(String error);
         void showGeneralError(String error);
+        void showToastError(String error);
 
         void clearData();
 
