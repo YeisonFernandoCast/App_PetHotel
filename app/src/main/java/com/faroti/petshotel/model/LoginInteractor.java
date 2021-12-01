@@ -1,8 +1,10 @@
 package com.faroti.petshotel.model;
 
 import android.content.Context;
+import android.content.Intent;
 
 import com.faroti.petshotel.model.repository.FirebaseAuthRepository;
+import com.faroti.petshotel.model.repository.GmailAuthRepository;
 import com.faroti.petshotel.model.repository.UserRepository;
 import com.faroti.petshotel.mvp.LoginMVP;
 
@@ -10,11 +12,13 @@ public class LoginInteractor implements LoginMVP.Model {
 
     private UserRepository userRepository;
     private FirebaseAuthRepository AUTH;
+    private GmailAuthRepository gmailAuthRepository;
 
 
     public LoginInteractor(Context context) {
         AUTH = FirebaseAuthRepository.getInstance(context);
         userRepository = UserRepository.getInstance(context);
+        gmailAuthRepository = GmailAuthRepository.getInstance(context);
     }
 
 
@@ -75,5 +79,15 @@ public class LoginInteractor implements LoginMVP.Model {
     @Override
     public boolean isAuthenticated() {
         return AUTH.isAuthenticated();
+    }
+
+    @Override
+    public Intent getGoogleSignIntent() {
+        return gmailAuthRepository.getSignInIntent();
+    }
+
+    @Override
+    public void setGoogleData(Intent data) {
+        gmailAuthRepository.setLoginData(data);
     }
 }

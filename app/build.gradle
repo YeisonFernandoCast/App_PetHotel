@@ -54,6 +54,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics:20.0.0'
     implementation 'com.google.firebase:firebase-database'
     implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.android.gms:play-services-auth:19.2.0' //auth with gmail
 
     //Retrofit (HTTP)
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'

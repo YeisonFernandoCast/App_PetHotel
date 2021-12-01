@@ -6,13 +6,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import com.faroti.petshotel.R;
 import com.faroti.petshotel.mvp.LoginMVP;
 import com.faroti.petshotel.presenter.LoginPresenter;
+import com.google.android.gms.common.SignInButton;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -31,7 +38,7 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
 
     private AppCompatButton buttonSingLogin;
     private AppCompatButton buttonFacebook;
-    private AppCompatButton buttonGoogle;
+    private SignInButton buttonGoogle;
     private AppCompatButton buttonRegister;
 
     private LoginMVP.Presenter presenter;
@@ -148,7 +155,20 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
         buttonGoogle.setEnabled(true);
     }
 
-    public void goToRegister(){
+    @Override
+    public void openGoogleSignInActivity(Intent intent) {
+        registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        Intent data = result.getData();
+                        presenter.setGoogleData(data);
+                    }
+                })
+                .launch(intent);
+    }
+
+    public void goToRegister() {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }

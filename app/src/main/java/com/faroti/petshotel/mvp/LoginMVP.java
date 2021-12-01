@@ -1,6 +1,7 @@
 package com.faroti.petshotel.mvp;
 
 import android.app.Activity;
+import android.content.Intent;
 
 
 public interface LoginMVP {
@@ -10,6 +11,10 @@ public interface LoginMVP {
         void validateCredentials(String email, String password, ValidateCredentialsCallback callback);
 
         boolean isAuthenticated();
+
+        Intent getGoogleSignIntent();
+
+        void setGoogleData(Intent data);
 
         interface ValidateCredentialsCallback{
             void onSuccess();
@@ -23,6 +28,8 @@ public interface LoginMVP {
         void loginWithEmail();
         void loginWithFacebook();
         void loginWithGoogle();
+
+        void setGoogleData(Intent data);
     }
 
     interface View {
@@ -39,6 +46,8 @@ public interface LoginMVP {
 
         void startWaiting();
         void stopWaiting();
+
+        void openGoogleSignInActivity(Intent intent);
     }
 
     class LoginInfo{

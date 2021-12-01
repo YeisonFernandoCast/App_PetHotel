@@ -1,6 +1,7 @@
 package com.faroti.petshotel.presenter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 
 import com.faroti.petshotel.model.LoginInteractor;
@@ -111,6 +112,12 @@ public class LoginPresenter implements LoginMVP.Presenter{
 
     @Override
     public void loginWithGoogle() {
+        Intent intent = model.getGoogleSignIntent();
+        view.openGoogleSignInActivity(intent);
+    }
 
+    @Override
+    public void setGoogleData(Intent data) {
+        model.setGoogleData(data);
     }
 }
