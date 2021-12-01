@@ -46,5 +46,6 @@
     <string name="name_garden">Nombre de su Guardería</string>
     <string name="city">Ciudad</string>
     <string name="address">Dirección</string>
+    <string name="title_activity_location">LocationActivity</string>
 
 </resources>

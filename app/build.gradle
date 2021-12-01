@@ -25,11 +25,15 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
     //Bibliotecas de Room
     implementation 'androidx.room:room-runtime:2.3.0'
+    implementation 'com.google.android.gms:play-services-maps:18.0.0'
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testImplementation 'org.junit.jupiter:junit-jupiter'
     annotationProcessor 'androidx.room:room-compiler:2.3.0'
