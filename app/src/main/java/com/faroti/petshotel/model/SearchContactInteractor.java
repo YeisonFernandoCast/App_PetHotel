@@ -9,7 +9,7 @@ public class SearchContactInteractor implements SearchContactMVP.Model {
 
     private List<SearchContactMVP.SearchContactInfo> data;
 
-    public SearchContactInteractor(){
+    public SearchContactInteractor() {
         data = Arrays.asList(
                 new SearchContactMVP.SearchContactInfo("Jose Pacheco", "Cra 23AA # 8 - 79, Peñol, Colombia"),
                 new SearchContactMVP.SearchContactInfo("Johan Moscoso", "calle 17 # 7 - 18,Montenegro, quindío"),
@@ -28,4 +28,6 @@ public class SearchContactInteractor implements SearchContactMVP.Model {
         }
         callback.showSearchContactInfo(this.data);
     }
+
 }
+

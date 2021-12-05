@@ -3,8 +3,10 @@ package com.faroti.petshotel.model.repository;
 import android.content.Context;
 
 import com.faroti.petshotel.model.database.entities.User;
+import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
 
 public class FirebaseAuthRepository {
 
@@ -17,7 +19,7 @@ public class FirebaseAuthRepository {
         return instance;
     }
 
-    private final FirebaseAuth AUTH;
+    private FirebaseAuth AUTH;
     public FirebaseUser currentUser;
     private UserRepository userRepository;
 
@@ -84,6 +86,20 @@ public class FirebaseAuthRepository {
         void onSuccess();
 
         void onFail();
+    }
+
+
+    public void gmailAuth(String idToken, GmailAuthRepository.GmailAuthCallback callback) {
+        AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
+        AUTH.signInWithCredential(credential)
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        currentUser = AUTH.getCurrentUser();
+                        callback.onSuccess();
+                    } else {
+                        callback.onFail();
+                    }
+                });
     }
 
 }
