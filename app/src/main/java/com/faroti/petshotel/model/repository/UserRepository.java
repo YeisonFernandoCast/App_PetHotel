@@ -138,5 +138,4 @@ public class UserRepository {
         void onSuccess(T data);
         void onFail();
     }
-
 }

@@ -50,5 +50,6 @@
     <string name="title_activity_location">LocationActivity</string>
     <string name="contact_Us">Contáctenos</string>
     <string name="email_pet_hotel">pethotelmt@gmail.com</string>
+    <string name="gardens">Guarderias</string>
 
 </resources>

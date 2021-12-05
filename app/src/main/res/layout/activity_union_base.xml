@@ -18,6 +18,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_16"
         android:gravity="center"
         android:text="@string/app_name"
         android:textColor="@color/black"
@@ -25,39 +26,39 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="@dimen/margin_16"
-        app:layout_constraintVertical_bias="0.754"
-        tools:layout_editor_absoluteX="39dp" />
+        app:layout_constraintVertical_bias="0.858"
+        tools:layout_editor_absoluteX="16dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/union_login"
         android:layout_width="@dimen/margin_100"
         android:layout_height="@dimen/margin_50"
-        android:layout_marginStart="64dp"
-        android:layout_marginBottom="92dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="28dp"
         android:backgroundTint="@color/red_dark"
-        app:rippleColor="@color/red"
-        app:cornerRadius="@dimen/margin_80"
         android:text="@string/register_login"
         android:textColor="@color/white"
+        app:cornerRadius="@dimen/margin_80"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/union_register"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@color/red" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/union_register"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="@dimen/margin_100"
         android:layout_height="@dimen/margin_50"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="92dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="28dp"
         android:backgroundTint="@color/red_dark"
-        app:rippleColor="@color/red"
-        app:cornerRadius="@dimen/margin_80"
         android:text="@string/register_text_registro"
         android:textColor="@color/white"
+        app:cornerRadius="@dimen/margin_80"
         app:layout_constraintBottom_toBottomOf="parent"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        app:layout_constraintEnd_toEndOf="parent" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/red" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

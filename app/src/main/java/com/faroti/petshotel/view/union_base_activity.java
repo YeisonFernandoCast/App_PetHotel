@@ -31,6 +31,7 @@ public class union_base_activity extends AppCompatActivity {
         Glide.with(this)
                 .load(R.mipmap.perro_gato)
                 .centerCrop()
+                .circleCrop()
                 .into(background);
         //hideSystemUI();
         initIU();
