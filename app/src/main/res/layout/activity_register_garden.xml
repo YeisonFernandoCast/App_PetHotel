@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/window_paddingRegister"
+    tools:context=".view.RegisterGardenActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logo_register_garden"
+            android:layout_width="144dp"
+            android:layout_height="144dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:contentDescription="@string/register_logo_descriptionApp"
+            android:fitsSystemWindows="true"
+            android:src="@drawable/ic_pet_hotel_logo" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_name_register_garden"
+            style="@style/boxRounded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_toEndOf="@+id/logo_register_garden"
+            android:hint="@string/register_name"
+            app:startIconDrawable="@drawable/ic_account_user_circle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_name_garden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_cellphone_register_garden"
+            style="@style/boxRounded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/til_name_register_garden"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_toEndOf="@id/logo_register_garden"
+            android:hint="@string/register_cellphone"
+            app:startIconDrawable="@drawable/ic_phone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_cellphone_register_garden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_name_garden_register"
+            style="@style/boxRounded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo_register_garden"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_8"
+            android:hint="@string/name_garden"
+            app:startIconDrawable="@drawable/ic_pet_hotel_garden">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_name_register_garden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_city_register_garden"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="@dimen/margin_150"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/til_name_garden_register"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/margin_8"
+            android:hint="@string/city"
+            app:startIconDrawable="@drawable/ic_user">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/edit_text_city_register_garden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_address_register_garden"
+            style="@style/boxRounded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/til_name_garden_register"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_toEndOf="@id/til_city_register_garden"
+            android:hint="@string/address"
+            app:startIconDrawable="@drawable/ic_user">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_address_register_garden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_email_register_garden"
+            style="@style/boxRounded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/til_address_register_garden"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_8"
+            android:hint="@string/register_email"
+            app:startIconDrawable="@drawable/ic_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_email_register_garden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_password_register_garden"
+            style="@style/boxRounded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/til_email_register_garden"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_8"
+            android:hint="@string/register_password"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@drawable/ic_lock">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_password_register_garden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_register_user_garden"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/til_password_register_garden"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_16"
+            android:gravity="center"
+            android:text="@string/register_sign_up"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:textColor="@color/red" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress_circular_waiting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_register_user_garden"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_8"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/blue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ingrese_con_su_red_social"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progress_circular_waiting"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:text="@string/register_start_whit_social_network" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_facebook_register_garden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ingrese_con_su_red_social"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_80"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@color/facebook_color"
+            android:text="@string/register_facebook"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_google_register_garden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ingrese_con_su_red_social"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@color/google_color"
+            android:text="@string/register_google"
+            android:layout_marginEnd="@dimen/margin_80"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</LinearLayout>

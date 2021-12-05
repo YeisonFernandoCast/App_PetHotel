@@ -56,6 +56,12 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
         presenter.loadSearchContact();
     }
 
+    @Override
+    public void onBackPressed() {
+        presenter.onBackPressed();
+        //super.onBackPressed();
+    }
+
     private void initUI() {
         drawerLayout = findViewById(R.id.drawer_layout);
 
@@ -73,9 +79,13 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
 
 
         piWaiting = findViewById(R.id.pi_waiting_search);
+
+        searchContactAdapter = new SearchContactAdapter();
+        searchContactAdapter.setOnItemClickListener(presenter::onItemSelected);
+
         rvSearchContact = findViewById(R.id.rv_search_contact);
         rvSearchContact.setLayoutManager(new LinearLayoutManager(SearchContact.this));
-        searchContactAdapter = new SearchContactAdapter();
+
         rvSearchContact.setAdapter(searchContactAdapter);
 
 
@@ -113,14 +123,14 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
                 return true;
             case R.id.close:
                 drawerLayout.closeDrawer(navigationDrawer);
-                presenter.logout();
-                getUnionBaseActivity();
+                presenter.onBackPressed();
+                //presenter.logout();
+                //getUnionBaseActivity();
                 return true;
             default:
                 return true;
         }
     }
-
 
     @Override
     public Activity getActivity() {
@@ -128,7 +138,7 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
     }
 
     @Override
-    public void getUnionBaseActivity(){
+    public void getUnionBaseActivity() {
         Intent intent = new Intent(this, union_base_activity.class);
         startActivity(intent);
     }
@@ -149,5 +159,12 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
 
         //TODO Cargar la información en el RecyclerView - Youtube 1:20min
         Toast.makeText(SearchContact.this, "Datos cargados", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void openLocationActivity(Bundle params) {
+        Intent intent = new Intent(SearchContact.this, LocationActivity.class);
+        intent.putExtras(params);
+        startActivity(intent);
     }
 }

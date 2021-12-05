@@ -18,6 +18,7 @@ import java.util.List;
 
 public class SearchContactAdapter extends RecyclerView.Adapter<SearchContactAdapter.ViewHolder> {
     private List<SearchContactMVP.SearchContactInfo> data;
+    private OnItemClickListener onItemClickListener;
 
     public SearchContactAdapter() {
         this.data = new ArrayList<>();
@@ -26,6 +27,10 @@ public class SearchContactAdapter extends RecyclerView.Adapter<SearchContactAdap
     public void setData(List<SearchContactMVP.SearchContactInfo> data) {
         this.data = data;
         notifyDataSetChanged();
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
     }
 
     @NonNull
@@ -40,11 +45,10 @@ public class SearchContactAdapter extends RecyclerView.Adapter<SearchContactAdap
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         SearchContactMVP.SearchContactInfo item = data.get(position);
 
-        //TODO Agregar un evento a la vista
-        holder.itemView.setOnClickListener(v ->{
-            Toast.makeText(v.getContext(),item.getName(), Toast.LENGTH_SHORT).show();
-        });
-
+        //Agregar un evento a la vista
+        if(onItemClickListener != null) {
+            holder.itemView.setOnClickListener(v -> onItemClickListener.onItemClick(item));
+        }
         //TODO holder.getIvClient().setImageIcon();
         holder.getTvClient().setText(item.getName());
         holder.getTvAddress().setText(item.getAddress());
@@ -83,4 +87,9 @@ public class SearchContactAdapter extends RecyclerView.Adapter<SearchContactAdap
             return tvAddress;
         }
     }
+
+    public interface OnItemClickListener {
+        void onItemClick(SearchContactMVP.SearchContactInfo info);
+    }
+
 }

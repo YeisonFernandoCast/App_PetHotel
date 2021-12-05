@@ -26,11 +26,13 @@ public class UserRepository {
     private final static Boolean USE_DATABASE_LOCAL = Boolean.FALSE;
     private UserDao userDao ;
     private DatabaseReference userRef;
+    private DatabaseReference GardenRef;
     private FirebaseDatabase dataBase;
 
     private UserRepository(Context context) {
         userDao = PetDatabase.getDatabase(context).getUserDao();
         dataBase = FirebaseDatabase.getInstance(); // instancia firebase en database
+        GardenRef = dataBase.getReference("Garden");
         userRef = dataBase.getReference("Users");
         //loadInitialDatabase();
     }
@@ -93,8 +95,6 @@ public class UserRepository {
                     /*
                     .addValueEventListener(new ValueEventListener() { // este metodo es para actualizar cada cambio que se haga en la
                                                                         //base de datos sobre la tabla users que le da userRef
-
-
             @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     User value = dataSnapshot.getValue(User.class);
@@ -113,14 +113,13 @@ public class UserRepository {
     }
 
     public void getAll(UserCallBack<List<User>> callBack){
-        userRef.get().addOnCompleteListener(task ->{
+        userRef.getParent().get().addOnCompleteListener(task ->{
             if (task.isSuccessful()){
                DataSnapshot dataSnapshot = task.getResult();
                if(dataSnapshot.hasChildren()){
                    List<User> users = new ArrayList<>();
                    for(DataSnapshot snapshot:dataSnapshot.getChildren()){
                        //snapshot.child("name").getValue(String.class);
-
                        User user = snapshot.getValue(User.class);
                        users.add(user);
                    }

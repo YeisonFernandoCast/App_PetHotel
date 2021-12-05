@@ -2,16 +2,19 @@ package com.faroti.petshotel.mvp;
 
 import android.app.Activity;
 
+import com.faroti.petshotel.model.database.entities.User;
+
 public interface RegisterMVP {
 
     interface Model{
+
         void validateCredentials(String email, ValidateCredentialsCallback callback);
         interface ValidateCredentialsCallback{
             void onSuccess();
             void onFailed(String error);
         }
 
-        void insertNewUser(String name, String email, String password, String cellPhone);
+        void insertNewUser(User user);
     }
 
     interface Presenter{

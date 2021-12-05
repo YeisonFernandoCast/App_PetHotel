@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.faroti.petshotel">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_pet_hotel_logo"
@@ -9,6 +12,12 @@
         android:roundIcon="@drawable/ic_pet_hotel_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetsHotel">
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
         <activity
             android:name=".view.union_base_activity"
             android:exported="true"
@@ -25,6 +34,9 @@
         <activity
             android:name=".view.RegisterActivity"
             android:exported="true" />
+        <activity
+            android:name=".view.RegisterGardenActivity"
+            android:exported="false" />
         <activity
             android:name=".view.RegisterUserActivity"
             android:exported="true" />
@@ -55,6 +67,10 @@
         <activity
             android:name=".view.ActivityFive"
             android:exported="false" />
+        <activity
+            android:name=".view.LocationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_location" />
     </application>
 
 </manifest>

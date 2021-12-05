@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,7 +42,7 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
         setContentView(R.layout.activity_login);
 
         presenter = new LoginPresenter(this);
-        presenter.isLogged();
+        presenter.isAuthenticated();
         initIU();
     }
 
@@ -114,7 +113,9 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
 
     @Override
     public void showGeneralError(String error) {
-        Toast.makeText(LoginActivity.this, error, Toast.LENGTH_SHORT).show();
+        tilPassword.setError(error);
+        tilEmail.setError(error);
+        //Toast.makeText(LoginActivity.this, error, Toast.LENGTH_SHORT).show();
     }
 
     @Override
