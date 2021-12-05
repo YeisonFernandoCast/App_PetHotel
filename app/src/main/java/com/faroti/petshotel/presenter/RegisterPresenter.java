@@ -134,13 +134,4 @@ public class RegisterPresenter implements RegisterMVP.Presenter {
         return password.length() > 7;
     }
 
-    @Override
-    public void RegisterWithFacebook() {
-
-    }
-
-    @Override
-    public void RegisterWithGoogle() {
-
-    }
 }

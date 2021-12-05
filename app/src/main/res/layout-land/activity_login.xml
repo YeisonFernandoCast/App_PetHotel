@@ -6,6 +6,16 @@
     android:orientation="vertical"
     android:padding="@dimen/window_paddingRegister">
 
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/pi_waiting_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/logo_login"
         android:layout_width="@dimen/logo_register_users"
@@ -66,13 +76,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/margin_16"
         android:text="@string/login_sign_in"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
         android:textColor="@color/red"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logo_login"
         app:layout_constraintTop_toBottomOf="@+id/til_password_login" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -92,22 +99,11 @@
         android:layout_marginTop="@dimen/margin_8"
         android:layout_marginEnd="@dimen/margin_16"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logo_login"
         app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_facebook_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_8"
-        android:layout_marginEnd="168dp"
-        android:background="@color/facebook_color"
-        android:text="@string/register_facebook"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
-
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/register_init_login"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

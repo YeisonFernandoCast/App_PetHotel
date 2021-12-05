@@ -11,21 +11,16 @@ public class SearchContactInteractor implements SearchContactMVP.Model {
 
     public SearchContactInteractor() {
         data = Arrays.asList(
-                new SearchContactMVP.SearchContactInfo("Jose Pacheco", "Cra 23AA # 8 - 79, Peñol, Colombia"),
-                new SearchContactMVP.SearchContactInfo("Johan Moscoso", "calle 17 # 7 - 18,Montenegro, quindío"),
-                new SearchContactMVP.SearchContactInfo("Yeison Castaño", "Cra 4B # 31A - 37 , Ibague, Colombia"),
-                new SearchContactMVP.SearchContactInfo("Rodrigo Estupiñán", "Cra 23 # 45-67, Buga laGrande, Colombia"),
-                new SearchContactMVP.SearchContactInfo("Francisco J", "Cra 23 # 45-67, Buga, Colombia")
+                new SearchContactMVP.SearchContactInfo("Perros Y Gatos", "Corales Mz 15 casa 14, Pereira, Risaralda"),
+                new SearchContactMVP.SearchContactInfo("Huellas", "calle 69 numero 2-67, Ibagué, Tolima"),
+                new SearchContactMVP.SearchContactInfo("Guarderia Canina", "Cl. 5 Sur, Medellín, Antioquia"),
+                new SearchContactMVP.SearchContactInfo("Traviezoos Guarderia", "Buga - Guacarí, Guadalajara de Buga, Valle del Cauca"),
+                new SearchContactMVP.SearchContactInfo("Guarderia Tails", "San Jorge Km 10, Armenia, Quindío")
         );
     }
 
     @Override
     public void loadSearchContact(LoadSearchContactCallback callback) {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         callback.showSearchContactInfo(this.data);
     }
 

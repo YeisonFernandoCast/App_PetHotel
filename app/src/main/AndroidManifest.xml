@@ -12,7 +12,9 @@
         android:roundIcon="@drawable/ic_pet_hotel_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetsHotel">
-
+        <activity
+            android:name=".view.ContactUsActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

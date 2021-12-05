@@ -19,7 +19,7 @@
         <item
             android:id="@+id/contact_us"
             android:icon="@drawable/ic_contatc"
-            android:title="@string/contact" />
+            android:title="@string/contact_Us" />
         <item
             android:id="@+id/close"
             android:icon="@drawable/ic_close_circle_outline"

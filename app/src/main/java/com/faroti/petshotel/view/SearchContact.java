@@ -71,13 +71,6 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
         navigationDrawer = findViewById(R.id.navigation_drawer);
         navigationDrawer.setNavigationItemSelectedListener(this::navigationitemSelected);
 
-        //ivOutContact = findViewById(R.id.iv_out);
-
-
-        tilSearch = findViewById(R.id.til_search);
-        etSearch = findViewById(R.id.et_search);
-
-
         piWaiting = findViewById(R.id.pi_waiting_search);
 
         searchContactAdapter = new SearchContactAdapter();
@@ -88,9 +81,6 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
 
         rvSearchContact.setAdapter(searchContactAdapter);
 
-
-        //ivInitContact = findViewById(R.id.iv_init);
-        //ivInitContact.setOnClickListener((evt) -> onInitClick());
 
     }
 
@@ -110,7 +100,7 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
                 return true;
             case R.id.acount:
                 drawerLayout.closeDrawer(navigationDrawer);
-                Toast.makeText(this, "Pronto ... xD", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Pronto ...", Toast.LENGTH_LONG).show();
                 return true;
             case R.id.tips:
                 drawerLayout.closeDrawer(navigationDrawer);
@@ -119,7 +109,8 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
                 return true;
             case R.id.contact_us:
                 drawerLayout.closeDrawer(navigationDrawer);
-                Toast.makeText(this, "Contactenos", Toast.LENGTH_LONG).show();
+                intent = new Intent(this, ContactUsActivity.class);
+                startActivity(intent);
                 return true;
             case R.id.close:
                 drawerLayout.closeDrawer(navigationDrawer);
@@ -156,9 +147,6 @@ public class SearchContact extends AppCompatActivity implements SearchContactMVP
     @Override
     public void showSearchContactInfo(List<SearchContactMVP.SearchContactInfo> searchContactInfo) {
         searchContactAdapter.setData(searchContactInfo);
-
-        //TODO Cargar la información en el RecyclerView - Youtube 1:20min
-        Toast.makeText(SearchContact.this, "Datos cargados", Toast.LENGTH_SHORT).show();
     }
 
     @Override

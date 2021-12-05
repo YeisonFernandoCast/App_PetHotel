@@ -33,19 +33,20 @@
         style="@style/boxRounded"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
         android:hint="@string/register_email"
         app:boxCornerRadiusBottomEnd="@dimen/margin_8"
         app:boxCornerRadiusBottomStart="@dimen/margin_8"
-        android:layout_marginTop="@dimen/margin_16"
-        app:startIconDrawable="@drawable/ic_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_login">
+        app:layout_constraintTop_toBottomOf="@+id/logo_login"
+        app:startIconDrawable="@drawable/ic_email">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_email_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -56,15 +57,16 @@
         android:layout_marginTop="@dimen/margin_16"
         android:hint="@string/register_password"
         app:endIconMode="password_toggle"
-        app:startIconDrawable="@drawable/ic_lock"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/til_email_login">
+        app:layout_constraintTop_toBottomOf="@+id/til_email_login"
+        app:startIconDrawable="@drawable/ic_lock">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_password_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -96,34 +98,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_8"
-        android:layout_marginEnd="@dimen/margin_32"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView"  />
-
-    <!--
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_google_login2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_8"
-        android:layout_marginEnd="@dimen/margin_72"
-        android:background="@color/google_color"
-        android:text="@string/register_google"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
-        -->
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_facebook_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_8"
-        android:layout_marginEnd="@dimen/margin_56"
-        android:background="@color/facebook_color"
-        android:text="@string/register_facebook"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/button_google_login"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
 
     <androidx.appcompat.widget.AppCompatButton

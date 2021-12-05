@@ -19,7 +19,6 @@ public interface SearchContactMVP {
         void logout();
         void loadSearchContact();
         void onInfoContactClick();
-
         void onItemSelected(SearchContactInfo info);
     }
 

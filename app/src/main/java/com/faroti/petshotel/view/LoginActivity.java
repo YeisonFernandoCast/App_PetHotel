@@ -34,7 +34,6 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
     private TextInputEditText etPassword;
 
     private AppCompatButton buttonSingLogin;
-    private AppCompatButton buttonFacebook;
     private SignInButton buttonGoogle;
     private AppCompatButton buttonRegister;
 
@@ -84,15 +83,11 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
 
         //*buttonRegister = findViewById(R.id.register_init_login);
         //buttonRegister.setOnClickListener((evt) -> presenter.());
-
-        buttonFacebook = findViewById(R.id.button_facebook_login);
-        buttonFacebook.setOnClickListener((evt) -> presenter.loginWithFacebook());
+        buttonRegister = findViewById(R.id.register_init_login);
+        buttonRegister.setOnClickListener((evt) -> goToRegister());
 
         buttonGoogle = findViewById(R.id.button_google_login);
         buttonGoogle.setOnClickListener((evt) -> presenter.loginWithGoogle());
-
-        buttonRegister = findViewById(R.id.register_init_login);
-        buttonRegister.setOnClickListener((evt) -> goToRegister());
         gmailLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
@@ -157,7 +152,6 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
     public void startWaiting() {
         piWaitingLogin.setVisibility(View.VISIBLE);
         buttonSingLogin.setEnabled(false);
-        buttonFacebook.setEnabled(false);
         buttonGoogle.setEnabled(false);
     }
 
@@ -165,7 +159,6 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
     public void stopWaiting() {
         piWaitingLogin.setVisibility(View.GONE);
         buttonSingLogin.setEnabled(true);
-        buttonFacebook.setEnabled(true);
         buttonGoogle.setEnabled(true);
     }
 

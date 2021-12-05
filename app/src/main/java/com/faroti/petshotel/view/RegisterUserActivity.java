@@ -37,8 +37,7 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
     private TextInputLayout tilUserName;
     private TextInputEditText userName;
 
-    private AppCompatButton buttonFacebook;
-    private AppCompatButton buttonGoogle;
+
     private AppCompatButton buttonSingUpUser;
 
     private RegisterMVP.Presenter presenter;
@@ -98,12 +97,6 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
 
         buttonSingUpUser = findViewById(R.id.button_register_user);
         buttonSingUpUser.setOnClickListener((evt) -> presenter.RegisterWithEmail());
-
-        buttonFacebook = findViewById(R.id.button_facebook_register);
-        buttonFacebook.setOnClickListener((evt) -> presenter.RegisterWithFacebook());
-
-        buttonGoogle = findViewById(R.id.button_google_register);
-        buttonGoogle.setOnClickListener((evt) -> presenter.RegisterWithGoogle());
     }
 
     @Override
@@ -167,15 +160,11 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterM
     public void startWaiting() {
         progressCircularWaiting.setVisibility(View.VISIBLE);
         buttonSingUpUser.setEnabled(false);
-        buttonFacebook.setEnabled(false);
-        buttonGoogle.setEnabled(false);
     }
 
     @Override
     public void stopWaiting() {
         progressCircularWaiting.setVisibility(View.GONE);
         buttonSingUpUser.setEnabled(true);
-        buttonFacebook.setEnabled(true);
-        buttonGoogle.setEnabled(true);
     }
 }

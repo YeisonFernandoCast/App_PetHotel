@@ -104,11 +104,6 @@ public class LoginPresenter implements LoginMVP.Presenter {
     }
 
     @Override
-    public void loginWithFacebook() {
-
-    }
-
-    @Override
     public void loginWithGoogle() {
         Intent intent = model.getGoogleSignIntent();
         view.openGoogleSignInActivity(intent);
