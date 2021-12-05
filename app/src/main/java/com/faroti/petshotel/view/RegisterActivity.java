@@ -2,7 +2,6 @@ package com.faroti.petshotel.view;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -46,7 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void onRegisterUserClick(){
         Intent intent = new Intent(this, RegisterUserActivity.class);
         startActivity(intent);
-        Toast.makeText(this, "Registro Completo", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "Registro Completo", Toast.LENGTH_SHORT).show();
     }
 
     private void onRegisterGardenClick() {

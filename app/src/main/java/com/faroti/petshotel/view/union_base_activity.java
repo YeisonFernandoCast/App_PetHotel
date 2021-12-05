@@ -29,7 +29,7 @@ public class union_base_activity extends AppCompatActivity {
         background = findViewById(R.id.background);
 
         Glide.with(this)
-                .load(R.mipmap.background)
+                .load(R.mipmap.perro_gato)
                 .centerCrop()
                 .into(background);
         //hideSystemUI();

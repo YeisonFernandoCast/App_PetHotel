@@ -19,8 +19,6 @@ public interface RegisterMVP {
 
     interface Presenter{
         void RegisterWithEmail();
-        void RegisterWithFacebook();
-        void RegisterWithGoogle();
     }
 
     interface View {

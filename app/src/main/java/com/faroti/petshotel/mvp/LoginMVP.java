@@ -26,7 +26,6 @@ public interface LoginMVP {
         void isAuthenticated();
         void isLogged();
         void loginWithEmail();
-        void loginWithFacebook();
         void loginWithGoogle();
 
         void setGoogleData(Intent data);
